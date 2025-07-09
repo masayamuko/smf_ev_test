@@ -7,7 +7,7 @@ const postsDirectory = path.join(process.cwd(), 'src/posts');
 
 function getPosts() {
   const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => {
+  const posts = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '');
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -21,6 +21,8 @@ function getPosts() {
       image: data.image || '', // frontmatterにimageがあれば追加
     };
   });
+  // 日付で降順ソート（新しい順）
+  return posts.sort((a, b) => (b.date > a.date ? 1 : -1));
 }
 
 export default function BlogPage() {
