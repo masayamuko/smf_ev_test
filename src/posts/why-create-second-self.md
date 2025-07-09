@@ -7,6 +7,7 @@ category: "AI活用"
 tags: ["第二の自分", "AI活用", "ChatGPT", "自己理解", "生産性向上"]
 author: "Masaya"
 featured: true
+image: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1751644296/AI-Powered_Journey_Image_k7nfzy.png"
 ---
 
 # AI時代の最強武器!?ChatGPTで「第二の自分」を育てるべし
