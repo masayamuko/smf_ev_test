@@ -108,7 +108,7 @@ export default function Home() {
 
             {/* 更新のお知らせ */}
             <div className="animate-fade-in w-full max-w-lg bg-white/30 rounded-2xl p-2">
-              <div className="bg-white border-2 border-white/40 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="bg-white/30 border-2 border-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-xs font-bold">📢</span>
@@ -117,7 +117,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-3">
                   <Link href="/events" className="block">
-                    <div className="flex items-start gap-3 p-3 bg-white rounded-lg border-2 border-orange-200 hover:border-orange-400 transition-colors duration-200 cursor-pointer relative text-left">
+                    <div className="flex items-start gap-3 p-3 bg-white/30 rounded-lg border-2 border-orange-200 hover:border-orange-400 transition-colors duration-200 cursor-pointer relative text-left">
                       <span className="text-lg">📅</span>
                       <div className="flex-1 min-w-0">
                         <p className="text-base font-semibold text-gray-800 leading-tight hover:text-blue-600 transition-colors duration-200">7/15(火) みんなの生成AI活用シェア会@福岡</p>
@@ -126,7 +126,7 @@ export default function Home() {
                     </div>
                   </Link>
                   <a href="https://www.masayamuko.com/blog/why-create-second-self" target="_blank" rel="noopener noreferrer" className="block">
-                    <div className="flex items-start gap-3 p-3 bg-white rounded-lg border-2 border-blue-200 hover:border-blue-400 transition-colors duration-200 cursor-pointer relative text-left">
+                    <div className="flex items-start gap-3 p-3 bg-white/30 rounded-lg border-2 border-blue-200 hover:border-blue-400 transition-colors duration-200 cursor-pointer relative text-left">
                       <span className="text-lg">📖</span>
                       <div className="flex-1 min-w-0">
                         <p className="text-base font-semibold text-gray-800 leading-tight hover:text-orange-600 transition-colors duration-200">AI時代の最強武器!?ChatGPTで「第二の自分」を育てるべし</p>
