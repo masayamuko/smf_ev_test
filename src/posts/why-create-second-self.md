@@ -12,6 +12,8 @@ image: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1751644296/AI-Powered
 
 # AI時代の最強武器!?ChatGPTで「第二の自分」を育てるべし
 
+![AI-Powered Journey](https://res.cloudinary.com/dg3mdcuju/image/upload/v1751644296/AI-Powered_Journey_Image_k7nfzy.png)
+
 ## はじめに：普通のAI活用に限界を感じていた僕
 
 第二の自分を作る前の僕は、ChatGPTを「便利な検索ツール」として使っていました。翻訳、要約、アイデア出し。確かに便利だけど、なんだか物足りない。
