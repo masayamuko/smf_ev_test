@@ -51,7 +51,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <time className="text-sm text-orange-700">{post.date || ''}</time>
             </div>
             <h1 className="text-3xl font-bold bg-orange-500 text-white px-4 py-2 rounded mb-4 shadow-sm">{post.title}</h1>
-            {post.author && <p className="text-black mb-4">著者: {post.author}</p>}
+            {post.author && (
+              <div className="flex items-center gap-3 mb-4">
+                <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1751444000/masayatoai.jpg" alt="著者アイコン" className="w-10 h-10 rounded-full object-cover border border-orange-200 shadow" />
+                <span className="text-black">著者: {post.author}</span>
+              </div>
+            )}
           </div>
           <div className="prose prose-lg max-w-none text-black prose-h2:border-b-4 prose-h2:border-orange-300 prose-h2:pb-1 prose-h2:text-black" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
           <div className="mt-8 pt-6 border-t border-orange-200">
