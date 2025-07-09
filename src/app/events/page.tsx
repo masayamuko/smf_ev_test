@@ -11,7 +11,7 @@ export default function EventsPage() {
       description: 'みんなの「作りたい」をAIと一緒に形にしてゆくボドゲ作りの夜',
       image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
       category: 'AI × ボードゲーム',
-      location: '福岡市内（天神駅近く）',
+      location: '福岡',
       price: '無料',
       link: '/events/boardgame',
       status: 'upcoming'
