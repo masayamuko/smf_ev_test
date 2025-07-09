@@ -107,33 +107,31 @@ export default function Home() {
             </div>
 
             {/* 更新のお知らせ */}
-            <div className="animate-fade-in w-full max-w-sm">
-              <div className="bg-white/50 border border-white/20 rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <div className="animate-fade-in w-full max-w-lg">
+              <div className="bg-white border border-white/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-xs font-bold">📢</span>
                   </div>
-                  <h3 className="text-base font-semibold text-gray-800">News</h3>
+                  <h3 className="text-lg font-bold text-gray-800">News</h3>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <Link href="/events" className="block">
-                    <div className="flex items-start gap-2 p-2 bg-white/50 rounded-lg hover:bg-white/70 transition-colors duration-200 cursor-pointer">
-                      <span className="text-sm">📅</span>
+                    <div className="flex items-start gap-3 p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors duration-200 cursor-pointer">
+                      <span className="text-lg">📅</span>
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs font-medium text-gray-800 leading-tight hover:text-blue-600 transition-colors duration-200">【参加者募集】7/15(火)みんなの生成AI活用シェア会</p>
-                        <p className="text-xs text-gray-500 mt-1">2024-07-15</p>
+                        <p className="text-base font-semibold text-gray-800 leading-tight hover:text-blue-600 transition-colors duration-200">【参加者募集】7/15(火)みんなの生成AI活用シェア会</p>
                       </div>
                     </div>
                   </Link>
-                  <a href="https://www.masayamuko.com/blog/why-create-second-self" target="_blank" rel="noopener noreferrer" className="block">
-                    <div className="flex items-start gap-2 p-2 bg-white/50 rounded-lg hover:bg-white/70 transition-colors duration-200 cursor-pointer">
-                      <span className="text-sm">📖</span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs font-medium text-gray-800 leading-tight hover:text-orange-600 transition-colors duration-200">AI時代の最強武器!?ChatGPTで「第二の自分」を育てるべし</p>
-                        <p className="text-xs text-gray-500 mt-1">2025-07-06</p>
-                      </div>
-                    </div>
-                  </a>
+                 <a href="https://www.masayamuko.com/blog/why-create-second-self" target="_blank" rel="noopener noreferrer" className="block">
+                   <div className="flex items-start gap-3 p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors duration-200 cursor-pointer">
+                     <span className="text-lg">📖</span>
+                     <div className="flex-1 min-w-0">
+                       <p className="text-base font-semibold text-gray-800 leading-tight hover:text-orange-600 transition-colors duration-200">AI時代の最強武器!?ChatGPTで「第二の自分」を育てるべし</p>
+                     </div>
+                   </div>
+                 </a>
                 </div>
               </div>
             </div>
