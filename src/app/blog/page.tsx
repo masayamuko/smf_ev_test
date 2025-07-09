@@ -27,14 +27,14 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="min-h-screen relative bg-cover bg-center bg-no-repeat w-full" style={{
+      <section className="h-screen relative bg-cover bg-center bg-no-repeat w-full" style={{
         backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://res.cloudinary.com/dg3mdcuju/image/upload/v1752078463/masan_dayo_AI_--ar_21_--profile_njfaa7d_--v_7_1091e879-2178-4ba6-b54e-c9254483d644_2_spq5e3.png')",
         backgroundSize: '100% auto',
         backgroundPosition: 'center center'
       }}>
         <div className="container-narrow">
-          <div className="flex flex-col items-center justify-center min-h-screen text-center space-y-16">
-            <div className="space-y-12 animate-fade-in">
+          <div className="flex flex-col items-center justify-center h-screen text-center space-y-8">
+            <div className="space-y-6 animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold leading-relaxed text-balance text-black drop-shadow-lg">
                 BLOG
               </h1>
