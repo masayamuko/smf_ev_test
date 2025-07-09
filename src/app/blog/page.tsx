@@ -88,7 +88,7 @@ export default function BlogPage() {
               <Link 
                 key={post.slug} 
                 href={`/blog/${post.slug}`}
-                className="block bg-orange-100/80 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-orange-200"
+                className="block bg-orange-100/80 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-orange-200 h-full"
               >
                 {/* サムネイル画像（frontmatterにimageがあれば） */}
                 {post.image && (
@@ -108,8 +108,8 @@ export default function BlogPage() {
                   <h2 className="text-lg font-bold text-orange-900 mb-2 group-hover:text-orange-600 transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-orange-800 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
-                  <div className="mt-auto inline-flex items-center text-orange-700 hover:text-white font-semibold bg-orange-200 hover:bg-orange-500 transition-colors rounded px-4 py-2">
+                  <p className="text-orange-800 text-sm mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
+                  <div className="inline-flex items-center text-orange-700 hover:text-white font-semibold bg-orange-200 hover:bg-orange-500 transition-colors rounded px-4 py-2">
                     続きを読む
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
