@@ -6,6 +6,7 @@ import Navigation from './components/Navigation'
 import StructuredData from './components/StructuredData'
 import GoogleAnalytics from './components/GoogleAnalytics'
 import AnalyticsDebug from './components/AnalyticsDebug'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -161,6 +162,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <SpeedInsights />
       </body>
     </html>
   )
