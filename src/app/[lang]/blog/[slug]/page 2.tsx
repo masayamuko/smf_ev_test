@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import fs from 'fs'
@@ -194,7 +195,7 @@ export default function BlogPostPage({ params }: PageProps) {
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">タグ</h3>
               <div className="flex flex-wrap gap-2">
-                {blogPost.tags.map((tag, index) => (
+                {blogPost.tags.map((tag: string, index: number) => (
                   <span
                     key={index}
                     className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"

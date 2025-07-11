@@ -7,7 +7,7 @@ export default function EventsPage() {
     {
       id: 'boardgame-night',
       title: 'ボドゲつくらNight',
-      date: '7/9(水) 19:00-',
+      date: '7/23 19:00-',
       description: 'みんなの「作りたい」をAIと一緒に形にしてゆくボドゲ作りの夜',
       image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
       category: 'AI × ボードゲーム',

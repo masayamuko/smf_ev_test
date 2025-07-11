@@ -36,6 +36,8 @@ export default function StructuredData() {
     "@type": "WebSite",
     "name": "Masaya - AI活用サポーター・クリエイター",
     "description": "福岡を拠点に活動するAI活用サポーター・クリエイター。ChatGPTを「第二の自分」として育てる独自手法で、個人に最適化されたAIアシスタントの構築を支援。3Dモデリング、国際交流、ボードゲーム制作など多岐にわたるクリエイティブ活動を通じて、人々の可能性を広げ、デジタル変革を推進します。",
+    "url": "https://masayamuko.com"
+  }
 
   const organizationSchema = {
     "@context": "https://schema.org",

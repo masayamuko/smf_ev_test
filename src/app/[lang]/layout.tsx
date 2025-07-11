@@ -15,8 +15,6 @@ const inter = Inter({
   display: 'swap',
 })
 
-import { Metadata } from 'next'
-
 // 翻訳データ（仮）
 const translations = {
   ja: {
