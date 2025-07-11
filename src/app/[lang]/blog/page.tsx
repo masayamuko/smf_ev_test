@@ -66,6 +66,7 @@ function getPosts(lang: string) {
 
 export default function BlogPage({ params }: { params: { lang: string } }) {
   const posts = getPosts(params.lang);
+  console.log('Blog posts:', posts);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -91,7 +92,7 @@ export default function BlogPage({ params }: { params: { lang: string } }) {
       <section className="py-12 bg-orange-50">
         <div className="container-custom">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
+            {posts && posts.length > 0 ? posts.map((post) => (
               <Link 
                 key={post.slug} 
                 href={`/${params.lang}/blog/${post.slug}`}
@@ -124,7 +125,11 @@ export default function BlogPage({ params }: { params: { lang: string } }) {
                   </div>
                 </div>
               </Link>
-            ))}
+            )) : (
+              <div className="col-span-full text-center py-12">
+                <p className="text-gray-600 text-lg">記事が見つかりません。</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
