@@ -1,15 +1,24 @@
 import { notFound } from 'next/navigation'
+import HomeJa from './components/pages/HomeJa'
+import HomeEn from './components/pages/HomeEn'
+
+// generateStaticParams: ビルド時に生成するパスを定義
+export async function generateStaticParams() {
+  return [
+    { lang: 'ja' },
+    { lang: 'en' }
+  ]
+}
 
 export default function Page({ params }: { params: { lang: string } }) {
   const { lang } = params;
 
   if (lang === 'ja') {
-    const PageComponent = require('./page.ja.tsx').default;
-    return <PageComponent />;
+    return <HomeJa lang={lang} />;
   } else if (lang === 'en') {
-    const PageComponent = require('./page.en.tsx').default;
-    return <PageComponent />;
+    return <HomeEn lang={lang} />;
   } else {
-    notFound();
+    // Fallback to Japanese if unsupported language
+    return <HomeJa lang="ja" />;
   }
 }

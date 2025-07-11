@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-export default function Home() {
+export default function Home({ lang = 'ja' }: { lang?: string }) {
   // スクロール機能
   const scrollToCharacteristics = () => {
     const element = document.getElementById('masaya-characteristics')
@@ -116,7 +116,7 @@ export default function Home() {
                   <h3 className="text-lg font-bold text-gray-800">News</h3>
                 </div>
                 <div className="space-y-3">
-                  <Link href="/events" className="block">
+                  <Link href={`/${lang}/events`} className="block">
                     <div className="flex items-start gap-3 p-3 bg-white/30 rounded-lg border-2 border-orange-200 hover:border-orange-400 transition-colors duration-200 cursor-pointer relative text-left">
                       <span className="text-lg">📅</span>
                       <div className="flex-1 min-w-0">
@@ -192,7 +192,7 @@ export default function Home() {
                 <p className="text-gray-400 leading-relaxed mb-6 group-hover:text-gray-300 transition-colors duration-300">
                   最新AIツール情報を追い続け、積極的に課金して人柱になっています。常に自分 or誰かにぴったりのAI・ITツールを探求！
                 </p>
-                <Link href="/tools" className="inline-block bg-yellow-400/20 hover:bg-yellow-400 text-yellow-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-yellow-400/30 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-400/25 text-sm backdrop-blur-sm">
+                <Link href={`/${lang}/tools`} className="inline-block bg-yellow-400/20 hover:bg-yellow-400 text-yellow-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-yellow-400/30 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-400/25 text-sm backdrop-blur-sm">
                   活用ツール & 人柱ログ
                 </Link>
               </div>
@@ -209,7 +209,7 @@ export default function Home() {
                 <p className="text-gray-400 leading-relaxed mb-6 group-hover:text-gray-300 transition-colors duration-300">
                   日本語教師・企業のIT担当・コーチング提供など、社員・個人で「聴く」「教える」を生業としてきました。
                 </p>
-                <Link href="/career" className="inline-block bg-green-400/20 hover:bg-green-400 text-green-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-green-400/30 hover:border-green-400 hover:shadow-lg hover:shadow-green-400/25 text-sm backdrop-blur-sm">
+                <Link href={`/${lang}/career`} className="inline-block bg-green-400/20 hover:bg-green-400 text-green-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-green-400/30 hover:border-green-400 hover:shadow-lg hover:shadow-green-400/25 text-sm backdrop-blur-sm">
                   Masayaの経歴
                 </Link>
               </div>
@@ -226,7 +226,7 @@ export default function Home() {
                 <p className="text-gray-400 leading-relaxed mb-6 group-hover:text-gray-300 transition-colors duration-300">
                   何かを好きになると人を集めコミュニティーを作る習性があります。人と人のハブ役。今はボドゲとAI活用の会してます。
                 </p>
-                <Link href="/community" className="inline-block bg-purple-400/20 hover:bg-purple-400 text-purple-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-purple-400/30 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-400/25 text-sm backdrop-blur-sm">
+                <Link href={`/${lang}/community`} className="inline-block bg-purple-400/20 hover:bg-purple-400 text-purple-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-purple-400/30 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-400/25 text-sm backdrop-blur-sm">
                   主催コミュニティー
                 </Link>
               </div>
@@ -261,7 +261,7 @@ export default function Home() {
                     <p className="text-lead leading-relaxed text-gray-700 group-hover:text-gray-800 transition-colors duration-300">
                       Masayaの本格的なAI活用はここから始まった。何より楽しい！「AI何に使ったらいい？」「使う習慣ない」が一気に解決！育てる過程で深い自己理解、育ててからはずっと大活躍。50人以上に教え、たくさんの論文も読んで深めてきました。
                     </p>
-                    <Link href="/blog/why-create-second-self" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-orange-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/blog/why-create-second-self`} className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-orange-300/50 group-hover:scale-105">
                       詳細を見る
                     </Link>
                   </div>
@@ -292,7 +292,7 @@ export default function Home() {
                       <h4 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">AIでボドゲつくらNight</h4>
                       <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">AIを活用してオリジナルボードゲームを制作するクリエイティブなイベント。アイデア出しから実際の制作まで、参加者同士で楽しみながら新しいゲームを生み出しています。</p>
                     </div>
-                    <Link href="/events/boardgame" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/events/boardgame`} className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-300/50 group-hover:scale-105">
                       詳細を見る
                     </Link>
                   </div>
@@ -311,7 +311,7 @@ export default function Home() {
                       <h4 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">みんなの生成AI活用発表会</h4>
                       <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">仕事・遊び・生活での実践的なAI活用事例をシェアし合う情報交換会。初心者歓迎、聞くだけ参加もOKのカジュアルな学びの場で、新しい発見がたくさん！</p>
                     </div>
-                    <Link href="/events/ai-study" className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/events/ai-study`} className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-300/50 group-hover:scale-105">
                       詳細を見る
                     </Link>
                   </div>
@@ -330,7 +330,7 @@ export default function Home() {
                       <h4 className="text-xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">社会的養護のユース支援</h4>
                       <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">社会的養護のもとで育った若者たちの自立と成長をサポートする活動。ボードゲームを通じた交流や施設での直接支援、そして将来のボードゲームカフェ開業という夢も。</p>
                     </div>
-                    <Link href="/services/youth-support" className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/services/youth-support`} className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-300/50 group-hover:scale-105">
                       詳細を見る
                     </Link>
                   </div>

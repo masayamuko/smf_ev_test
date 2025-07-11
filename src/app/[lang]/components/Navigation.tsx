@@ -2,23 +2,26 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
+  const pathname = usePathname()
+  const lang = pathname.split('/')[1] || 'ja'
   return (
     <nav className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
       <div className="container-wide">
         <div className="flex items-center justify-between h-20">
           {/* ロゴ - ミニマル */}
-          <Link href="/" className="group flex items-center">
+          <Link href={`/${lang}`} className="group flex items-center">
             <Image src="/logo_masaya.png" alt="MASAYAロゴ" width={120} height={40} priority className="h-10 w-auto mr-2" />
           </Link>
           
           {/* デスクトップナビゲーション */}
           <div className="hidden md:flex items-center space-x-12">
-            <Link href="/" className="nav-link">Home</Link>
+            <Link href={`/${lang}`} className="nav-link">Home</Link>
             <button 
               onClick={() => {
-                if (window.location.pathname === '/') {
+                if (pathname === `/${lang}`) {
                   const element = document.getElementById('masaya-characteristics')
                   if (element) {
                     const navHeight = 80
@@ -29,7 +32,7 @@ export default function Navigation() {
                     })
                   }
                 } else {
-                  window.location.href = '/#masaya-characteristics'
+                  window.location.href = `/${lang}#masaya-characteristics`
                 }
               }}
               className="nav-link"
@@ -38,7 +41,7 @@ export default function Navigation() {
             </button>
             <button 
               onClick={() => {
-                if (window.location.pathname === '/') {
+                if (pathname === `/${lang}`) {
                   const element = document.getElementById('works')
                   if (element) {
                     const navHeight = 80
@@ -49,14 +52,14 @@ export default function Navigation() {
                     })
                   }
                 } else {
-                  window.location.href = '/#works'
+                  window.location.href = `/${lang}#works`
                 }
               }}
               className="nav-link"
             >
               Works
             </button>
-            <Link href="/events" className="nav-link">Events</Link>
+            <Link href={`/${lang}/events`} className="nav-link">Events</Link>
             <a 
               href="https://www.masayamuko.com/blog" 
               target="_blank" 

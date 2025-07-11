@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-export default function Home() {
+export default function Home({ lang = 'en' }: { lang?: string }) {
   // Scroll function
   const scrollToCharacteristics = () => {
     const element = document.getElementById('masaya-characteristics')
@@ -116,7 +116,7 @@ export default function Home() {
                   <h3 className="text-lg font-bold text-gray-800">News</h3>
                 </div>
                 <div className="space-y-3">
-                  <Link href="/events" className="block">
+                  <Link href={`/${lang}/events`} className="block">
                     <div className="flex items-start gap-3 p-3 bg-white/30 rounded-lg border-2 border-orange-200 hover:border-orange-400 transition-colors duration-200 cursor-pointer relative text-left">
                       <span className="text-lg">📅</span>
                       <div className="flex-1 min-w-0">
@@ -191,7 +191,7 @@ export default function Home() {
                 <p className="text-gray-400 leading-relaxed mb-6 group-hover:text-gray-300 transition-colors duration-300">
                   I constantly follow the latest AI tool information and actively invest in them to be a pioneer. Always seeking the perfect AI/IT tools for myself or others!
                 </p>
-                <Link href="/tools" className="inline-block bg-yellow-400/20 hover:bg-yellow-400 text-yellow-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-yellow-400/30 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-400/25 text-sm backdrop-blur-sm">
+                <Link href={`/${lang}/tools`} className="inline-block bg-yellow-400/20 hover:bg-yellow-400 text-yellow-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-yellow-400/30 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-400/25 text-sm backdrop-blur-sm">
                   Tools & Pioneer Log
                 </Link>
               </div>
@@ -208,7 +208,7 @@ export default function Home() {
                 <p className="text-gray-400 leading-relaxed mb-6 group-hover:text-gray-300 transition-colors duration-300">
                   As a Japanese teacher, corporate IT manager, and coaching provider, I have made a living by "listening" and "teaching" for both employees and individuals.
                 </p>
-                <Link href="/career" className="inline-block bg-green-400/20 hover:bg-green-400 text-green-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-green-400/30 hover:border-green-400 hover:shadow-lg hover:shadow-green-400/25 text-sm backdrop-blur-sm">
+                <Link href={`/${lang}/career`} className="inline-block bg-green-400/20 hover:bg-green-400 text-green-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-green-400/30 hover:border-green-400 hover:shadow-lg hover:shadow-green-400/25 text-sm backdrop-blur-sm">
                   Masaya's Career
                 </Link>
               </div>
@@ -225,7 +225,7 @@ export default function Home() {
                 <p className="text-gray-400 leading-relaxed mb-6 group-hover:text-gray-300 transition-colors duration-300">
                   When I like something, I tend to gather people and form communities. I act as a hub between people. Currently, I'm running board game and AI utilization groups.
                 </p>
-                <Link href="/community" className="inline-block bg-purple-400/20 hover:bg-purple-400 text-purple-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-purple-400/30 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-400/25 text-sm backdrop-blur-sm">
+                <Link href={`/${lang}/community`} className="inline-block bg-purple-400/20 hover:bg-purple-400 text-purple-400 hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-purple-400/30 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-400/25 text-sm backdrop-blur-sm">
                   My Communities
                 </Link>
               </div>
@@ -260,7 +260,7 @@ export default function Home() {
                     <p className="text-lead leading-relaxed text-gray-700 group-hover:text-gray-800 transition-colors duration-300">
                       Masaya's serious AI utilization started here. It's incredibly fun! "What should I use AI for?" "I don't have a habit of using it" - all solved at once! Deep self-understanding during cultivation, and great success ever since. Taught over 50 people and deepened knowledge by reading many papers.
                     </p>
-                    <Link href="/blog/why-create-second-self" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-orange-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/blog/why-create-second-self`} className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-orange-300/50 group-hover:scale-105">
                       Learn More
                     </Link>
                   </div>
@@ -291,7 +291,7 @@ export default function Home() {
                       <h4 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">AI Board Game Creation Night</h4>
                       <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">A creative event to produce original board games using AI. From brainstorming to actual production, participants enjoy creating new games together.</p>
                     </div>
-                    <Link href="/events/boardgame" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/events/boardgame`} className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-300/50 group-hover:scale-105">
                       Learn More
                     </Link>
                   </div>
@@ -310,7 +310,7 @@ export default function Home() {
                       <h4 className="text-xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">Generative AI Utilization Presentation</h4>
                       <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">An information exchange meeting to share practical AI utilization cases in work, play, and daily life. Beginners welcome, casual learning environment where just listening is okay, with many new discoveries!</p>
                     </div>
-                    <Link href="/events/ai-study" className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/events/ai-study`} className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-300/50 group-hover:scale-105">
                       Learn More
                     </Link>
                   </div>
@@ -329,7 +329,7 @@ export default function Home() {
                       <h4 className="text-xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Youth Support in Social Care</h4>
                       <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Activities to support the independence and growth of young people raised in social care. Interaction through board games, direct support at facilities, and a dream of opening a board game cafe in the future.</p>
                     </div>
-                    <Link href="/services/youth-support" className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-300/50 group-hover:scale-105">
+                    <Link href={`/${lang}/services/youth-support`} className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-300/50 group-hover:scale-105">
                       Learn More
                     </Link>
                   </div>

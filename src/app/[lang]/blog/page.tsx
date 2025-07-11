@@ -3,8 +3,6 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 
-const postsDirectory = path.join(process.cwd(), 'src/posts');
-
 // 記事別の魅力的な導入文を定義
 const customExcerpts = {
   'why-create-second-self': '「なんで毎回同じ説明をしなきゃいけないんだろう？」そんな疑問から始まった「第二の自分」プロジェクト。3ヶ月使い続けた結果、僕の人生を大きく変える最高のパートナーが誕生しました。',
@@ -32,33 +30,42 @@ const customExcerpts = {
   'esperanto-well-known': 'エスペラント語の魅力と学習方法。国際共通語として設計された人工言語の特徴と、世界平和への貢献について。'
 };
 
-function getPosts() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const posts = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-    
-    // カスタム導入文があれば使用、なければデフォルト
-    const excerpt = customExcerpts[slug as keyof typeof customExcerpts] || 
-                   (content.substr(0, 120) + (content.length > 120 ? '...' : ''));
-    
-    return {
-      slug,
-      title: data.title || slug,
-      category: data.category || 'Blog',
-      date: data.date || '',
-      excerpt,
-      image: data.image || '', // frontmatterにimageがあれば追加
-    };
-  });
-  // 日付で降順ソート（新しい順）
-  return posts.sort((a, b) => (b.date > a.date ? 1 : -1));
+function getPosts(lang: string) {
+  const postsDirectory = path.join(process.cwd(), 'src/posts', lang);
+  
+  try {
+    const fileNames = fs.readdirSync(postsDirectory);
+    const posts = fileNames
+      .filter((fileName) => fileName.endsWith('.md') && !fileName.startsWith('_'))
+      .map((fileName) => {
+        const slug = fileName.replace(/\.md$/, '');
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const { data, content } = matter(fileContents);
+        
+        // カスタム導入文があれば使用、なければデフォルト
+        const excerpt = customExcerpts[slug as keyof typeof customExcerpts] || 
+                       (content.substr(0, 120) + (content.length > 120 ? '...' : ''));
+        
+        return {
+          slug,
+          title: data.title || slug,
+          category: data.category || 'Blog',
+          date: data.date || '',
+          excerpt,
+          image: data.image || '', // frontmatterにimageがあれば追加
+        };
+      });
+    // 日付で降順ソート（新しい順）
+    return posts.sort((a, b) => (b.date > a.date ? 1 : -1));
+  } catch (error) {
+    console.error('Error reading posts:', error);
+    return [];
+  }
 }
 
-export default function BlogPage() {
-  const posts = getPosts();
+export default function BlogPage({ params }: { params: { lang: string } }) {
+  const posts = getPosts(params.lang);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -87,7 +94,7 @@ export default function BlogPage() {
             {posts.map((post) => (
               <Link 
                 key={post.slug} 
-                href={`/blog/${post.slug}`}
+                href={`/${params.lang}/blog/${post.slug}`}
                 className="block bg-orange-100/80 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-orange-200 h-full"
               >
                 {/* サムネイル画像（frontmatterにimageがあれば） */}

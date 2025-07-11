@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-export default function EventsPage() {
+export default function EventsPage({ params }: { params: { lang: string } }) {
   const upcomingEvents = [
     {
       id: 'boardgame-night',
@@ -13,7 +13,7 @@ export default function EventsPage() {
       category: 'AI × ボードゲーム',
       location: '福岡',
       price: '無料',
-      link: '/events/boardgame',
+      link: `/${params.lang}/events/boardgame`,
       status: 'upcoming'
     },
     {
@@ -25,7 +25,7 @@ export default function EventsPage() {
       category: 'AI活用',
       location: '福岡',
       price: '無料',
-      link: '/events/ai-study',
+      link: `/${params.lang}/events/ai-study`,
       status: 'upcoming'
     }
   ]
@@ -110,7 +110,7 @@ export default function EventsPage() {
           {/* ホームに戻るボタン */}
           <div className="text-center mt-16">
             <Link 
-              href="/" 
+              href={`/${params.lang}`} 
               className="inline-flex items-center gap-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
