@@ -5,6 +5,12 @@ import Link from 'next/link'
 
 export default function LanguageSwitcher() {
   const pathname = usePathname()
+  
+  // pathnameがnullの場合のフォールバック
+  if (!pathname) {
+    return null
+  }
+  
   const currentLang = pathname.split('/')[1] || 'ja' // URLの最初のセグメントから言語を取得
 
   const getLocalizedPath = (lang: string) => {
