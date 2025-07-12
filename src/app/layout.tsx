@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'masaya official site',
+  title: 'Masaya Official Site',
   description: 'AI活用サポーター・クリエイター',
 }
 
