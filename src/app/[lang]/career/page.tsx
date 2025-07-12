@@ -53,11 +53,6 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
           description: "・個人ブログ運営<br />・広告運用代行<br />・IT顧問<br />・海外個人輸出<br />・コーチング<br />などいろんな仕事を経験してきました。",
           tags: ["ブログ運営", "広告運用", "IT顧問", "海外輸出", "コーチング"]
         },
-        2024: {
-          title: "再出発への道のりの1年",
-          description: "うつ病で休職した会社を退職して、転職活動したり、ADHDの診断を受けたり、コーチングの学習継続、コミュニティ運営してましたがなかなか決まらず。12月に2025年はフリーランスとしてマジメに活動してみることを決意しました。",
-          tags: ["転職活動", "コーチング学習", "コミュニティ運営", "フリーランス準備"]
-        },
         2023: {
           title: "生成AI活用研究開始",
           description: "ChatGPTの登場を機に、「第二の自分」の構築を意識して生成AI活用研究を開始。業務効率化とクリエイティブ活動の両面で可能性を探求。",
@@ -173,11 +168,6 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
           title: "Full-time Freelancer",
           description: "・Personal blog management<br />・Advertising operations<br />・IT consulting<br />・International personal export<br />・Coaching<br />Experienced various types of work.",
           tags: ["Blog Management", "Advertising", "IT Consulting", "International Export", "Coaching"]
-        },
-        2024: {
-          title: "A Year of Finding My Path",
-          description: "Left the company where I took sick leave due to depression, engaged in job hunting, received ADHD diagnosis, continued coaching studies, ran communities, but couldn't settle on anything. In December, decided to seriously pursue freelancing in 2025.",
-          tags: ["Job Hunting", "Coaching Studies", "Community Management", "Freelance Preparation"]
         },
         2023: {
           title: "Started Generative AI Research",
