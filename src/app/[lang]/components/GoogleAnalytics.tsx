@@ -31,7 +31,7 @@ export default function GoogleAnalytics() {
       return
     }
     
-    const url = pathname + searchParams.toString()
+    const url = pathname + (searchParams ? searchParams.toString() : '')
     
     // ページビューの送信（configはScript内で既に実行済み）
     if (typeof window.gtag === 'function') {
