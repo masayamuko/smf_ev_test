@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useParams } from 'next/navigation'
 import { useState } from 'react'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navigation() {
   const params = useParams()
@@ -28,50 +29,55 @@ export default function Navigation() {
           </Link>
           
           {/* デスクトップナビゲーション */}
-          <div className="hidden md:flex items-center space-x-12">
-            <Link href={`/${lang}`} className="nav-link">Home</Link>
-            <button 
-              onClick={() => {
-                if (pathname === `/${lang}`) {
-                  const element = document.getElementById('masaya-characteristics')
-                  if (element) {
-                    const navHeight = 80
-                    const elementPosition = element.offsetTop - navHeight - 20
-                    window.scrollTo({
-                      top: elementPosition,
-                      behavior: 'smooth'
-                    })
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="flex items-center space-x-12">
+              <Link href={`/${lang}`} className="nav-link">Home</Link>
+              <button 
+                onClick={() => {
+                  if (pathname === `/${lang}`) {
+                    const element = document.getElementById('masaya-characteristics')
+                    if (element) {
+                      const navHeight = 80
+                      const elementPosition = element.offsetTop - navHeight - 20
+                      window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                      })
+                    }
+                  } else {
+                    window.location.href = `/${lang}#masaya-characteristics`
                   }
-                } else {
-                  window.location.href = `/${lang}#masaya-characteristics`
-                }
-              }}
-              className="nav-link"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => {
-                if (pathname === `/${lang}`) {
-                  const element = document.getElementById('works')
-                  if (element) {
-                    const navHeight = 80
-                    const elementPosition = element.offsetTop - navHeight - 20
-                    window.scrollTo({
-                      top: elementPosition,
-                      behavior: 'smooth'
-                    })
+                }}
+                className="nav-link"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => {
+                  if (pathname === `/${lang}`) {
+                    const element = document.getElementById('works')
+                    if (element) {
+                      const navHeight = 80
+                      const elementPosition = element.offsetTop - navHeight - 20
+                      window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                      })
+                    }
+                  } else {
+                    window.location.href = `/${lang}#works`
                   }
-                } else {
-                  window.location.href = `/${lang}#works`
-                }
-              }}
-              className="nav-link"
-            >
-              Works
-            </button>
-            <Link href={`/${lang}/events`} className="nav-link">Events</Link>
-            <Link href={`/${lang}/blog`} className="nav-link">Blog</Link>
+                }}
+                className="nav-link"
+              >
+                Works
+              </button>
+              <Link href={`/${lang}/events`} className="nav-link">Events</Link>
+              <Link href={`/${lang}/blog`} className="nav-link">Blog</Link>
+            </div>
+            
+            {/* 言語切り替えスイッチ（デスクトップ） */}
+            <LanguageSwitcher variant="compact" />
           </div>
           
           {/* モバイルメニューボタン */}
@@ -96,6 +102,11 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-4 space-y-4">
+              {/* 言語切り替えスイッチ（モバイル） */}
+              <div className="pb-4 border-b border-gray-200">
+                <LanguageSwitcher variant="mobile" />
+              </div>
+              
               <Link 
                 href={`/${lang}`} 
                 className="block text-gray-700 hover:text-blue-600 py-2"

@@ -1,8 +1,7 @@
-"use client"
-
 import Link from 'next/link'
 
-export default function YouthSupportPage({ params }: { params: { lang: string } }) {
+export default async function YouthSupportPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -10,7 +9,7 @@ export default function YouthSupportPage({ params }: { params: { lang: string } 
         <div className="container-narrow">
           <div className="text-center space-y-12">
             <div className="space-y-8">
-              <Link href={`/${params.lang}`} className="inline-block text-gray-600 hover:text-black transition-colors duration-300">
+              <Link href={`/${lang}`} className="inline-block text-gray-600 hover:text-black transition-colors duration-300">
                 ← ホームに戻る
               </Link>
               <h1 className="text-4xl md:text-5xl font-bold">社会的養護のユース支援</h1>
@@ -205,7 +204,7 @@ export default function YouthSupportPage({ params }: { params: { lang: string } 
                 >
                   Xでお問い合わせ
                 </a>
-                <Link href={`/${params.lang}`} className="btn btn-secondary">
+                <Link href={`/${lang}`} className="btn btn-secondary">
                   ホームに戻る
                 </Link>
               </div>

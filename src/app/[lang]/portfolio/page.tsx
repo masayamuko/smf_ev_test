@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
-export default function PortfolioPage({ params }: { params: { lang: string } }) {
+export default async function PortfolioPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="max-w-6xl mx-auto px-4 py-20 pt-28 sm:px-6 lg:px-8">
@@ -287,7 +288,7 @@ export default function PortfolioPage({ params }: { params: { lang: string } }) 
               プロジェクトのご相談や、コラボレーションのご提案など、お気軽にお声がけください。
             </p>
             <Link 
-              href={`/${params.lang}/contact`} 
+              href={`/${lang}/contact`} 
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
             >
               お問い合わせ

@@ -1,8 +1,102 @@
-"use client"
-
 import Link from 'next/link'
 
-export default function Career({ params }: { params: { lang: string } }) {
+export default async function Career({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const content = {
+    ja: {
+      title: "経歴",
+      skillsSection: "培ってきたスキル",
+      skills: {
+        listening: {
+          title: "傾聴力",
+          description: "相手の話を深く聞き、想いや感情を引き出すスキル。「コーチング」を300万円以上の学習費と500時間以上の実践で磨いてきました。"
+        },
+        teaching: {
+          title: "わかりやすい説明力",
+          description: "複雑なことを簡単に、相手のレベルに合わせて伝える技術。日本語教師養成講座420時間と日本語学校での授業実施、その他、コーチング・IT活用関連講座提供などで培ってきました。"
+        },
+        community: {
+          title: "コミュニティ形成力",
+          description: "人と人をつなぎ、自然な交流が生まれる場作り。多くのコミュニティ立ち上げ経験があります。"
+        },
+        digital: {
+          title: "IT・デジタル活用力",
+          description: "企業内IT担当として社内DX化を推進。最新AIツールの導入・活用にも積極的に取り組んでいます。"
+        }
+      },
+      timeline: {
+        2025: {
+          title: "再出発の準備中！",
+          description: "・各種生成AIツールの学習、実践（独学）<br />・ものづくり, 3CADの学習（通学）<br />AIツールの導入を個人・企業さま相手に実験的にサポートしてます。",
+          tags: ["AI学習", "3CAD", "個人・企業サポート"]
+        },
+        2024: {
+          title: "再出発への道のりの1年",
+          description: "うつ病で休職した会社を退職して、転職活動したり、ADHDの診断を受けたり、コーチングの学習継続、コミュニティ運営してましたがなかなか決まらず。12月に2025年はフリーランスとしてマジメに活動してみることを決意しました。",
+          tags: ["転職活動", "コーチング学習", "コミュニティ運営", "フリーランス準備"]
+        },
+        2013: {
+          title: "フリーターしながら模索",
+          description: "人との繋がりで紹介を中心に興味ある仕事を経験させてもらいました。<br />パン屋、留学会社、WEB制作会社、貿易会社、ホームステイの会社、イベント会社、ゲストハウス、社会的養護施設、日本語学校。この時、WEBデザインの学校と日本語教師養成講座にも通いました。",
+          tags: ["パン屋", "留学会社", "WEB制作", "貿易会社", "その他多数"]
+        },
+        2008: {
+          title: "大学生（カナダに休学留学）",
+          description: "久留米大学で英語専攻してました。１年間休学留学してカナダのバンクーバーにワーキングホリデー制度で留学しました。帰国後、自信がついて活動的になって、国際交流サークルを作って活動してました。",
+          tags: ["久留米大学", "カナダ留学", "国際交流サークル"]
+        }
+      },
+      backHome: "ホームに戻る"
+    },
+    en: {
+      title: "Career",
+      skillsSection: "Skills I've Developed",
+      skills: {
+        listening: {
+          title: "Active Listening",
+          description: "Skills to deeply listen and draw out thoughts and emotions. Refined through over 3 million yen in coaching education and 500+ hours of practice."
+        },
+        teaching: {
+          title: "Clear Communication",
+          description: "Ability to explain complex concepts simply, adapting to the audience's level. Developed through 420 hours of Japanese language teacher training, teaching at Japanese language schools, and providing coaching & IT utilization seminars."
+        },
+        community: {
+          title: "Community Building",
+          description: "Creating spaces where people naturally connect and interact. Experienced in launching multiple communities."
+        },
+        digital: {
+          title: "IT & Digital Skills",
+          description: "Promoted internal DX transformation as a corporate IT coordinator. Actively implementing and utilizing the latest AI tools."
+        }
+      },
+      timeline: {
+        2025: {
+          title: "Preparing for a Fresh Start!",
+          description: "・Learning and practicing various generative AI tools (self-study)<br />・Learning manufacturing & 3D CAD (in-person courses)<br />Experimentally supporting individuals and companies with AI tool implementation.",
+          tags: ["AI Learning", "3D CAD", "Individual & Corporate Support"]
+        },
+        2024: {
+          title: "A Year of Finding My Path",
+          description: "Left the company where I took sick leave due to depression, engaged in job hunting, received ADHD diagnosis, continued coaching studies, ran communities, but couldn't settle on anything. In December, decided to seriously pursue freelancing in 2025.",
+          tags: ["Job Hunting", "Coaching Studies", "Community Management", "Freelance Preparation"]
+        },
+        2013: {
+          title: "Exploring While Freelancing",
+          description: "Experienced various jobs through personal connections and referrals.<br />Bakery, study abroad agency, web development company, trading company, homestay company, event company, guesthouse, social welfare facility, Japanese language school. Also attended web design school and Japanese language teacher training during this period.",
+          tags: ["Bakery", "Study Abroad Agency", "Web Development", "Trading Company", "Various Others"]
+        },
+        2008: {
+          title: "University Student (Study Abroad in Canada)",
+          description: "Majored in English at Kurume University. Took a gap year to study abroad in Vancouver, Canada through the Working Holiday program. After returning, gained confidence and became more active, creating and managing an international exchange circle.",
+          tags: ["Kurume University", "Canada Study Abroad", "International Exchange Circle"]
+        }
+      },
+      backHome: "Back to Home"
+    }
+  };
+
+  const t = content[lang as keyof typeof content] || content.ja;
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - 統一感のあるデザイン（高さ半分） */}
@@ -14,7 +108,7 @@ export default function Career({ params }: { params: { lang: string } }) {
             {/* Main Title */}
             <div className="space-y-12 animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold leading-relaxed text-balance text-black drop-shadow-lg">
-                <span className="block">経歴</span>
+                <span className="block">{t.title}</span>
               </h1>
               <div className="w-32 h-1 bg-black mx-auto drop-shadow-sm"></div>
             </div>
@@ -41,16 +135,12 @@ export default function Career({ params }: { params: { lang: string } }) {
                       2025
                     </div>
                     <div className="flex-1 bg-white border-2 border-orange-400 rounded-2xl p-8 group-hover:border-orange-400 group-hover:shadow-2xl group-hover:shadow-orange-200/30 transition-all duration-500 shadow-2xl shadow-orange-200/30">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-300 text-orange-600">再出発の準備中！</h3>
-                      <p className="text-gray-600 mb-3 group-hover:text-gray-700 transition-colors duration-300">
-                        ・各種生成AIツールの学習、実践（独学）<br />
-                        ・ものづくり, 3CADの学習（通学）<br />
-                        AIツールの導入を個人・企業さま相手に実験的にサポートしてます。
-                      </p>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-300 text-orange-600">{t.timeline[2025].title}</h3>
+                      <p className="text-gray-600 mb-3 group-hover:text-gray-700 transition-colors duration-300" dangerouslySetInnerHTML={{ __html: t.timeline[2025].description }} />
                       <div className="flex flex-wrap gap-2">
-                        <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">AIツール学習</span>
-                        <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">CAD学習</span>
-                        <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">導入サポート</span>
+                        {t.timeline[2025].tags.map((tag: string, index: number) => (
+                          <span key={index} className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">{tag}</span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -149,7 +239,7 @@ export default function Career({ params }: { params: { lang: string } }) {
         <div className="container-custom">
           <div className="space-y-20">
             <div className="text-center space-y-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">培ってきたスキル</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">{t.skillsSection}</h2>
               <div className="w-16 h-0.5 bg-white mx-auto"></div>
             </div>
             
@@ -365,25 +455,25 @@ export default function Career({ params }: { params: { lang: string } }) {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link href={`/${params.lang}/`} className="group btn btn-primary text-lg px-8 py-4 relative overflow-hidden">
+                <Link href={`/${lang}/`} className="group btn btn-primary text-lg px-8 py-4 relative overflow-hidden">
                   <span className="flex items-center gap-3">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
-                    ホームに戻る
+                    {t.backHome}
                     <svg className="w-5 h-5 transform group-hover:translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                   </span>
                 </Link>
-                <Link href={`/${params.lang}/tools`} className="group btn btn-secondary text-lg px-8 py-4 relative overflow-hidden hover:scale-110 hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 hover:-rotate-2">
+                <Link href={`/${lang}/tools`} className="group btn btn-secondary text-lg px-8 py-4 relative overflow-hidden hover:scale-110 hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 hover:-rotate-2">
                   <span className="relative z-10 flex items-center gap-2">
                     <span className="group-hover:animate-bounce">🔧</span>
                     活用ツールを見る
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-                <Link href={`/${params.lang}/community`} className="group btn btn-secondary text-lg px-8 py-4 relative overflow-hidden hover:scale-110 hover:shadow-2xl hover:shadow-green-300/50 transition-all duration-300 hover:-rotate-2">
+                <Link href={`/${lang}/community`} className="group btn btn-secondary text-lg px-8 py-4 relative overflow-hidden hover:scale-110 hover:shadow-2xl hover:shadow-green-300/50 transition-all duration-300 hover:-rotate-2">
                   <span className="relative z-10 flex items-center gap-2">
                     <span className="group-hover:animate-bounce">🤝</span>
                     コミュニティについて

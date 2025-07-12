@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
-export default function SecondSelfProject({ params }: { params: { lang: string } }) {
+export default async function SecondSelfProject({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="max-w-4xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
@@ -236,10 +237,10 @@ export default function SecondSelfProject({ params }: { params: { lang: string }
             >
               詳しく相談する
             </a>
-            <Link href={`/${params.lang}/events/ai-study`} className="btn-secondary">
+            <Link href={`/${lang}/events/ai-study`} className="btn-secondary">
               AI勉強会について
             </Link>
-            <Link href={`/${params.lang}`} className="btn-secondary">
+            <Link href={`/${lang}`} className="btn-secondary">
               ホームに戻る
             </Link>
           </div>

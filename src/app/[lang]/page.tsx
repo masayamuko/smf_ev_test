@@ -10,8 +10,8 @@ export async function generateStaticParams() {
   ]
 }
 
-export default function Page({ params }: { params: { lang: string } }) {
-  const { lang } = params;
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
 
   if (lang === 'ja') {
     return <HomeJa lang={lang} />;

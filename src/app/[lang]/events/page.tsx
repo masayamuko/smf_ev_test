@@ -1,8 +1,7 @@
-"use client"
-
 import Link from 'next/link'
 
-export default function EventsPage({ params }: { params: { lang: string } }) {
+export default async function EventsPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
   const upcomingEvents = [
     {
       id: 'boardgame-night',
@@ -13,7 +12,7 @@ export default function EventsPage({ params }: { params: { lang: string } }) {
       category: 'AI × ボードゲーム',
       location: '福岡',
       price: '無料',
-      link: `/${params.lang}/events/boardgame`,
+      link: `/${lang}/events/boardgame`,
       status: 'upcoming'
     },
     {
@@ -25,7 +24,7 @@ export default function EventsPage({ params }: { params: { lang: string } }) {
       category: 'AI活用',
       location: '福岡',
       price: '無料',
-      link: `/${params.lang}/events/ai-study`,
+      link: `/${lang}/events/ai-study`,
       status: 'upcoming'
     }
   ]
@@ -110,7 +109,7 @@ export default function EventsPage({ params }: { params: { lang: string } }) {
           {/* ホームに戻るボタン */}
           <div className="text-center mt-16">
             <Link 
-              href={`/${params.lang}`} 
+              href={`/${lang}`} 
               className="inline-flex items-center gap-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,33 +1,29 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+import { getPostContent } from '@/utils/blog'
+import { Lang } from '@/types'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     lang: string;
     slug: string;
-  };
+  }>;
 }
 
 // 動的ルートを強制的に有効化
 export const dynamicParams = true;
 
-export default function BlogPostPage({ params }: PageProps) {
-  const { lang, slug } = params;
+export default async function BlogPostPage({ params }: PageProps) {
+  const { lang, slug } = await params;
 
-  const filePath = path.join(process.cwd(), 'src', 'posts', lang, `${slug}.md`);
-
-  let fileContents;
-  try {
-    fileContents = fs.readFileSync(filePath, 'utf8');
-  } catch (error) {
+  const postContent = getPostContent(lang as Lang, slug);
+  
+  if (!postContent) {
     notFound();
   }
 
-  const { data, content } = matter(fileContents);
+  const { data, content } = postContent;
 
   // タグの処理
   const tags = data.tags || ['ブログ', 'AI活用'];

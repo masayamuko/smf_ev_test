@@ -56,8 +56,10 @@ export default function GoogleAnalytics() {
         onLoad={() => {
           console.log('Google Analytics loaded successfully')
         }}
-        onError={() => {
-          console.error('Failed to load Google Analytics')
+        onError={(e) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('Google Analytics failed to load (normal in development):', e)
+          }
         }}
       />
       <Script
