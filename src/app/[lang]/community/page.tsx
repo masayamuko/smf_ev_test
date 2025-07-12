@@ -28,7 +28,27 @@ export default async function CommunityPage({ params }: { params: Promise<{ lang
       },
       pastCommunities: {
         title: "過去のコミュニティ",
-        subtitle: "これまでに立ち上げ・運営してきたコミュニティたち"
+        subtitle: "これまでに立ち上げ・運営してきたコミュニティたち",
+        picnic: {
+          title: "ピクニックサークル",
+          description: "大学出て１、２年間。自然の中で楽しむ仲間たちとピクニックを企画・開催していました。",
+          period: "大学卒業後1-2年"
+        },
+        sharehouse1: {
+          title: "シェアハウスのらまめ",
+          description: "友人4人と共同生活。シェアハウスでの暮らしを通じて、新しい生活スタイルを体験しました。",
+          period: "友人4人と共同生活"
+        },
+        sharehouse2: {
+          title: "シェアハウス&ホームステイ",
+          description: "僕ら夫婦＋友人１人＋外国人留学生。国際的な環境での共同生活を体験しました。",
+          period: "夫婦＋友人＋留学生"
+        },
+        unipass: {
+          title: "留学・国際交流サークルUniPass",
+          description: "大学3年ー4年生。留学や国際交流に興味のある学生たちと活動していました。",
+          period: "大学3年ー4年生"
+        }
       },
       backHome: "ホームに戻る"
     },
