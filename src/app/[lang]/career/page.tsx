@@ -80,6 +80,26 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
           description: "Left the company where I took sick leave due to depression, engaged in job hunting, received ADHD diagnosis, continued coaching studies, ran communities, but couldn't settle on anything. In December, decided to seriously pursue freelancing in 2025.",
           tags: ["Job Hunting", "Coaching Studies", "Community Management", "Freelance Preparation"]
         },
+        2023: {
+          title: "Started Generative AI Research",
+          description: "With the emergence of ChatGPT, began research on generative AI utilization with focus on building my 'second self'. Explored possibilities in both business efficiency and creative activities.",
+          tags: ["Generative AI Research", "Second Self", "Business Efficiency"]
+        },
+        2022: {
+          title: "3rd Company: ERP Implementation & Webinar Instructor",
+          description: "Participated in Enterprise Resource Planning (ERP) implementation project as IT coordinator. Promoted internal DX. Simultaneously worked as webinar instructor for knowledge sharing activities.",
+          tags: ["ERP Implementation", "DX Promotion", "Webinar Instructor"]
+        },
+        2019: {
+          title: "2nd Company: Software Development & Coaching Start",
+          description: "Support work at software development company. Began serious coaching studies during this period. Accumulated over 500 hours of practice, finding deeper value in human relationships.",
+          tags: ["Software Development", "Coaching Studies", "500+ Hours Practice"]
+        },
+        2017: {
+          title: "1st Company: HR & Recruitment",
+          description: "Recruitment consultant at HR specialist company. Developed matching and relationship building skills through connecting companies and job seekers.",
+          tags: ["HR Recruitment", "Recruitment Consulting", "Matching"]
+        },
         2013: {
           title: "Exploring While Freelancing",
           description: "Experienced various jobs through personal connections and referrals.<br />Bakery, study abroad agency, web development company, trading company, homestay company, event company, guesthouse, social welfare facility, Japanese language school. Also attended web design school and Japanese language teacher training during this period.",
