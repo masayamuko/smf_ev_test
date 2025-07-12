@@ -22,9 +22,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
           highlights: [
-            'AIを活用したボードゲーム制作体験',
-            '初心者からでも楽しめるワークショップ形式',
-            '作ったゲームは持ち帰り可能'
+            'ものづくりやゲームに興味がある方歓迎',
+            'AIツールを使った実際のボードゲーム制作体験',
+            '初心者大歓迎！手ぶらで参加OK'
           ]
         },
         {
@@ -38,9 +38,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png',
           highlights: [
-            '仕事・生活でのAI活用事例をシェア',
-            '参加者同士の情報交換とネットワーキング',
-            '実践的なAI活用ヒント満載'
+            'AI初心者からエキスパートまで誰でも',
+            '実際のAI活用事例の共有とディスカッション',
+            '聞くだけ参加もOK！気軽にご参加ください'
           ]
         }
       ]
@@ -63,9 +63,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
           highlights: [
-            'AI-powered board game creation experience',
-            'Workshop format enjoyable for beginners',
-            'Take your created game home'
+            'Welcome for anyone interested in crafting and games',
+            'Hands-on board game creation using AI tools',
+            'Beginners welcome! Come empty-handed'
           ]
         },
         {
@@ -79,9 +79,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png',
           highlights: [
-            'Share AI use cases in work and daily life',
-            'Networking and information exchange among participants',
-            'Packed with practical AI utilization tips'
+            'From AI beginners to experts, everyone welcome',
+            'Real AI use case sharing and discussion',
+            'Just listening is OK! Feel free to join'
           ]
         }
       ]
