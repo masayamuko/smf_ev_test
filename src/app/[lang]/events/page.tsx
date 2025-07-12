@@ -18,10 +18,14 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           description: 'みんなの「作りたい」をAIと一緒に形にしてゆくボドゲ作りの夜',
           category: 'AI × ボードゲーム',
           location: '福岡',
-          price: '無料',
           link: `/${lang}/events/boardgame`,
           status: 'upcoming',
-          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg'
+          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
+          highlights: [
+            'AIを活用したボードゲーム制作体験',
+            '初心者からでも楽しめるワークショップ形式',
+            '作ったゲームは持ち帰り可能'
+          ]
         },
         {
           id: 'ai-share',
@@ -30,10 +34,14 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           description: '仕事だけでなく、遊びや生活でもどんなふうに生成AIを役立ててるかシェアし合う会',
           category: 'AI活用',
           location: '福岡',
-          price: '無料',
           link: `/${lang}/events/ai-study`,
           status: 'upcoming',
-          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png'
+          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png',
+          highlights: [
+            '仕事・生活でのAI活用事例をシェア',
+            '参加者同士の情報交換とネットワーキング',
+            '実践的なAI活用ヒント満載'
+          ]
         }
       ]
     },
@@ -51,10 +59,14 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           description: 'An evening of board game creation where everyone\'s "want to create" takes shape with AI',
           category: 'AI × Board Games',
           location: 'Fukuoka',
-          price: 'Free',
           link: `/${lang}/events/boardgame`,
           status: 'upcoming',
-          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg'
+          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
+          highlights: [
+            'AI-powered board game creation experience',
+            'Workshop format enjoyable for beginners',
+            'Take your created game home'
+          ]
         },
         {
           id: 'ai-share',
@@ -63,10 +75,14 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           description: 'A gathering to share how generative AI is being utilized not only in work, but also in play and daily life',
           category: 'AI Utilization',
           location: 'Fukuoka',
-          price: 'Free',
           link: `/${lang}/events/ai-study`,
           status: 'upcoming',
-          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png'
+          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png',
+          highlights: [
+            'Share AI use cases in work and daily life',
+            'Networking and information exchange among participants',
+            'Packed with practical AI utilization tips'
+          ]
         }
       ]
     }
@@ -131,14 +147,18 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
                     {event.title}
                   </h3>
                   
-                  {/* 参加費 */}
-                  <div className="flex items-center justify-center bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-xl border-2 border-green-200">
-                    <div className="flex items-center gap-3 text-green-700 font-bold text-xl">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                      </svg>
-                      {event.price}
-                    </div>
+                  {/* イベント概要 */}
+                  <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-4 rounded-xl border border-gray-200">
+                    <ul className="space-y-2">
+                      {event.highlights.map((highlight, index) => (
+                        <li key={index} className="flex items-start gap-3 text-gray-700">
+                          <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-sm leading-relaxed">{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
                   {/* 詳細ボタン */}
