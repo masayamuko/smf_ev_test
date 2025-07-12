@@ -22,9 +22,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
           highlights: [
-            'ものづくりやゲームに興味がある方歓迎',
-            'AIツールを使った実際のボードゲーム制作体験',
-            '初心者大歓迎！手ぶらで参加OK'
+            'AIを使ってボドゲ作ろう！',
+            'アイデア出しやAI活用シェア',
+            'AIやボドゲの初心者も歓迎！'
           ]
         },
         {
@@ -38,9 +38,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png',
           highlights: [
-            'AI初心者からエキスパートまで誰でも',
-            '実際のAI活用事例の共有とディスカッション',
-            '聞くだけ参加もOK！気軽にご参加ください'
+            '生成AIの情報交換をしたい方向け',
+            '実際のAI活用事例シェアや交流会',
+            '聞くだけ参加OK、発表者も募集中'
           ]
         }
       ]
@@ -63,9 +63,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
           highlights: [
-            'Welcome for anyone interested in crafting and games',
-            'Hands-on board game creation using AI tools',
-            'Beginners welcome! Come empty-handed'
+            'Let\'s create board games using AI!',
+            'Idea brainstorming and AI utilization sharing',
+            'AI and board game beginners welcome!'
           ]
         },
         {
@@ -79,9 +79,9 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           status: 'upcoming',
           image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png',
           highlights: [
-            'From AI beginners to experts, everyone welcome',
-            'Real AI use case sharing and discussion',
-            'Just listening is OK! Feel free to join'
+            'For those interested in generative AI information exchange',
+            'Real AI use case sharing and networking event',
+            'Just listening OK, also recruiting presenters'
           ]
         }
       ]
