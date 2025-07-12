@@ -7,13 +7,46 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // 人気記事の個別リダイレクト（SEO価値の高い記事）
+      {
+        source: '/hide_uberlogo',
+        destination: '/ja/blog/hide_uberlogo',
+        permanent: true, // 301リダイレクト (SEO重要)
+      },
+      {
+        source: '/hide_uberlogo/',
+        destination: '/ja/blog/hide_uberlogo',
+        permanent: true,
+      },
+      {
+        source: '/display-design',
+        destination: '/ja/blog/display-design',
+        permanent: true,
+      },
+      {
+        source: '/display-design/',
+        destination: '/ja/blog/display-design',
+        permanent: true,
+      },
+      {
+        source: '/magnet_ubag',
+        destination: '/ja/blog/magnet_ubag',
+        permanent: true,
+      },
+      {
+        source: '/magnet_ubag/',
+        destination: '/ja/blog/magnet_ubag',
+        permanent: true,
+      },
+      
       // 旧ブログURLから新しい多言語URLへのリダイレクト
       {
         source: '/blog/:slug*',
         destination: '/ja/blog/:slug*',
         permanent: true, // 301リダイレクト (SEO重要)
       },
-      // その他の旧URLパターンがあれば追加
+      
+      // その他の旧URLパターン
       {
         source: '/about',
         destination: '/ja/about',
