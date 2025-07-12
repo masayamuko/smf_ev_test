@@ -33,7 +33,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           price: '無料',
           link: `/${lang}/events/ai-study`,
           status: 'upcoming',
-          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751684284/Gemini_Generated_Image_1_i2nw7d.jpg'
+          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png'
         }
       ]
     },
@@ -66,7 +66,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
           price: 'Free',
           link: `/${lang}/events/ai-study`,
           status: 'upcoming',
-          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751684284/Gemini_Generated_Image_1_i2nw7d.jpg'
+          image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png'
         }
       ]
     }
