@@ -2,6 +2,102 @@ import Link from 'next/link'
 
 export default async function About({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
+
+  const content = {
+    ja: {
+      profileAlt: "Masayaのプロフィール写真",
+      title: "PROFILE",
+      lifeGuidance: "🌱 人生の指針",
+      motto: "「やらぬ善よりやる偽善」",
+      mottoDescription: "完璧でなくても、まず行動する。誰かの役に立つかもしれないなら、とりあえずやってみる。失敗を恐れず、小さな一歩から始める。そんな考え方で生きています。",
+      mottoExtra: "この価値観が、AI活用の普及活動や、コミュニティ作り、新しいツールへの挑戦の原動力になっています。",
+      threeExperiences: "僕を作った3つの経験",
+      study: {
+        title: "留学で学んだ「違い」の価値",
+        description: "20代前半のフィリピン留学で、文化の違い、価値観の違い、そして「違い」そのものの美しさを学びました。異なる背景を持つ人々と出会い、自分の当たり前が通用しない世界で、新しい視点と柔軟性を身につけました。",
+        link: "留学体験記"
+      },
+      marriage: {
+        title: "結婚で知った「支え合い」の力",
+        description: "結婚生活を通じて、一人ではできないことも、二人なら乗り越えられることを実感しました。相手の成長を支え、同時に自分も成長する。この相互支援の関係性が、今のコミュニティ作りや人と人をつなぐ活動の原点になっています。",
+        link: "パートナーシップについて"
+      },
+      coaching: {
+        title: "コーチングで磨いた「聴く力」",
+        description: "コーチングの経験で、相手の話を深く聴くことの大切さを学びました。答えを教えるのではなく、相手の中にある答えを引き出す。この姿勢が、AI活用のサポートやコミュニティ運営でも活かされています。",
+        link: "コーチングサービス"
+      },
+      personality: "Masayaの人となり",
+      newThings: {
+        title: "新しいモノ好き",
+        description: "最新のAIツールは必ずチェック。人柱になって課金し、「これは使える！」を見つけるのが趣味。失敗も含めて楽しんでいます。",
+        link: "活用中ツール"
+      },
+      clarity: {
+        title: "わかりやすさ重視",
+        description: "日本語教師、IT担当、コーチの経験から、「相手の立場で考える」「簡潔に伝える」を常に意識。専門用語は使わず、具体例で説明します。",
+        link: "経歴詳細"
+      },
+      connecting: {
+        title: "つなぐことが好き",
+        description: "人と人をつなぎ、新しい化学反応が生まれる場作りが得意。コミュニティ運営やイベント企画で多くの出会いを生み出してきました。",
+        link: "コミュニティ詳細"
+      },
+      fate: "これも何かのご縁！",
+      contact: "「興味・想いが似てる！」\n「Masayaが詳しいor経験した〇〇が気になる！」\nなんでもお気軽にDMください☺️",
+      backHome: "ホームに戻る",
+      viewCareer: "経歴を見る",
+      aboutCommunity: "コミュニティについて"
+    },
+    en: {
+      profileAlt: "Masaya's profile photo",
+      title: "PROFILE",
+      lifeGuidance: "🌱 Life Philosophy",
+      motto: "\"Action over perfection\"",
+      mottoDescription: "Even if it's not perfect, take action first. If it might help someone, just try it. Don't fear failure, start with small steps. This is how I live my life.",
+      mottoExtra: "This mindset drives my AI utilization activities, community building, and challenges with new tools.",
+      threeExperiences: "Three Experiences That Shaped Me",
+      study: {
+        title: "Learning the Value of \"Differences\" Through Study Abroad",
+        description: "Through my study abroad experience in the Philippines in my early twenties, I learned about cultural differences, value differences, and the beauty of 'differences' themselves. Meeting people from different backgrounds in a world where my assumptions didn't work, I gained new perspectives and flexibility.",
+        link: "Study Abroad Experience"
+      },
+      marriage: {
+        title: "The Power of \"Supporting Each Other\" Through Marriage",
+        description: "Through married life, I realized that things impossible alone can be overcome together. Supporting each other's growth while growing ourselves. This mutual support relationship is the foundation of my current community building and people-connecting activities.",
+        link: "About Partnership"
+      },
+      coaching: {
+        title: "\"Listening Skills\" Refined Through Coaching",
+        description: "Through coaching experience, I learned the importance of deeply listening to others. Not giving answers, but drawing out the answers within them. This approach is also utilized in AI utilization support and community management.",
+        link: "Coaching Services"
+      },
+      personality: "About Masaya's Personality",
+      newThings: {
+        title: "Loves New Things",
+        description: "Always check the latest AI tools. I enjoy being a pioneer, paying for subscriptions, and finding 'this is useful!' tools. I enjoy failures as part of the process.",
+        link: "Tools in Use"
+      },
+      clarity: {
+        title: "Clarity-Focused",
+        description: "From my experience as a Japanese teacher, IT coordinator, and coach, I always focus on 'thinking from the other's perspective' and 'communicating concisely.' I avoid jargon and explain with concrete examples.",
+        link: "Career Details"
+      },
+      connecting: {
+        title: "Loves Connecting",
+        description: "Good at creating spaces where people connect and new chemistry is born. Through community management and event planning, I've created many encounters.",
+        link: "Community Details"
+      },
+      fate: "This must be fate!",
+      contact: "\"Similar interests and passions!\"\n\"Interested in something Masaya knows about or has experienced!\"\nFeel free to DM me about anything☺️",
+      backHome: "Back to Home",
+      viewCareer: "View Career",
+      aboutCommunity: "About Community"
+    }
+  };
+
+  const t = content[lang as keyof typeof content] || content.ja;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
       {/* Hero Section - 自然と成長のテーマ */}
@@ -15,7 +111,7 @@ export default async function About({ params }: { params: Promise<{ lang: string
               <div className="relative">
                 <img 
                   src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1751444000/masayatoai.jpg" 
-                  alt="Masayaのプロフィール写真" 
+                  alt={t.profileAlt} 
                   className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover mx-auto shadow-xl hover:rotate-12 hover:scale-110 transition-transform duration-500 cursor-pointer border-4 border-green-200"
                 />
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
@@ -27,7 +123,7 @@ export default async function About({ params }: { params: Promise<{ lang: string
             {/* Main Title */}
             <div className="space-y-8 animate-fade-in">
               <h1 className="text-3xl md:text-5xl font-bold leading-relaxed text-balance text-green-900 drop-shadow-lg">
-                <span className="block">PROFILE</span>
+                <span className="block">{t.title}</span>
               </h1>
               <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto drop-shadow-sm rounded-full"></div>
             </div>
@@ -46,18 +142,17 @@ export default async function About({ params }: { params: Promise<{ lang: string
                 <div className="space-y-8">
                   <div className="space-y-4">
                     <div className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-bold tracking-wider group-hover:from-green-600 group-hover:to-emerald-700 transition-all duration-300">
-                      🌱 人生の指針
+                      {t.lifeGuidance}
                     </div>
                     <h3 className="text-3xl md:text-4xl font-bold text-green-900 group-hover:text-green-700 transition-colors duration-300">
-                      「やらぬ善よりやる偽善」
+                      {t.motto}
                     </h3>
                   </div>
                   <p className="text-lead leading-relaxed text-green-800 group-hover:text-green-900 transition-colors duration-300">
-                    完璧でなくても、まず行動する。誰かの役に立つかもしれないなら、とりあえずやってみる。
-                    失敗を恐れず、小さな一歩から始める。そんな考え方で生きています。
+                    {t.mottoDescription}
                   </p>
                   <p className="text-green-700">
-                    この価値観が、AI活用の普及活動や、コミュニティ作り、新しいツールへの挑戦の原動力になっています。
+                    {t.mottoExtra}
                   </p>
                 </div>
                 <div className="flex justify-end">
@@ -78,7 +173,7 @@ export default async function About({ params }: { params: Promise<{ lang: string
         <div className="container-custom">
           <div className="space-y-20">
             <div className="text-center space-y-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-100">僕を作った3つの経験</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-green-100">{t.threeExperiences}</h2>
               <div className="w-16 h-0.5 bg-gradient-to-r from-green-400 to-emerald-400 mx-auto rounded-full"></div>
             </div>
             
@@ -88,14 +183,13 @@ export default async function About({ params }: { params: Promise<{ lang: string
                   <div className="w-16 h-16 border-2 border-green-400/40 rounded-xl flex items-center justify-center group-hover:border-green-400 group-hover:bg-green-400/20 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 backdrop-blur-sm">
                     <span className="text-2xl">✈️</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-green-100 tracking-wide group-hover:text-green-300 transition-colors duration-300">留学で学んだ「違い」の価値</h3>
+                  <h3 className="text-xl font-semibold text-green-100 tracking-wide group-hover:text-green-300 transition-colors duration-300">{t.study.title}</h3>
                 </div>
                 <p className="text-green-200 leading-relaxed mb-6 group-hover:text-green-100 transition-colors duration-300">
-                  20代前半のフィリピン留学で、文化の違い、価値観の違い、そして「違い」そのものの美しさを学びました。
-                  異なる背景を持つ人々と出会い、自分の当たり前が通用しない世界で、新しい視点と柔軟性を身につけました。
+                  {t.study.description}
                 </p>
                 <Link href={`/${lang}/career`} className="inline-block bg-green-400/20 hover:bg-green-400 text-green-300 hover:text-green-900 font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-green-400/30 hover:border-green-400 hover:shadow-lg hover:shadow-green-400/25 text-sm backdrop-blur-sm">
-                  留学体験記
+                  {t.study.link}
                 </Link>
               </div>
               

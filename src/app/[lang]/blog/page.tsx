@@ -5,6 +5,22 @@ import { Lang } from '@/types';
 export default async function BlogPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const posts = getPosts(lang as Lang);
+  
+  const content = {
+    ja: {
+      title: "BLOG",
+      readMore: "続きを読む",
+      noArticles: "記事が見つかりません。"
+    },
+    en: {
+      title: "BLOG",
+      readMore: "Read More",
+      noArticles: "No articles found."
+    }
+  };
+
+  const t = content[lang as keyof typeof content] || content.ja;
+  
   console.log('Blog posts from Markdown:', posts);
   return (
     <div className="min-h-screen bg-white">
@@ -21,7 +37,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
       >
         <div className="text-center w-full">
           <h1 className="text-4xl md:text-6xl font-bold leading-relaxed text-balance text-black drop-shadow-lg">
-            BLOG
+            {t.title}
           </h1>
           <div className="w-32 h-1 bg-black mx-auto drop-shadow-sm"></div>
         </div>
@@ -57,7 +73,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
                   </h2>
                   <p className="text-orange-800 text-sm mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
                   <div className="inline-flex items-center text-orange-700 hover:text-white font-semibold bg-orange-200 hover:bg-orange-500 transition-colors rounded px-4 py-2">
-                    続きを読む
+                    {t.readMore}
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -66,7 +82,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
               </Link>
             )) : (
               <div className="col-span-full text-center py-12">
-                <p className="text-gray-600 text-lg">記事が見つかりません。</p>
+                <p className="text-gray-600 text-lg">{t.noArticles}</p>
               </div>
             )}
           </div>

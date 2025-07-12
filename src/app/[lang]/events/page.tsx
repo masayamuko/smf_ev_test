@@ -2,32 +2,73 @@ import Link from 'next/link'
 
 export default async function EventsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const upcomingEvents = [
-    {
-      id: 'boardgame-night',
-      title: 'ボドゲつくらNight',
-      date: '7/23 19:00-',
-      description: 'みんなの「作りたい」をAIと一緒に形にしてゆくボドゲ作りの夜',
-      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg',
-      category: 'AI × ボードゲーム',
-      location: '福岡',
-      price: '無料',
-      link: `/${lang}/events/boardgame`,
-      status: 'upcoming'
+  
+  const content = {
+    ja: {
+      title: "イベント開催日程",
+      altText: "イベント背景",
+      upcoming: "開催予定",
+      details: "詳細を見る",
+      backHome: "ホームに戻る",
+      events: [
+        {
+          id: 'boardgame-night',
+          title: 'ボドゲつくらNight',
+          date: '7/23 19:00-',
+          description: 'みんなの「作りたい」をAIと一緒に形にしてゆくボドゲ作りの夜',
+          category: 'AI × ボードゲーム',
+          location: '福岡',
+          price: '無料',
+          link: `/${lang}/events/boardgame`,
+          status: 'upcoming'
+        },
+        {
+          id: 'ai-share',
+          title: '生成AI活用シェア会',
+          date: '7/15(火) 19:00-',
+          description: '仕事だけでなく、遊びや生活でもどんなふうに生成AIを役立ててるかシェアし合う会',
+          category: 'AI活用',
+          location: '福岡',
+          price: '無料',
+          link: `/${lang}/events/ai-study`,
+          status: 'upcoming'
+        }
+      ]
     },
-    {
-      id: 'ai-share',
-      title: '生成AI活用シェア会',
-      date: '7/15(火) 19:00-',
-      description: '仕事だけでなく、遊びや生活でもどんなふうに生成AIを役立ててるかシェアし合う会',
-      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1751652432/ChatGPT_2025%E5%B9%B46%E6%9C%8829%E6%97%A5_%E7%94%BB%E5%83%8F_bwfjco.png',
-      category: 'AI活用',
-      location: '福岡',
-      price: '無料',
-      link: `/${lang}/events/ai-study`,
-      status: 'upcoming'
+    en: {
+      title: "Event Schedule",
+      altText: "Event background",
+      upcoming: "Upcoming",
+      details: "View Details",
+      backHome: "Back to Home",
+      events: [
+        {
+          id: 'boardgame-night',
+          title: 'Board Game Creation Night',
+          date: '7/23 19:00-',
+          description: 'An evening of board game creation where everyone\'s "want to create" takes shape with AI',
+          category: 'AI × Board Games',
+          location: 'Fukuoka',
+          price: 'Free',
+          link: `/${lang}/events/boardgame`,
+          status: 'upcoming'
+        },
+        {
+          id: 'ai-share',
+          title: 'Generative AI Utilization Sharing Session',
+          date: '7/15 (Tue) 19:00-',
+          description: 'A gathering to share how generative AI is being utilized not only in work, but also in play and daily life',
+          category: 'AI Utilization',
+          location: 'Fukuoka',
+          price: 'Free',
+          link: `/${lang}/events/ai-study`,
+          status: 'upcoming'
+        }
+      ]
     }
-  ]
+  };
+
+  const t = content[lang as keyof typeof content] || content.ja;
 
   return (
     <div className="min-h-screen bg-white">
@@ -35,11 +76,11 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
       <section className="relative w-full h-[320px] md:h-[420px] flex items-center justify-center overflow-hidden pt-24">
         <img 
           src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1751684284/Gemini_Generated_Image_1_i2nw7d.jpg" 
-          alt="イベント背景" 
+          alt={t.altText} 
           className="absolute inset-0 w-full h-full object-cover object-center z-0 brightness-75" 
         />
         <div className="relative z-10 w-full text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">イベント開催日程</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">{t.title}</h1>
         </div>
       </section>
 
@@ -47,7 +88,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
       <section className="section py-12 md:py-20">
         <div className="container-narrow">
           <div className="grid gap-12 md:grid-cols-2">
-            {upcomingEvents.map((event) => (
+            {t.events.map((event) => (
               <Link 
                 key={event.id} 
                 href={event.link}
@@ -66,7 +107,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
                   </div>
                   <div className="absolute top-4 right-4">
                     <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                      開催予定
+                      {t.upcoming}
                     </span>
                   </div>
                 </div>
@@ -99,7 +140,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
                   </div>
                   
                   <div className="inline-block w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-4 px-8 rounded-xl text-center text-lg md:text-xl group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-                    詳細を見る
+                    {t.details}
                   </div>
                 </div>
               </Link>
@@ -115,7 +156,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              ホームに戻る
+              {t.backHome}
             </Link>
           </div>
         </div>
