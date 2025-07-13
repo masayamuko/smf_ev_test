@@ -2,33 +2,74 @@ import Link from 'next/link'
 
 export default async function BoardgameEventPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
+  
+  const content = {
+    ja: {
+      backHome: "← ホームに戻る",
+      title: "AIでボドゲつくらNight",
+      altText: "AIでボドゲつくらNight - イベント画像",
+      date: "7/23(水) 19:00-",
+      location: "福岡"
+    },
+    en: {
+      backHome: "← Back to Home",
+      title: "AI Board Game Creation Night",
+      altText: "AI Board Game Creation Night - Event Image",
+      date: "7/23 (Wed) 19:00-",
+      location: "Fukuoka"
+    }
+  };
+  
+  const t = content[lang as keyof typeof content] || content.ja;
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="section-alt pt-24">
         <div className="container-narrow">
-          <div className="text-center space-y-12">
+          <div className="text-center space-y-2">
             <div className="space-y-8">
               <Link href={`/${lang}`} className="inline-block text-gray-600 hover:text-black transition-colors duration-300">
-                ← ホームに戻る
+                {t.backHome}
               </Link>
-              <h1 className="text-4xl md:text-5xl font-bold">AIでボドゲつくらNight</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">{t.title}</h1>
               <div className="w-16 h-0.5 bg-black mx-auto"></div>
             </div>
             
-            <div className="max-w-2xl mx-auto">
-              <img 
-                src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg" 
-                alt="AIでボドゲつくらNight - イベント画像"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg"
-              />
+            <div className="max-w-md mx-auto">
+              <div className="relative">
+                <img 
+                  src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1751450178/aibg04_xaad2j.jpg" 
+                  alt={t.altText}
+                  className="w-full aspect-square object-cover rounded-2xl shadow-lg"
+                />
+                {/* 左上に日付タグ */}
+                <div className="absolute top-4 left-4">
+                  <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {t.date}
+                  </span>
+                </div>
+                {/* 右下に会場タグ */}
+                <div className="absolute bottom-4 right-4">
+                  <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    {t.location}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Event Details */}
-      <section className="section">
+      <section className="py-8">
         <div className="container-narrow">
           <div className="space-y-16">
             {/* イベント概要 */}

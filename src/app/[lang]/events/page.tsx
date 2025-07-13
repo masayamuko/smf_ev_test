@@ -14,7 +14,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
         {
           id: 'boardgame-night',
           title: 'ボドゲつくらNight',
-          date: '7/23 19:00-',
+          date: '7/23(水) 19:00-',
           description: 'みんなの「作りたい」をAIと一緒に形にしてゆくボドゲ作りの夜',
           category: 'AI × ボードゲーム',
           location: '福岡',
@@ -55,7 +55,7 @@ export default async function EventsPage({ params }: { params: Promise<{ lang: s
         {
           id: 'boardgame-night',
           title: 'Board Game Creation Night',
-          date: '7/23 19:00-',
+          date: '7/23 (Wed) 19:00-',
           description: 'An evening of board game creation where everyone\'s "want to create" takes shape with AI',
           category: 'AI × Board Games',
           location: 'Fukuoka',
