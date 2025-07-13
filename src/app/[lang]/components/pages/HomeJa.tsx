@@ -116,7 +116,16 @@ export default function Home({ lang = 'ja' }: { lang?: string }) {
                   <h3 className="text-lg font-bold text-gray-800">News</h3>
                 </div>
                 <div className="space-y-3">
-                  <Link href={`/${lang}/events`} className="block">
+                  <Link href={`/${lang}/events/boardgame`} className="block">
+                    <div className="flex items-start gap-3 p-3 bg-white/30 rounded-lg border-2 border-blue-200 hover:border-blue-400 transition-colors duration-200 cursor-pointer relative text-left">
+                      <span className="text-lg">🎲</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-base font-semibold text-gray-800 leading-tight hover:text-blue-600 transition-colors duration-200">7/23 ボドゲつくらNight@福岡</p>
+                      </div>
+                      <span className="absolute bottom-2 right-3 bg-blue-200 text-blue-800 text-xs font-bold px-2 py-0.5 rounded-full shadow">募集中</span>
+                    </div>
+                  </Link>
+                  <Link href={`/${lang}/events/ai-study`} className="block">
                     <div className="flex items-start gap-3 p-3 bg-white/30 rounded-lg border-2 border-orange-200 hover:border-orange-400 transition-colors duration-200 cursor-pointer relative text-left">
                       <span className="text-lg">📅</span>
                       <div className="flex-1 min-w-0">
