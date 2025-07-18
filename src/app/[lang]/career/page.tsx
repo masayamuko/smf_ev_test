@@ -35,16 +35,16 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
       timeline: {
         2025: {
           title: "再出発の準備中！",
-          description: "・各種生成AIツールの学習、実践（独学）<br />・ものづくり, 3DCADの学習（通学）<br />企業研修や就労支援などでCAD(2D,3D)や生成AIの活用を教える仕事に興味があり就活中です。理想は週３勤務の社員＋フリーランス。学習とポートフォリオづくり、NPOや個人へのAI導入テストサポート中。",
+          description: "・各種生成AIツールの学習、実践（独学）<br />・ものづくり, 3DCADの学習（通学）<br />企業研修や就労支援などでCAD(2D,3D)や生成AIの活用を教える仕事に興味があり就活してます。理想は週３勤務の社員＋フリーランス。学習とポートフォリオづくり、NPOや個人へのAI導入テストサポート中。",
           tags: ["AI活用", "3DCAD学習", "個人・NPOボランティア"]
         },
         2020: {
           title: "会社員とフリーランス",
-          description: "・海外留学事業と社会的養護のユース支援してるNPOで正社員勤務（5年）<br />・個人事業でコーチング、中小企業のIT顧問も継続（10年）<br />2024年年末に退職&廃業して理想のライフスタイル目指して動き始めました。",
+          description: "・海外留学事業と社会的養護のユース支援してるNPOで正社員勤務（5年）<br />・個人でのコーチング、中小企業のIT顧問も継続（フリーランス合計10年）<br />2024年年末に退職&廃業して理想のライフスタイル目指して動き始めました。",
           tags: ["初の正社員", "コーチング", "IT顧問"]
         },
         2015: {
-          title: "専業フリーランス",
+          title: "専業フリーランス(5年)",
           description: "・個人ブログ運営<br />・広告運用代行<br />・中小企業のIT顧門<br />・海外個人輸出<br />・コーチング<br />などいろんな仕事を経験してきました。",
           tags: ["ブログ運営", "広告運用", "中小企業のIT顧問", "海外輸出", "コーチング"]
         },
@@ -131,11 +131,11 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
         },
         2020: {
           title: "Employee & Freelancer",
-          description: "・Full-time employee at NPO supporting overseas study programs and youth in social care (5 years)<br />・Continued personal coaching and IT consulting for small businesses (10 years)<br />Resigned & closed business at end of 2024 to pursue ideal lifestyle.",
+          description: "・Full-time employee at NPO supporting overseas study programs and youth in social care (5 years)<br />・Continued personal coaching and IT consulting for small businesses (Total 10 years as freelancer)<br />Resigned & closed business at end of 2024 to pursue ideal lifestyle.",
           tags: ["First Full-time Job", "Coaching", "IT Consulting"]
         },
         2015: {
-          title: "Full-time Freelancer",
+          title: "Full-time Freelancer (5 years)",
           description: "・Personal blog management<br />・Advertising operations<br />・IT consulting for small businesses<br />・International personal export<br />・Coaching<br />Experienced various types of work.",
           tags: ["Blog Management", "Advertising", "Small Business IT Consulting", "International Export", "Coaching"]
         },
