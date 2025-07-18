@@ -33,26 +33,42 @@ const customExcerpts = {
 };
 
 function getPosts() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const posts = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
+  const posts: any[] = [];
+  const locales = ['ja', 'en']; // サポートする言語
+  
+  for (const lang of locales) {
+    const langDir = path.join(postsDirectory, lang);
+    if (!fs.existsSync(langDir)) {
+      continue;
+    }
     
-    // カスタム導入文があれば使用、なければデフォルト
-    const excerpt = customExcerpts[slug as keyof typeof customExcerpts] || 
-                   (content.substr(0, 120) + (content.length > 120 ? '...' : ''));
+    const fileNames = fs.readdirSync(langDir);
+    const langPosts = fileNames
+      .filter(fileName => fileName.endsWith('.md') && fileName !== '_template.md')
+      .map((fileName) => {
+        const slug = fileName.replace(/\.md$/, '');
+        const fullPath = path.join(langDir, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const { data, content } = matter(fileContents);
+        
+        // カスタム導入文があれば使用、なければデフォルト
+        const excerpt = customExcerpts[slug as keyof typeof customExcerpts] || 
+                       (content.substr(0, 120) + (content.length > 120 ? '...' : ''));
+        
+        return {
+          slug,
+          title: data.title || slug,
+          category: data.category || 'Blog',
+          date: data.date || '',
+          excerpt,
+          image: data.image || '', // frontmatterにimageがあれば追加
+          lang: lang
+        };
+      });
     
-    return {
-      slug,
-      title: data.title || slug,
-      category: data.category || 'Blog',
-      date: data.date || '',
-      excerpt,
-      image: data.image || '', // frontmatterにimageがあれば追加
-    };
-  });
+    posts.push(...langPosts);
+  }
+  
   // 日付で降順ソート（新しい順）
   return posts.sort((a, b) => (b.date > a.date ? 1 : -1));
 }
