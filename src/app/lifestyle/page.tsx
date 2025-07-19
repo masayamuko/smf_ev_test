@@ -197,19 +197,31 @@ export default function Lifestyle() {
                       </div>
                     </div>
                   </div>
+                  {/* キャリアへのリンク - タイムラインの一部として */}
+                  <div className="group cursor-pointer relative flex items-start space-x-8 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2">
+                    <Link href="/career" className="flex items-start space-x-8 w-full">
+                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:scale-110 transition-all duration-300">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1 bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl p-8 group-hover:border-blue-400 group-hover:shadow-2xl group-hover:shadow-blue-200/30 transition-all duration-500">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">仕事の経歴</h3>
+                        <p className="text-gray-600 mb-3 group-hover:text-gray-700 transition-colors duration-300">
+                          フリーランス、正社員、AI学習、就活中...<br />
+                          仕事に関する軌跡はこちらから
+                        </p>
+                        <div className="flex items-center gap-2 text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
+                          <span className="text-sm font-medium">キャリアページへ</span>
+                          <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            {/* キャリアへのリンクボタン */}
-            <div className="mt-12 text-center">
-              <Link href="/career" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <span className="text-lg">💼</span>
-                <span>仕事の経歴はこちら</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
             </div>
           </div>
         </div>
