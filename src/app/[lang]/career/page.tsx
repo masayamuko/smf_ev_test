@@ -36,6 +36,7 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
         2025: {
           title: "再出発の準備中！",
           description: "・各種生成AIツールの学習、実践（独学）<br />・ものづくり, 3DCADの学習（通学）<br />企業研修や就労支援などでCAD(2D,3D)や生成AIの活用を教える仕事に興味があり就活してます。理想は週３勤務の社員＋フリーランス。学習とポートフォリオづくり、NPOや個人へのAI導入テストサポート中。",
+          portfolioButton: "ポートフォリオサイトを見る",
           tags: ["AI活用", "3DCAD学習", "個人・NPOボランティア"]
         },
         2020: {
@@ -128,6 +129,7 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
         2025: {
           title: "Preparing for a Fresh Start!",
           description: "・Learning and practicing various generative AI tools (self-study)<br />・Learning manufacturing & 3D CAD (in-person courses)<br />Job hunting for positions teaching CAD (2D, 3D) and generative AI utilization in corporate training and employment support. Ideal: 3-day employee + freelance work. Focusing on learning and portfolio building, providing AI implementation test support for NPOs and individuals.",
+          portfolioButton: "View Portfolio Site",
           tags: ["AI Learning", "3D CAD", "Individual & NPO Volunteer"]
         },
         2020: {
@@ -230,7 +232,23 @@ export default async function Career({ params }: { params: Promise<{ lang: strin
                     </div>
                     <div className="flex-1 bg-white border-2 border-orange-400 rounded-2xl p-8 group-hover:border-orange-400 group-hover:shadow-2xl group-hover:shadow-orange-200/30 transition-all duration-500 shadow-2xl shadow-orange-200/30">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-300 text-orange-600">{t.timeline[2025].title}</h3>
-                      <p className="text-gray-600 mb-3 group-hover:text-gray-700 transition-colors duration-300" dangerouslySetInnerHTML={{ __html: t.timeline[2025].description }} />
+                      <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300" dangerouslySetInnerHTML={{ __html: t.timeline[2025].description }} />
+                      <div className="mb-4">
+                        <a 
+                          href="https://portfolio.masayamuko.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-orange-300/50 hover:scale-105 group/portfolio"
+                        >
+                          <svg className="w-5 h-5 group-hover/portfolio:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 00-2 2H10a2 2 0 00-2-2V6m8 0H8m0 0v-.5A.5.5 0 018.5 5h7a.5.5 0 01.5.5V6m-8 0h8" />
+                          </svg>
+                          {t.timeline[2025].portfolioButton}
+                          <svg className="w-4 h-4 group-hover/portfolio:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      </div>
                       <div className="flex flex-wrap gap-2">
                         {t.timeline[2025].tags.map((tag: string, index: number) => (
                           <span key={index} className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">{tag}</span>

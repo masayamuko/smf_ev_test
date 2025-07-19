@@ -6,8 +6,8 @@ export default async function AIStudyEventPage({ params }: { params: Promise<{ l
   const content = {
     ja: {
       backHome: "← ホームに戻る",
-      title: "みんなの生成AI活用発表会",
-      altText: "みんなの生成AI活用発表会 - イベント画像",
+      title: "みんなの生成AI活用シェア会",
+      altText: "みんなの生成AI活用シェア会 - イベント画像",
       date: "7/15(火) 19:00-",
       location: "福岡",
       eventOverview: "イベント概要",
@@ -16,8 +16,8 @@ export default async function AIStudyEventPage({ params }: { params: Promise<{ l
       concept: "コンセプト",
       conceptText: "仕事だけでなく、遊びや生活でもどんなふうに生成AIを役立ててるかシェアし合う会です。実際の活用事例を通じて、みんなでAIの可能性を発見していきます。",
       participationStyle: "参加スタイル",
-      participationText: "カジュアルに聴くだけ参加、初心者さんWELCOME！発表したい方も、まずは聞いてみたい方も、どちらも大歓迎です。",
-      presentationExamples: "発表内容例",
+      participationText: "カジュアルに聴くだけ参加、初心者さんWELCOME！シェアしたい方も、まずは聞いてみたい方も、どちらも大歓迎です。",
+      presentationExamples: "シェア内容例",
       examples: [
         "仕事での効率化事例",
         "趣味や創作活動での活用法",
@@ -33,9 +33,9 @@ export default async function AIStudyEventPage({ params }: { params: Promise<{ l
       diverse: "多様な視点",
       diverseText: "様々な分野・立場からのAI活用事例",
       masayaMessage: "Masayaからのメッセージ",
-      messageText1: "「みんなの生成AI活用発表会」は、AI活用の\"リアル\"を共有する場です。",
+      messageText1: "「みんなの生成AI活用シェア会」は、AI活用の\"リアル\"を共有する場です。",
       messageText2: "教科書的な使い方ではなく、みんなが実際にどんなふうにAIを生活に取り入れているかを聞けるのが、この会の一番の魅力です。「こんな使い方があるんだ！」「これなら自分にもできそう」という発見がたくさんあります。",
-      messageText3: "発表者の方も、聞き手の方も、みんなが学び合える温かい雰囲気を大切にしています。AIを使ったことがない方も、ベテランの方も、それぞれの視点で楽しめる会になっています。",
+      messageText3: "シェアする方も、聞き手の方も、みんなが学び合える温かい雰囲気を大切にしています。AIを使ったことがない方も、ベテランの方も、それぞれの視点で楽しめる会になっています。",
       messageText4: "「聞くだけ参加」も大歓迎！まずは気軽に参加してみてください。",
       contact: "参加・お問い合わせ",
       contactText: "イベントへの参加や詳細については、お気軽にお声がけください。",

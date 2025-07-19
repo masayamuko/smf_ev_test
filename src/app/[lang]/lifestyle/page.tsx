@@ -225,7 +225,7 @@ export default async function Lifestyle({ params }: { params: Promise<{ lang: st
     <div className="min-h-screen bg-white">
       {/* Hero Section - 統一感のあるデザイン（高さ半分） */}
       <section className="min-h-[25vh] relative bg-cover bg-center bg-no-repeat pt-24" style={{
-        backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://res.cloudinary.com/dg3mdcuju/image/upload/v1751644296/AI_Journey_Through_Nature_p3qkcd.png')"
+        backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://res.cloudinary.com/dg3mdcuju/image/upload/v1752911265/masan_dayo__--ar_43_--profile_njfaa7d_--v_7_22698f24-cdcc-49db-b426-347829e6896a_1_amawiu.png')"
       }}>
         <div className="container-narrow">
           <div className="flex flex-col items-center justify-center min-h-[25vh] text-center space-y-12">

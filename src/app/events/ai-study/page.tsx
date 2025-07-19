@@ -13,14 +13,14 @@ export default function AIStudyPage() {
               <Link href="/" className="inline-block text-gray-600 hover:text-black transition-colors duration-300">
                 ← ホームに戻る
               </Link>
-              <h1 className="text-4xl md:text-5xl font-bold">みんなの生成AI活用発表会</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">みんなの生成AI活用シェア会</h1>
               <div className="w-16 h-0.5 bg-black mx-auto"></div>
             </div>
             
             <div className="max-w-2xl mx-auto">
               <img 
-                src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1751652432/ChatGPT_2025%E5%B9%B46%E6%9C%8829%E6%97%A5_%E7%94%BB%E5%83%8F_bwfjco.png" 
-                alt="みんなの生成AI活用発表会 - イベント画像"
+                src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1752363438/Masan_Dayo_AI_Profile_wca3om.png" 
+                alt="みんなの生成AI活用シェア会 - イベント画像"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
             </div>
@@ -56,12 +56,12 @@ export default function AIStudyPage() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-green-600">参加スタイル</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      カジュアルに聴くだけ参加、初心者さんWELCOME！発表したい方も、まずは聞いてみたい方も、どちらも大歓迎です。
+                      カジュアルに聴くだけ参加、初心者さんWELCOME！シェアしたい方も、まずは聞いてみたい方も、どちらも大歓迎です。
                     </p>
                   </div>
                   
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-green-600">発表内容例</h3>
+                    <h3 className="text-xl font-semibold text-green-600">シェア内容例</h3>
                     <ul className="text-gray-700 leading-relaxed space-y-2">
                       <li>• 仕事での効率化事例</li>
                       <li>• 趣味や創作活動での活用法</li>
@@ -124,7 +124,7 @@ export default function AIStudyPage() {
                 
                 <div className="max-w-3xl mx-auto space-y-6">
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    「みんなの生成AI活用発表会」は、AI活用の"リアル"を共有する場です。
+                    「みんなの生成AI活用シェア会」は、AI活用の"リアル"を共有する場です。
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed">
@@ -132,7 +132,7 @@ export default function AIStudyPage() {
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    発表者の方も、聞き手の方も、みんなが学び合える温かい雰囲気を大切にしています。AIを使ったことがない方も、ベテランの方も、それぞれの視点で楽しめる会になっています。
+                    シェアする方も、聞き手の方も、みんなが学び合える温かい雰囲気を大切にしています。AIを使ったことがない方も、ベテランの方も、それぞれの視点で楽しめる会になっています。
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed font-semibold">
