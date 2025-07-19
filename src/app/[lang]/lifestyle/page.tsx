@@ -106,11 +106,7 @@ export default async function Lifestyle({ params }: { params: Promise<{ lang: st
           tools: "活用ツールを見る",
           community: "コミュニティについて"
         },
-        careerLink: {
-          title: "仕事の経歴",
-          description: "フリーランス、正社員、AI学習、就活中...<br />仕事に関する軌跡はこちらから",
-          linkText: "キャリアページへ"
-        }
+        careerLink: "仕事の経歴"
       },
       backHome: "ホームに戻る"
     },
@@ -217,11 +213,7 @@ export default async function Lifestyle({ params }: { params: Promise<{ lang: st
           tools: "View Tools",
           community: "About Community"
         },
-        careerLink: {
-          title: "Career Journey",
-          description: "Freelance, Full-time Employee, AI Learning, Job Hunting...<br />Work-related milestones are documented here",
-          linkText: "Go to Career Page"
-        }
+        careerLink: "Career Journey"
       },
       backHome: "Back to Home"
     }
@@ -390,7 +382,10 @@ export default async function Lifestyle({ params }: { params: Promise<{ lang: st
                     </div>
                   </div>
                 </div>
-                  {/* キャリアへのリンク - タイムラインの一部として */}
+              </div>
+            </div>
+            
+                  {/* キャリアへのリンク - タイムラインスタイル */}
                   <div className="group cursor-pointer relative flex items-start space-x-8 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2">
                     <Link href={`/${lang}/career`} className="flex items-start space-x-8 w-full">
                       <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:scale-110 transition-all duration-300">
@@ -399,10 +394,13 @@ export default async function Lifestyle({ params }: { params: Promise<{ lang: st
                         </svg>
                       </div>
                       <div className="flex-1 bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl p-8 group-hover:border-blue-400 group-hover:shadow-2xl group-hover:shadow-blue-200/30 transition-all duration-500">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{t.careerLink.title}</h3>
-                        <p className="text-gray-600 mb-3 group-hover:text-gray-700 transition-colors duration-300" dangerouslySetInnerHTML={{ __html: t.careerLink.description }} />
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{t.philosophy.careerLink}</h3>
+                        <p className="text-gray-600 mb-3 group-hover:text-gray-700 transition-colors duration-300">
+                          フリーランス、正社員、AI学習、就活中...<br />
+                          仕事に関する軌跡はこちらから
+                        </p>
                         <div className="flex items-center gap-2 text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
-                          <span className="text-sm font-medium">{t.careerLink.linkText}</span>
+                          <span className="text-sm font-medium">キャリアページへ</span>
                           <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>
@@ -410,9 +408,6 @@ export default async function Lifestyle({ params }: { params: Promise<{ lang: st
                       </div>
                     </Link>
                   </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
