@@ -76,6 +76,103 @@ npm install
 - Tailwind CSS
 - React Markdown
 
+### 🚨 GitHubプッシュ時の上位ディレクトリ誤プッシュ問題
+
+**問題:** 特定のディレクトリのみプッシュしたいのに、上位ディレクトリ全体がプッシュされる
+
+**原因:**
+- 対象ディレクトリが既存のGitリポジトリのサブディレクトリになっている
+- 上位ディレクトリに`.git`フォルダが存在し、git操作がそれを参照する
+
+**例:**
+```
+iCloud/                  ← .gitがここにある（既存リポジトリ）
+  └── Projects/
+      └── MyApp/         ← ここだけプッシュしたい
+```
+
+**事前確認方法:**
+```bash
+# 現在のディレクトリでGitリポジトリの状況を確認
+pwd
+git status
+git remote -v
+
+# 上位ディレクトリにGitリポジトリがないかチェック
+find .. -name ".git" -type d 2>/dev/null
+```
+
+**解決方法:**
+
+1. **方法1: 新しい独立リポジトリの作成（推奨）**
+```bash
+# 対象ディレクトリに移動
+cd /path/to/target/directory
+
+# 既存のGit履歴を削除（注意：この操作は元に戻せません）
+rm -rf .git
+
+# 新しいGitリポジトリを初期化
+git init
+
+# 適切な.gitignoreを作成
+echo "node_modules/" > .gitignore
+echo ".cache/" >> .gitignore
+echo "build/" >> .gitignore
+
+# ファイルをステージング
+git add .
+
+# 初期コミット
+git commit -m "Initial commit: Project Name"
+
+# リモートリポジトリを追加
+git remote add origin https://github.com/username/repository.git
+
+# プッシュ
+git push -u origin main
+```
+
+2. **方法2: 既存リポジトリから特定ディレクトリを分離**
+```bash
+# 新しい場所にディレクトリをコピー
+cp -r /path/to/current/directory /path/to/new/location
+
+# 新しい場所で方法1を実行
+```
+
+**予防策:**
+1. **プロジェクト開始前の確認**
+   ```bash
+   # 新規プロジェクト作成時は必ずGit状況を確認
+   git status
+   # "not a git repository"と表示されることを確認
+   ```
+
+2. **ディレクトリ構造の整理**
+   - 各プロジェクトは独立したディレクトリに配置
+   - 上位ディレクトリをGitリポジトリにしない
+
+3. **プッシュ前の最終確認**
+   ```bash
+   # ステージングされているファイルを確認
+   git status
+   
+   # ルートディレクトリの確認
+   git rev-parse --show-toplevel
+   ```
+
+**緊急対処法（誤プッシュ後）:**
+```bash
+# 新しいクリーンなリポジトリで強制上書き
+git push -f origin main
+```
+
+**⚠️ 注意事項:**
+- `rm -rf .git`は元に戻せないので、重要なコミット履歴がある場合は事前にバックアップ
+- 強制プッシュ(`-f`)はチーム開発では慎重に使用
+- 大きなファイルがプッシュされた場合、GitHub LFSの利用を検討
+
 ## ビルド・デプロイコマンド
 
 ```bash

@@ -50,7 +50,7 @@ const DonationPage = () => {
         }}></div>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>🤝</div>
+            <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}><span style={{ display: 'inline-block', width: '64px', height: '64px', background: 'white', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
             <h1 style={{ 
               fontSize: '3.5rem', 
               fontWeight: '700', 
@@ -90,7 +90,7 @@ const DonationPage = () => {
                 boxShadow: '0 8px 25px rgba(0,0,0,0.2)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease'
               }}>
-                <span style={{ fontSize: '1.3rem' }}>💝</span>
+                <span style={{ display: 'inline-block', width: '24px', height: '24px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
                 今すぐ寄付する
               </a>
               <a href="#usage" style={{
@@ -193,22 +193,22 @@ const DonationPage = () => {
                 fontSize: '2rem', 
                 margin: '0 auto 1.5rem',
                 color: 'white'
-              }}>👥</div>
+              }}><span style={{ display: 'inline-block', width: '32px', height: '32px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
               <div style={{ 
                 fontSize: '3rem', 
                 fontWeight: '700', 
                 color: 'var(--primary-color)', 
                 marginBottom: '0.5rem' 
-              }}>40%</div>
+              }}>55%</div>
               <h4 style={{ 
                 fontSize: '1.3rem', 
                 fontWeight: '700', 
                 marginBottom: '1rem', 
                 color: 'var(--primary-color)' 
-              }}>職員人件費</h4>
+              }}>人件費・支援体制</h4>
               <p style={{ color: '#666', lineHeight: '1.6' }}>
                 専門職員の配置と研修費用<br />
-                24時間体制での支援提供
+                24時間体制での支援提供と職員の専門性向上
               </p>
             </div>
             
@@ -231,22 +231,22 @@ const DonationPage = () => {
                 fontSize: '2rem', 
                 margin: '0 auto 1.5rem',
                 color: 'white'
-              }}>🏠</div>
+              }}><span style={{ display: 'inline-block', width: '48px', height: '48px', background: 'white', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
               <div style={{ 
                 fontSize: '3rem', 
                 fontWeight: '700', 
                 color: '#22c55e', 
                 marginBottom: '0.5rem' 
-              }}>25%</div>
+              }}>15%</div>
               <h4 style={{ 
                 fontSize: '1.3rem', 
                 fontWeight: '700', 
                 marginBottom: '1rem', 
                 color: '#22c55e' 
-              }}>施設運営費</h4>
+              }}>施設運営・管理費</h4>
               <p style={{ color: '#666', lineHeight: '1.6' }}>
-                光熱費、通信費、設備維持費<br />
-                安心安全な生活環境の維持
+                施設維持費、光熱費、法人運営費<br />
+                安心安全な環境維持と透明性の高い運営
               </p>
             </div>
             
@@ -269,13 +269,13 @@ const DonationPage = () => {
                 fontSize: '2rem', 
                 margin: '0 auto 1.5rem',
                 color: 'white'
-              }}>🎓</div>
+              }}><span style={{ display: 'inline-block', width: '48px', height: '48px', background: 'white', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
               <div style={{ 
                 fontSize: '3rem', 
                 fontWeight: '700', 
                 color: '#d97706', 
                 marginBottom: '0.5rem' 
-              }}>20%</div>
+              }}>30%</div>
               <h4 style={{ 
                 fontSize: '1.3rem', 
                 fontWeight: '700', 
@@ -284,45 +284,7 @@ const DonationPage = () => {
               }}>青少年支援費</h4>
               <p style={{ color: '#666', lineHeight: '1.6' }}>
                 生活用品、教育費、就労支援費<br />
-                一人ひとりの自立に向けた支援
-              </p>
-            </div>
-            
-            <div style={{ 
-              background: 'white', 
-              padding: '2.5rem', 
-              borderRadius: '16px', 
-              textAlign: 'center',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-              border: '1px solid #f0f0f0'
-            }}>
-              <div style={{ 
-                width: '80px', 
-                height: '80px', 
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                fontSize: '2rem', 
-                margin: '0 auto 1.5rem',
-                color: 'white'
-              }}>📋</div>
-              <div style={{ 
-                fontSize: '3rem', 
-                fontWeight: '700', 
-                color: '#7c3aed', 
-                marginBottom: '0.5rem' 
-              }}>15%</div>
-              <h4 style={{ 
-                fontSize: '1.3rem', 
-                fontWeight: '700', 
-                marginBottom: '1rem', 
-                color: '#7c3aed' 
-              }}>管理費</h4>
-              <p style={{ color: '#666', lineHeight: '1.6' }}>
-                法人運営、広報、その他管理費<br />
-                透明性の高い運営のために
+                一人ひとりの自立に向けた直接支援
               </p>
             </div>
           </div>
@@ -397,7 +359,7 @@ const DonationPage = () => {
                       onChange={(e) => setDonationType(e.target.value)}
                       style={{ margin: 0 }}
                     />
-                    <span style={{ fontSize: '1.2rem' }}>💝</span>
+                    <span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
                     単発寄付
                   </label>
                   <label style={{ 
@@ -424,7 +386,7 @@ const DonationPage = () => {
                       onChange={(e) => setDonationType(e.target.value)}
                       style={{ margin: 0 }}
                     />
-                    <span style={{ fontSize: '1.2rem' }}>🔄</span>
+                    <span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
                     継続寄付（月額）
                   </label>
                 </div>
@@ -683,7 +645,7 @@ const DonationPage = () => {
                     minWidth: '200px'
                   }}
                 >
-                  🤝 寄付を申し込む
+                  <span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'white', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>寄付を申し込む
                 </button>
                 <p style={{ 
                   marginTop: '1rem', 
@@ -916,7 +878,7 @@ const DonationPage = () => {
               boxShadow: '0 6px 20px rgba(230, 126, 80, 0.15)',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease'
             }}>
-              <span style={{ fontSize: '1.3rem' }}>📞</span>
+              <span style={{ display: 'inline-block', width: '24px', height: '24px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
               お問い合わせ
             </a>
           </div>

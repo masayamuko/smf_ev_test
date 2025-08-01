@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "e6d977a199d53563",
+    "type": "split",
+    "children": [
+      {
+        "id": "593aaa72ec61e6d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a8f2f5ed2fb52a43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02_team/YHM/NPOへの提案内容エージェント依頼用.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NPOへの提案内容エージェント依頼用"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f1b7c7011ae6160f",
+    "type": "split",
+    "children": [
+      {
+        "id": "ff6cfadbfb442205",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bc142a6d545b82e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "88232f22e853d16c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "8c8fc40bf47023a4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6f1a9f8921ea5cd3",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e895ab97987d86a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62a49f0b2ef5d920",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Public/LP/デジタル飲み/node_modules/ms/license.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "licenseへのバックリンク"
+            }
+          },
+          {
+            "id": "21a6c38f7fcf3832",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Public/LP/デジタル飲み/node_modules/ms/license.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "licenseからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "4eb57b1eec0c3f1a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "b1656447e0049bd8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Public/LP/デジタル飲み/node_modules/ms/license.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "licenseのアウトライン"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false
+    }
+  },
+  "active": "8bc142a6d545b82e",
+  "lastOpenFiles": [
+    "02_team/AAI/CONTENTS/X_anonimous/AI初心者ビジネスパーソン向け_改訂版.md",
+    "02_team/AAI/CONTENTS/Youtube_anonimous/YouTubeショート動画原稿集.md",
+    "02_team/AAI/CONTENTS/X_anonimous/シニア層向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/資格取得者向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/副業希望者向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/管理職・経営者向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/大学生・就活生向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/子育て中の主婦向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/クリエイター向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/コーチング志向者向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/フリーランス・個人事業主向け.md",
+    "02_team/AAI/CONTENTS/X_anonimous/AI初心者ビジネスパーソン向け.md",
+    "02_team/AAI/CONTENTS/Youtube_anonimous",
+    "02_team/AAI/CONTENTS/X_anonimous",
+    "02_team/AAI/DATA/プレゼン資料GAMMMA",
+    "02_team/AAI/CONTENTS/プレゼン資料GAMMMA",
+    "02_team/AAI/CONTENTS/DATA",
+    "02_team/AAI/CONTENTS",
+    "02_team/SMF/CtoKintone/カウンセリング/渡辺さん_カウンセリング記録.md",
+    "02_team/SMF/CtoKintone/カウンセリング/井浦さん_カウンセリング記録.md",
+    "02_team/SMF/CtoKintone/カウンセリング/渡航中生徒_近況報告・相談記録.md",
+    "02_team/SMF/CtoKintone/RAW/初回.txt",
+    "02_team/SMF/CtoKintone/RAW/Audio from PLAUD Web (4).txt",
+    "02_team/SMF/CtoKintone/RAW/Audio from PLAUD Web (2).txt",
+    "02_team/SMF/CtoKintone/AI",
+    "02_team/SMF/CtoKintone/KINTONE書き込みルールまとめ.md",
+    "02_team/YHM/NPOへの提案内容エージェント依頼用.md",
+    "Public/WEB/Childrens Home/public/switch.jpg",
+    "Public/WEB/Childrens Home/public/leap.jpg",
+    "Public/WEB/Childrens Home/public/yui.jpg",
+    "Public/WEB/Childrens Home/public/kanransya.jpg",
+    "02_team/SMF/CtoKintone/カウンセリング/内藤さん_カウンセリング記録.md",
+    "02_team/SMF/CtoKintone/経過報告/渡航中生徒_近況報告・相談記録.md",
+    "02_team/SMF/CtoKintone/文字起こし/内藤さん_カウンセリング記録.md",
+    "Clippings/インタビュー/インタビュー文字起こし_自立援助ホームLEAP_中嶋亮太さん_完全版.md",
+    "Clippings/インタビュー/インタビュー文字起こし_自立援助ホームLEAP_中嶋亮太さん_Part4.md",
+    "Clippings/インタビュー/インタビュー文字起こし_自立援助ホームLEAP_中嶋亮太さん_Part3.md",
+    "Clippings/インタビュー/インタビュー文字起こし_自立援助ホームLEAP_中嶋亮太さん_Part2.md",
+    "Clippings/インタビュー/インタビュー文字起こし_自立援助ホームLEAP_中嶋亮太さん_Part1.md",
+    "Clippings/「親がいないからできなくなる、をなくしてあげたい。」自立援助ホームLEAPホーム長／中嶋亮太さん 1.md",
+    "無題のファイル.canvas"
+  ]
+}

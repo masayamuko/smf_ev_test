@@ -8,61 +8,61 @@ const HomePage = () => {
       name: 'かんらん舎',
       description: '福岡市として初めての自立援助ホーム。2008年の開設以来、青少年の自立を支援しています。',
       established: '2008年',
-      location: '福岡市南区',
       image: '/自立援助ホーム かんらん舎.jpg',
-      logo: '/自立援助ホーム かんらん舎 ロゴ.jpg',
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753847928/%E8%87%AA%E7%AB%8B%E6%8F%B4%E5%8A%A9%E3%83%9B%E3%83%BC%E3%83%A0_%E3%81%8B%E3%82%93%E3%82%89%E3%82%93%E8%88%8E_%E3%83%AD%E3%82%B3%E3%82%99_ltzptu.png',
       url: 'https://kanransya-fukuoka.jimdofree.com/',
-      feature: '福岡市初のホーム'
+      feature: '福岡市南区',
+      gender: '女子ホーム'
     },
     {
       id: 'yui',
       name: '結ホーム',
       description: '絆を大切にする支援方針で、青少年一人ひとりの成長を丁寧にサポートします。',
       established: '2015年',
-      location: '福岡市南区',
-      image: '/自立援助ホーム 結ホーム.jpg',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/yui_home_hhnpkz.jpg',
       logo: '/自立援助ホーム 結ホーム.png',
       url: 'https://yuihome.jimdofree.com/',
-      feature: '絆を大切にする'
+      feature: '福岡市南区',
+      gender: '男子ホーム'
+    },
+    {
+      id: 'ties',
+      name: 'TIES',
+      description: '2025年に開設した最新の自立援助ホーム。最新の支援理論を取り入れた次世代型ホームです。',
+      established: '2025年',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg',
+      logo: null,
+      url: null,
+      feature: '福岡市南区',
+      gender: '男子ホーム'
     },
     {
       id: 'leap',
       name: 'LEAP',
       description: '「飛び越える、上昇する」という意味を持つホーム。青少年の可能性を信じて支援します。',
       established: '2019年',
-      location: '筑紫野市',
-      image: '/自立援助ホーム LEAP.jpg',
-      logo: '/LEAPLOGO.jpg',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/LEAP_home_vkrmua.jpg',
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png',
       url: 'https://leap-chikushino.jimdofree.com/',
-      feature: '可能性を重視'
+      feature: '筑紫野市',
+      gender: '男子ホーム'
     },
     {
       id: 'switch',
       name: 'スイッチ',
       description: 'HIGH SCHOOL DIPLOMA（高校卒業資格取得）を目指す青年の就学支援に積極的に取り組みます。',
       established: '2023年',
-      location: '太宰府市',
       image: '/自立援助ホーム スイッチ.jpg',
-      logo: null,
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753889235/Switch_logo_zy5kus.png',
       url: 'https://switch05.jimdofree.com/',
-      feature: '進学支援特化'
-    },
-    {
-      id: 'ties',
-      name: 'TIES',
-      description: '2025年2月開設予定の新しい自立援助ホーム。最新の支援理論を取り入れた次世代型ホームです。',
-      established: '2025年（開設予定）',
-      location: '福岡市南区',
-      image: null,
-      logo: null,
-      url: null,
-      feature: '2025年開設予定（次世代型ホーム）'
+      feature: '太宰府市',
+      gender: '男子ホーム'
     }
   ];
 
   const stats = [
     { number: '16', unit: '年', label: '運営実績', description: '2008年設立以来の実績' },
-    { number: '150', unit: '人', label: '支援実績', description: 'これまでに関わったユース総数' },
+    { number: '150', unit: '人', label: '支援実績', description: 'これまでに関わった青少年総数' },
     { number: '5', unit: '施設', label: '自立援助ホーム', description: '福岡市及び福岡県より委託運営' },
     { number: '30', unit: '人', label: '定員数', description: '各ホーム合計定員数' }
   ];
@@ -74,13 +74,33 @@ const HomePage = () => {
         <div className="hero-bg"></div>
         <div className="container">
           <div className="hero-content">
-            <h1>青少年の自立支援を通じて<br />希望ある未来を創造します</h1>
+            <h1 style={{
+              textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)',
+              padding: '2rem 3rem',
+              display: 'inline-block',
+              fontSize: '2.8rem',
+              lineHeight: '1.4'
+            }}>
+              <span style={{ fontSize: '3.2rem' }}>青少年</span>
+              <span style={{ fontSize: '2.4rem' }}>の</span>
+              <span style={{ fontSize: '3.2rem' }}>自立支援</span>
+              <span style={{ fontSize: '2.4rem' }}>を</span>
+              <span style={{ fontSize: '3rem' }}>通</span>
+              <span style={{ fontSize: '2.4rem' }}>じて</span>
+              <br />
+              <span style={{ fontSize: '3.2rem' }}>希望</span>
+              <span style={{ fontSize: '2.4rem' }}>ある</span>
+              <span style={{ fontSize: '3.2rem' }}>未来</span>
+              <span style={{ fontSize: '2.4rem' }}>を</span>
+              <span style={{ fontSize: '3.2rem' }}>創造</span>
+              <span style={{ fontSize: '2.4rem' }}>します</span>
+            </h1>
           </div>
         </div>
       </section>
 
       {/* 法人概要セクション */}
-      <section className="overview section">
+      <section id="overview" className="overview section">
         <div className="container">
           <div className="overview-content">
             <div className="overview-main">
@@ -102,9 +122,6 @@ const HomePage = () => {
                   </div>
                 ))}
               </div>
-              <div className="overview-actions">
-                <Link to="/contact" className="btn btn-outline">お問い合わせ</Link>
-              </div>
             </div>
           </div>
         </div>
@@ -118,15 +135,38 @@ const HomePage = () => {
           <p className="section-subtitle">福岡県内で5つの自立援助ホームを運営しています</p>
           <div className="homes-visual-grid">
             {homes.map((home) => (
-              <div key={home.id} className="home-visual-card">
+              <Link key={home.id} to={`/homes/${home.id}`} className="home-visual-card">
                 <div className="home-visual-content">
                   {home.image ? (
                     <div className="home-visual-image">
-                      <img src={home.image} alt={home.name} />
+                      <img src={home.image} alt={`自立援助ホーム${home.name}の外観`} />
                       <div className="home-visual-overlay">
-                        <h3>{home.name}</h3>
-                        <p>{home.location}</p>
-                        <span className="home-feature-tag">{home.feature}</span>
+                        {home.logo ? (
+                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{ 
+                            maxWidth: '180px', 
+                            maxHeight: '80px',
+                            objectFit: 'contain',
+                            marginBottom: '1rem',
+                            display: 'block'
+                          }} />
+                        ) : (
+                          <h3 style={{ marginBottom: '1rem' }}>{home.name}</h3>
+                        )}
+                        <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                          <span className="home-feature-tag">{home.feature}</span>
+                          {home.gender && <span className="home-gender-tag">{home.gender}</span>}
+                        </div>
+                      </div>
+                      <div className="home-hover-link">
+                        {home.logo && (
+                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{ 
+                            height: '30px',
+                            width: 'auto',
+                            objectFit: 'contain',
+                            marginRight: '0.8rem'
+                          }} />
+                        )}
+                        <span>詳細ページへ</span>
                       </div>
                     </div>
                   ) : (
@@ -134,24 +174,29 @@ const HomePage = () => {
                       {home.logo ? (
                         <img src={home.logo} alt={`${home.name}ロゴ`} className="home-visual-logo-only" />
                       ) : (
-                        <div className="home-visual-icon">🏠</div>
+                        <div className="home-visual-icon"><span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
                       )}
-                      <h3>{home.name}</h3>
-                      <p>{home.location}</p>
-                      <span className="home-feature-tag">{home.feature}</span>
+                      {!home.logo && <h3 style={{ marginBottom: '1rem' }}>{home.name}</h3>}
+                      <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                        <span className="home-feature-tag">{home.feature}</span>
+                        {home.gender && <span className="home-gender-tag">{home.gender}</span>}
+                      </div>
                       <div className="placeholder-notice">※写真準備中</div>
+                      <div className="home-hover-link">
+                        {home.logo && (
+                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{ 
+                            height: '30px',
+                            width: 'auto',
+                            objectFit: 'contain',
+                            marginRight: '0.8rem'
+                          }} />
+                        )}
+                        <span>詳細ページへ</span>
+                      </div>
                     </div>
                   )}
-                  <div className="home-visual-actions">
-                    {home.url && home.logo && (
-                      <a href={home.url} target="_blank" rel="noopener noreferrer" className="home-logo-link">
-                        <img src={home.logo} alt={`${home.name}ロゴ`} className="home-logo-button" />
-                      </a>
-                    )}
-                    <Link to={`/homes/${home.id}`} className="btn btn-sm btn-outline">詳細</Link>
-                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="homes-action">
@@ -160,8 +205,9 @@ const HomePage = () => {
         </div>
       </section>
 
+
       {/* 沿革 */}
-      <section className="section">
+      <section id="history" className="section">
         <div className="container">
           <h2 className="section-title">沿革</h2>
           <div className="timeline" style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -190,6 +236,14 @@ const HomePage = () => {
             </div>
             
             <div className="timeline-item">
+              <div className="timeline-year">2021年</div>
+              <div className="timeline-content">
+                <h3>かんらん舎移転・事務所設置</h3>
+                <p>かんらん舎を現住所（〇〇）に引っ越し、旧かんらん舎物件は事務所専用に用途変更。</p>
+              </div>
+            </div>
+            
+            <div className="timeline-item">
               <div className="timeline-year">2023年</div>
               <div className="timeline-content">
                 <h3>スイッチ開設</h3>
@@ -200,8 +254,8 @@ const HomePage = () => {
             <div className="timeline-item">
               <div className="timeline-year">2025年</div>
               <div className="timeline-content">
-                <h3>TIES開設予定</h3>
-                <p>福岡市南区に5つ目のホーム「TIES」開設予定。新しいつながりを創造。</p>
+                <h3>TIES開設</h3>
+                <p>福岡市南区に5つ目のホーム「TIES」を開設。新しいつながりを創造する次世代型ホーム。</p>
               </div>
             </div>
           </div>
@@ -209,7 +263,7 @@ const HomePage = () => {
       </section>
 
       {/* 法人概要 */}
-      <section className="section" style={{ background: 'linear-gradient(135deg, #f8fafb 0%, #e8f2f5 100%)', padding: '80px 0' }}>
+      <section id="overview" className="section" style={{ background: 'linear-gradient(135deg, #f8fafb 0%, #e8f2f5 100%)', padding: '80px 0' }}>
         <div className="container">
           <h2 className="section-title" style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--primary-color)', textAlign: 'center', marginBottom: '3rem', position: 'relative' }}>
             法人概要
@@ -229,7 +283,7 @@ const HomePage = () => {
             }}>
               
               <div className="info-summary" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
-                <div className="info-main-card" style={{ 
+                <div id="basic-info" className="info-main-card" style={{ 
                   padding: '2rem', 
                   borderRadius: '12px', 
                   background: 'linear-gradient(135deg, #fff9f5 0%, #fefefe 100%)', 
@@ -352,7 +406,21 @@ const HomePage = () => {
                   position: 'relative',
                   textAlign: 'center'
                 }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🏠</div>
+                  <div style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    borderRadius: '50%', 
+                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    marginBottom: '1rem',
+                    margin: '0 auto 1rem auto'
+                  }}>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="white"/>
+                    </svg>
+                  </div>
                   <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0' }}>生活支援</h5>
                   <p style={{ margin: '0', fontSize: '0.95rem', lineHeight: '1.6', color: '#666' }}>
                     日常生活指導・金銭管理<br />
@@ -368,7 +436,21 @@ const HomePage = () => {
                   boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                   textAlign: 'center'
                 }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎓</div>
+                  <div style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    borderRadius: '50%', 
+                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    marginBottom: '1rem',
+                    margin: '0 auto 1rem auto'
+                  }}>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5,13.18V4H4A2,2 0 0,0 2,6V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V8A2,2 0 0,0 20,6H19V13.18L14.5,9.18L13.09,10.59L10,7.5L7.91,9.59L5,13.18M13,12A1,1 0 0,1 12,11A1,1 0 0,1 13,10A1,1 0 0,1 14,11A1,1 0 0,1 13,12Z" fill="white"/>
+                    </svg>
+                  </div>
                   <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0' }}>就学・就労支援</h5>
                   <p style={{ margin: '0', fontSize: '0.95rem', lineHeight: '1.6', color: '#666' }}>
                     高校進学・大学進学・通信制高校<br />
@@ -384,7 +466,21 @@ const HomePage = () => {
                   boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                   textAlign: 'center'
                 }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🤝</div>
+                  <div style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    borderRadius: '50%', 
+                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    marginBottom: '1rem',
+                    margin: '0 auto 1rem auto'
+                  }}>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13,14C9.64,14 8.54,15.35 8.18,16.24C9.25,16.7 10.61,17 12,17C13.39,17 14.75,16.7 15.82,16.24C15.46,15.35 14.36,14 11,14H13M12,13C14.21,13 16,11.21 16,9C16,6.79 14.21,5 12,5C9.79,5 8,6.79 8,9C8,11.21 9.79,13 12,13M20,19C20,20.5 18.5,22 17,22H7C5.5,22 4,20.5 4,19V18C4,15.88 5.88,14 8,14H16C18.12,14 20,15.88 20,18V19Z" fill="white"/>
+                    </svg>
+                  </div>
                   <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0' }}>アフターケア</h5>
                   <p style={{ margin: '0', fontSize: '0.95rem', lineHeight: '1.6', color: '#666' }}>
                     退所後継続支援・緊急時対応<br />
@@ -393,54 +489,6 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="research-development">
-                <div style={{ 
-                  background: '#f8f9fa', 
-                  padding: '1.5rem 2rem', 
-                  borderRadius: '12px', 
-                  marginBottom: '2rem',
-                  textAlign: 'center',
-                  border: '1px solid #e0e0e0'
-                }}>
-                  <h4 style={{ margin: '0', fontSize: '1.4rem', fontWeight: '700', color: 'var(--primary-color)', letterSpacing: '0.05em' }}>
-                    社会的養護システム研究開発事業
-                  </h4>
-                </div>
-                
-                <div className="research-content" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '1.5rem' }}>
-                  <div style={{ 
-                    padding: '2rem', 
-                    background: 'white', 
-                    borderRadius: '12px',
-                    border: '1px solid #e0e0e0',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
-                  }}>
-                    <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <span style={{ fontSize: '1.5rem' }}>👥</span>
-                      人材育成
-                    </h5>
-                    <p style={{ margin: '0', fontSize: '0.95rem', lineHeight: '1.7', color: '#666' }}>
-                      職員研修体系構築・新人研修プログラム・継続研修・スーパービジョン体制・外部研修参加支援
-                    </p>
-                  </div>
-                  
-                  <div style={{ 
-                    padding: '2rem', 
-                    background: 'white', 
-                    borderRadius: '12px',
-                    border: '1px solid #e0e0e0',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
-                  }}>
-                    <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <span style={{ fontSize: '1.5rem' }}>🌐</span>
-                      地域連携
-                    </h5>
-                    <p style={{ margin: '0', fontSize: '0.95rem', lineHeight: '1.7', color: '#666' }}>
-                      児童相談所連携・学校連携・医療機関連携・ハローワーク連携・地域ボランティア活用・社会資源開発
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* 認可・連携情報 */}
@@ -501,9 +549,8 @@ const HomePage = () => {
 
       {/* CTAセクション */}
       <section style={{ 
-        background: 'linear-gradient(135deg, #fff 0%, #f8fafb 100%)', 
+        background: 'white', 
         padding: '100px 0',
-        marginTop: '40px',
         position: 'relative'
       }}>
         
@@ -520,7 +567,6 @@ const HomePage = () => {
             position: 'relative'
           }}>
             
-            <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>🤝</div>
             
             <h2 style={{ 
               color: 'var(--primary-color)', 
@@ -568,7 +614,6 @@ const HomePage = () => {
                 minWidth: '200px',
                 justifyContent: 'center'
               }}>
-                <span style={{ fontSize: '1.3rem' }}>💝</span>
                 寄付で支援
               </Link>
               
@@ -589,7 +634,6 @@ const HomePage = () => {
                 minWidth: '200px',
                 justifyContent: 'center'
               }}>
-                <span style={{ fontSize: '1.3rem' }}>👥</span>
                 職員として参加
               </Link>
             </div>

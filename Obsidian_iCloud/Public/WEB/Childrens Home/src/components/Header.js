@@ -8,8 +8,8 @@ const Header = () => {
 
   const navigation = [
     { name: 'TOP', path: '/' },
-    { name: 'ホーム一覧', path: '/homes' },
-    { name: '求人', path: '/jobs' },
+    { name: '運営ホーム', path: '/homes' },
+    { name: '求人情報', path: '/jobs' },
     { name: '寄付・支援', path: '/donation' },
     { name: 'お知らせ', path: '/news' },
     { name: 'お問合せ', path: '/contact' }

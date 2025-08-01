@@ -20,9 +20,10 @@
 }
 
 .footer-section h4 {
-  color: var(--secondary-color);
+  color: var(--white);
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .footer-section p {

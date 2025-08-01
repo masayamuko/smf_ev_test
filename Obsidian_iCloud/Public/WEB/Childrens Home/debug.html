@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>画像デバッグテスト</title>
+</head>
+<body>
+    <h1>画像表示テスト</h1>
+    
+    <h2>かんらん舎</h2>
+    <img src="/自立援助ホーム かんらん舎.jpg" alt="かんらん舎" style="max-width: 300px;" />
+    
+    <h2>結ホーム</h2>
+    <img src="/自立援助ホーム 結ホーム.jpg" alt="結ホーム" style="max-width: 300px;" />
+    
+    <h2>LEAP</h2>
+    <img src="/自立援助ホーム LEAP.jpg" alt="LEAP" style="max-width: 300px;" />
+    
+    <h2>スイッチ</h2>
+    <img src="/自立援助ホーム スイッチ.jpg" alt="スイッチ" style="max-width: 300px;" />
+    
+    <h2>TIES (Cloudinary)</h2>
+    <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg" alt="TIES" style="max-width: 300px;" />
+    
+    <script>
+        // 画像のロード状況をチェック
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.onload = () => {
+                console.log(`Image ${index} loaded successfully:`, img.src);
+            };
+            img.onerror = () => {
+                console.error(`Image ${index} failed to load:`, img.src);
+            };
+        });
+    </script>
+</body>
+</html>

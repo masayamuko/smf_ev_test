@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>画像表示テスト - ASCII名</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        img { max-width: 300px; margin: 10px; border: 1px solid #ddd; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Hero画像表示テスト</h1>
+    
+    <div class="test-section">
+        <h2>ASCII名ファイル（新しい方法）</h2>
+        <p>これらの画像が表示されれば成功です：</p>
+        
+        <div>
+            <h3>かんらん舎</h3>
+            <img src="/kanransya.jpg" alt="かんらん舎" />
+            <p id="kanransya-status">読み込み中...</p>
+        </div>
+        
+        <div>
+            <h3>結ホーム</h3>
+            <img src="/yui.jpg" alt="結ホーム" />
+            <p id="yui-status">読み込み中...</p>
+        </div>
+        
+        <div>
+            <h3>LEAP</h3>
+            <img src="/leap.jpg" alt="LEAP" />
+            <p id="leap-status">読み込み中...</p>
+        </div>
+        
+        <div>
+            <h3>スイッチ</h3>
+            <img src="/switch.jpg" alt="スイッチ" />
+            <p id="switch-status">読み込み中...</p>
+        </div>
+        
+        <div>
+            <h3>TIES (Cloudinary)</h3>
+            <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg" alt="TIES" />
+            <p id="ties-status">読み込み中...</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>日本語名ファイル（比較用）</h2>
+        <p>これらの画像は表示されない可能性があります：</p>
+        
+        <div>
+            <img src="/自立援助ホーム かんらん舎.jpg" alt="かんらん舎（日本語名）" />
+            <img src="/自立援助ホーム 結ホーム.jpg" alt="結ホーム（日本語名）" />
+        </div>
+    </div>
+    
+    <script>
+        // 画像のロード状況をチェック
+        const images = [
+            { img: document.querySelector('img[src="/kanransya.jpg"]'), status: 'kanransya-status' },
+            { img: document.querySelector('img[src="/yui.jpg"]'), status: 'yui-status' },
+            { img: document.querySelector('img[src="/leap.jpg"]'), status: 'leap-status' },
+            { img: document.querySelector('img[src="/switch.jpg"]'), status: 'switch-status' },
+            { img: document.querySelector('img[src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg"]'), status: 'ties-status' }
+        ];
+        
+        images.forEach(({ img, status }) => {
+            const statusEl = document.getElementById(status);
+            
+            img.onload = () => {
+                statusEl.innerHTML = '<span class="success">✅ 画像読み込み成功</span>';
+                console.log('✅ Image loaded:', img.src);
+            };
+            
+            img.onerror = () => {
+                statusEl.innerHTML = '<span class="error">❌ 画像読み込み失敗</span>';
+                console.error('❌ Image failed:', img.src);
+            };
+        });
+        
+        // 3秒後にまだ読み込み中の場合は失敗と判定
+        setTimeout(() => {
+            images.forEach(({ img, status }) => {
+                const statusEl = document.getElementById(status);
+                if (statusEl.innerText === '読み込み中...') {
+                    statusEl.innerHTML = '<span class="error">❌ タイムアウト</span>';
+                }
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

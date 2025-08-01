@@ -1,0 +1,385 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ヒーローセクション */
+.hero {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="12.5" cy="12.5" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23pattern)"/></svg>');
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ターゲット選択セクション */
+.target-selection {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.target-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.target-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.target-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.target-card:hover::before {
+  transform: scaleX(1);
+}
+
+.target-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(46, 139, 87, 0.2);
+  border-color: var(--primary-color);
+}
+
+.target-card.for-users:hover {
+  border-color: #2E8B57;
+}
+
+.target-card.for-supporters:hover {
+  border-color: #FF8C00;
+}
+
+.target-card.for-jobseekers:hover {
+  border-color: #4169E1;
+}
+
+.target-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.target-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.target-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* ページヘッダー */
+.page-header {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+}
+
+.page-header h1 {
+  font-size: 3.2rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 統計セクション */
+.stats-section {
+  background: var(--light-gray);
+  padding: 80px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  text-align: center;
+}
+
+.stat-card {
+  background: var(--white);
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* フィーチャーカード */
+.feature-highlight {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-left: 6px solid var(--primary-color);
+}
+
+.feature-highlight:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(46, 139, 87, 0.15);
+}
+
+.feature-highlight h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.feature-highlight p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* フォーム */
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* CTAセクション */
+.cta-section {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* パンくずナビ */
+.breadcrumb {
+  background: var(--light-gray);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumb-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: '▶';
+  margin-left: 0.8rem;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+.breadcrumb-list a {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-list a:hover {
+  color: var(--accent-color);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .target-cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .target-card {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .target-icon {
+    font-size: 3.5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .page-header p {
+    font-size: 1.1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+  
+  .feature-highlight {
+    padding: 2rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .target-card {
+    padding: 2rem 1rem;
+  }
+  
+  .feature-highlight {
+    padding: 1.5rem;
+  }
+}

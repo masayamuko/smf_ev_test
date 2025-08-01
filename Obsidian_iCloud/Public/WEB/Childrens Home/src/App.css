@@ -25,7 +25,8 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #E67E50 0%, #F4A460 50%, #FFDAB9 100%);
+  background: linear-gradient(135deg, rgba(230, 126, 80, 0.05) 0%, rgba(244, 164, 96, 0.05) 50%, rgba(255, 218, 185, 0.05) 100%),
+              url('https://res.cloudinary.com/dg3mdcuju/image/upload/v1753847620/TOPCOVER_pvlxwv.jpg') center/cover no-repeat;
   opacity: 0.95;
   z-index: -1;
 }
@@ -447,6 +448,9 @@ main {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: var(--white);
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .home-visual-card:hover {
@@ -471,42 +475,91 @@ main {
   transform: scale(1.05);
 }
 
+.home-visual-card:hover .home-visual-overlay {
+  background: transparent;
+}
+
+.home-visual-card:hover .home-visual-overlay p,
+.home-visual-card:hover .home-visual-overlay .home-feature-tag,
+.home-visual-card:hover .home-visual-overlay .home-gender-tag,
+.home-visual-card:hover .home-visual-overlay h3,
+.home-visual-card:hover .home-visual-overlay > img,
+.home-visual-card:hover .home-visual-overlay > div {
+  opacity: 0;
+}
+
+.home-visual-card:hover .home-hover-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* プレースホルダーのホバー効果 */
+.home-visual-card:hover .home-visual-placeholder .home-feature-tag,
+.home-visual-card:hover .home-visual-placeholder .home-gender-tag,
+.home-visual-card:hover .home-visual-placeholder h3,
+.home-visual-card:hover .home-visual-placeholder .home-visual-logo-only,
+.home-visual-card:hover .home-visual-placeholder .home-visual-icon,
+.home-visual-card:hover .home-visual-placeholder > div:not(.home-hover-link) {
+  opacity: 0;
+}
+
+/* 中央配置されたロゴとホーム名は常に表示 */
+.home-logo-center,
+.home-name-center {
+  opacity: 1 !important;
+}
+
+.home-logo-center img,
+.home-name-center h3 {
+  opacity: 1 !important;
+}
+
+/* 通常時にもタグを表示 */
+.home-feature-tag,
+.home-gender-tag {
+  opacity: 1;
+}
+
+/* 通常時の要素表示を確保 */
+.home-visual-overlay .home-feature-tag,
+.home-visual-overlay .home-gender-tag {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease;
+}
+
+/* より具体的な指定で通常時の表示を確保 */
+.home-visual-card:not(:hover) .home-logo-center,
+.home-visual-card:not(:hover) .home-name-center,
+.home-visual-card:not(:hover) .home-feature-tag,
+.home-visual-card:not(:hover) .home-gender-tag {
+  opacity: 1 !important;
+}
+
 .home-visual-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.9) 100%);
   color: white;
   padding: 2rem;
   text-align: center;
+  transition: all 0.3s ease;
+  min-height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.home-logo-link {
-  display: inline-block;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.home-visual-overlay > img {
+  margin-bottom: 1rem;
 }
 
-.home-logo-link:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+.home-visual-overlay * {
+  transition: opacity 0.3s ease;
 }
 
-.home-logo-button {
-  height: 40px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 8px;
-  padding: 8px 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.home-logo-button:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
 
 .home-visual-overlay h3 {
   font-size: 1.5rem;
@@ -529,6 +582,18 @@ main {
   font-weight: 600;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 0;
+}
+
+.home-gender-tag {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 0;
 }
 
 .home-visual-placeholder {
@@ -582,17 +647,26 @@ main {
   font-size: 0.7rem;
 }
 
-.home-visual-actions {
-  padding: 1.5rem;
+.home-hover-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  box-shadow: 0 6px 20px rgba(230, 126, 80, 0.4);
+  backdrop-filter: blur(10px);
   display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+  border: 4px solid var(--accent-color);
+  align-items: center;
 }
 
-.btn-sm {
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-}
 
 .btn-large {
   padding: 1rem 2rem;
@@ -649,6 +723,14 @@ main {
 
 .highlight-icon {
   font-size: 1.2rem;
+}
+
+.jobs-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
 }
 
 .job-card-enhanced {
@@ -824,7 +906,7 @@ main {
   background: var(--white);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   height: 100%;
@@ -852,19 +934,20 @@ main {
   text-transform: uppercase;
 }
 
-.status-badge.active {
-  background: #22c55e;
+.status-badge.city {
+  background: #3B82F6;
   color: white;
 }
 
-.status-badge.pending {
-  background: #f59e0b;
+.status-badge.prefecture {
+  background: #10B981;
   color: white;
 }
 
-.home-card-image {
+.home-card-detailed .home-card-image {
   height: 200px;
   overflow: hidden;
+  border-radius: 12px 12px 0 0;
 }
 
 .home-card-image img {
@@ -878,27 +961,33 @@ main {
   transform: scale(1.05);
 }
 
-.home-card-header {
+.home-logo-section {
+  position: absolute;
+  top: 200px;
+  left: 1.5rem;
+  transform: translateY(-50%);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
-  padding: 1.5rem 1.5rem 1rem;
+  z-index: 10;
 }
 
-.home-card-header .home-logo {
-  width: 60px;
-  height: 60px;
+.home-logo-large {
+  width: 120px;
+  height: 120px;
   object-fit: contain;
-  border-radius: 8px;
   background: white;
-  padding: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.home-card-header h3 {
-  margin: 0;
-  font-size: 1.5rem;
+.home-name-beside-logo {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
   color: var(--primary-color);
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .home-description {
@@ -1180,6 +1269,37 @@ main {
   margin-bottom: 0.5rem;
 }
 
+/* 職員カード流れるアニメーション - 完全シームレスループ */
+@keyframes staffSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 旧アニメーション（削除予定） */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* マウスホバー時にアニメーションを一時停止 */
+.staff-section:hover .staff-scroll {
+  animation-play-state: paused;
+}
+
+/* スタッフカードのホバーエフェクト */
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 80vh;
@@ -1198,6 +1318,11 @@ main {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+  }
+  
+  .jobs-list {
+    max-width: none;
+    grid-template-columns: 1fr;
   }
   
   .overview-text h2 {
