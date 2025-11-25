@@ -130,7 +130,6 @@ export default function Home() {
                 <p className="font-bold">🏆 1位：賞金5万円＋トロフィー＋賞状</p>
                 <p className="font-bold">🥈 2位：賞金3万円＋賞状</p>
                 <p className="font-bold">🥉 3位：賞金2万円＋賞状</p>
-                <p className="font-bold">🎖️ 4・5位：記念品＋賞状</p>
               </div>
               <p className="text-gray-700">
                 みんなの投票で順位が決まるので、あなたの一票が、学生たちの活動を後押しします。
@@ -332,10 +331,15 @@ export default function Home() {
             </div>
 
             <div className="text-center bg-gray-50 rounded-xl p-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">最後に表彰式</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">最後に表彰式 <span role="img" aria-label="trophy">🏆</span></h3>
+              <p className="text-gray-600 mb-3">
                 全団体の発表と投票が終了後、結果発表と表彰を行います
               </p>
+              <div className="space-y-1 text-gray-700">
+                <p className="font-bold">🏆 1位：賞金5万円＋トロフィー＋賞状</p>
+                <p className="font-bold">🥈 2位：賞金3万円＋賞状</p>
+                <p className="font-bold">🥉 3位：賞金2万円＋賞状</p>
+              </div>
             </div>
           </div>
         </div>
