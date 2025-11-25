@@ -72,9 +72,15 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="bg-[var(--yellow)] text-black hover:bg-[var(--yellow)]/90 text-lg px-8 py-6 font-bold"
-                  onClick={() => setIsFormOpen(true)}
+                  asChild
                 >
-                  今すぐ無料で予約する
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSf_K_wfxi43O-ieic5Xn53gP2WWh4nl1P9BJxhoGy43kz6TlA/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    今すぐ無料で予約する
+                  </a>
                 </Button>
               </div>
             </div>
@@ -652,9 +658,15 @@ export default function Home() {
           <Button
             size="lg"
             className="bg-white text-[var(--turquoise)] hover:bg-gray-100 text-xl px-12 py-8 font-bold"
-            onClick={() => setIsFormOpen(true)}
+            asChild
           >
-            今すぐ無料で予約する
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf_K_wfxi43O-ieic5Xn53gP2WWh4nl1P9BJxhoGy43kz6TlA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              今すぐ無料で予約する
+            </a>
           </Button>
         </div>
       </section >
