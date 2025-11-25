@@ -464,7 +464,7 @@ export default function Home() {
         <div className="container relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">実行委員会</h2>
           <p className="text-center text-gray-600 text-base md:text-lg mb-16 max-w-3xl mx-auto">
-            ボランティアの学生チームが主体となって、イベントを作成し、NPO法人スマイリーフラワーズのサポートを受けて活動しています。
+            第一回はNPO法人スマイリーフラワーズが主催となって学生インターンと共に実行委員会を作って運営しています。
           </p>
 
           {/* Creative flowing layout */}
@@ -731,10 +731,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">主催者情報</h3>
-              <p className="text-lg font-bold mb-2">実行委員会</p>
+              <div className="mb-4 space-y-1">
+                <p className="text-gray-400">主催</p>
+                <p className="text-gray-300 ml-4">NPO法人スマイリーフラワーズ</p>
+              </div>
               <div className="mb-4 space-y-1">
                 <p className="text-gray-400">後援</p>
-                <p className="text-gray-300 ml-4">NPO法人スマイリーフラワーズ</p>
                 <p className="text-gray-300 ml-4">福岡市</p>
               </div>
               <p className="text-lg font-semibold mb-2 mt-6">NPO法人スマイリーフラワーズ</p>
