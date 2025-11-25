@@ -127,9 +127,9 @@ export default function Home() {
                 優秀な活動には豪華賞金！
               </h3>
               <div className="space-y-2 text-gray-700">
-                <p className="font-bold">🏆 1位：賞金5万円＋トロフィー＋賞状</p>
-                <p className="font-bold">🥈 2位：賞金3万円＋賞状</p>
-                <p className="font-bold">🥉 3位：賞金2万円＋賞状</p>
+                <p className="font-bold">🏆 1位：賞金5万円＋トロフィー</p>
+                <p className="font-bold">🥈 2位：賞金3万円</p>
+                <p className="font-bold">🥉 3位：賞金2万円</p>
               </div>
               <p className="text-gray-700">
                 みんなの投票で順位が決まるので、あなたの一票が、学生たちの活動を後押しします。
@@ -336,9 +336,9 @@ export default function Home() {
                 全団体の発表と投票が終了後、結果発表と表彰を行います
               </p>
               <div className="space-y-1 text-gray-700">
-                <p className="font-bold">🏆 1位：賞金5万円＋トロフィー＋賞状</p>
-                <p className="font-bold">🥈 2位：賞金3万円＋賞状</p>
-                <p className="font-bold">🥉 3位：賞金2万円＋賞状</p>
+                <p className="font-bold">🏆 1位：賞金5万円＋トロフィー</p>
+                <p className="font-bold">🥈 2位：賞金3万円</p>
+                <p className="font-bold">🥉 3位：賞金2万円</p>
               </div>
             </div>
           </div>
