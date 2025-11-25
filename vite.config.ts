@@ -1,4 +1,3 @@
-import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "node:fs";
@@ -6,11 +5,11 @@ import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+const plugins = [react(), tailwindcss(), vitePluginManusRuntime()];
 
 export default defineConfig({
-  // For GitHub Pages project site under https://masayamuko.github.io/smf_ev_test/
-  base: "/smf_ev_test/",
+  // Use root base for Vercel, GH Pages prefix for project site
+  base: process.env.VERCEL ? "/" : "/smf_ev_test/",
   plugins,
   resolve: {
     alias: {
