@@ -551,7 +551,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <Button
               asChild
-              className="bg-gradient-to-r from-[var(--turquoise)] to-[var(--pink)] hover:from-[var(--turquoise)]/90 hover:to-[var(--pink)]/90 text-white px-8 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-[var(--turquoise)] to-[var(--pink)] hover:from-[var(--turquoise)]/90 hover:to-[var(--pink)]/90 text-white px-8 py-10 md:py-12 text-xl leading-relaxed whitespace-normal font-bold shadow-lg hover:shadow-xl transition-all duration-300 min-h-[88px]"
             >
               <a href="#team-recruitment">第2回主催メンバーとなる<br />学生ボランティア募集【２０２６年春開催】</a>
             </Button>
