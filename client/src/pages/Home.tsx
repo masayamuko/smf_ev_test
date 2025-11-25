@@ -56,7 +56,7 @@ export default function Home() {
               <div className="space-y-3 text-lg">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📅</span>
-                  <span>2025年12月3日（水）18:00-20:30</span>
+                  <span>2025年12月3日（水）18:30-20:30</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📍</span>
@@ -582,7 +582,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">開催予定日</p>
-                    <p className="text-gray-600">2026年6月15日（仮）18:00-20:30</p>
+                    <p className="text-gray-600">2026年6月15日（仮）18:30-20:30</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -750,7 +750,7 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-bold mb-4">イベント情報</h3>
               <div className="space-y-2 text-gray-400">
-                <p>📅 2025年12月3日（水）18:00-20:30</p>
+                <p>📅 2025年12月3日（水）18:30-20:30</p>
                 <p>📍 アクロス福岡 円形ホール</p>
                 <p>〒810-0001 福岡県福岡市中央区天神1丁目1-1</p>
                 <p>💰 入場無料・事前予約優先</p>
