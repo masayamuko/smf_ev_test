@@ -494,7 +494,7 @@ export default function Home() {
                 name: "Azumi Koga",
                 role: "デザイン・広報",
                 img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764043025/3_armevv.png",
-                bio: "ヨークビル大学(カナダ)１年生。会をスムーズに進行するための素材やイベント当日の設計を主に担当しました。",
+                bio: "ヨークビル大学３年生。会をスムーズに進行するための素材やイベント当日の設計を主に担当しました。",
                 gradient: "from-[var(--yellow)] to-[var(--turquoise)]",
                 position: "right"
               },
