@@ -289,13 +289,13 @@ export default function Home() {
 
 
       {/* Judging/Award Flow (New) */}
-      < section className="section bg-white" >
+      < section className="section bg-gradient-to-br from-gray-50 via-white to-gray-50" >
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">会場のみんなで優秀な活動に投票しよう！</h2>
 
           <div className="max-w-4xl mx-auto">
             {/* Flow visualization */}
-            <div className="bg-gray-50 rounded-2xl p-8 mb-8">
+            <div className="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-sm">
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-bold text-xl border-2 border-gray-300">
@@ -330,7 +330,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-center bg-gray-50 rounded-xl p-6">
+            <div className="text-center bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">最後に表彰式 <span role="img" aria-label="trophy">🏆</span></h3>
               <p className="text-gray-600 mb-3">
                 全団体の発表と投票が終了後、結果発表と表彰を行います
