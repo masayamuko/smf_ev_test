@@ -464,7 +464,7 @@ export default function Home() {
         <div className="container relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">実行委員会</h2>
           <p className="text-center text-gray-600 text-base md:text-lg mb-16 max-w-3xl mx-auto">
-            第一回はNPO法人スマイリーフラワーズが主催となって学生インターンと共に実行委員会を作って運営しています。
+            NPO法人スマイリーフラワーズが学生インターンと共に実行委員会を作って主催・運営しています。
           </p>
 
           {/* Creative flowing layout */}
