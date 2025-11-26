@@ -289,16 +289,18 @@ export default function Home() {
 
 
       {/* Judging/Award Flow (New) */}
-      < section className="section bg-gradient-to-br from-gray-50 via-white to-gray-50" >
+      < section className="section bg-gradient-to-br from-white via-[var(--turquoise)]/6 to-[var(--yellow)]/8" >
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">会場のみんなで優秀な活動に投票しよう！</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--turquoise)]">
+            会場のみんなで優秀な活動に投票しよう！
+          </h2>
 
           <div className="max-w-4xl mx-auto">
             {/* Flow visualization */}
-            <div className="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-sm">
+            <div className="bg-gradient-to-br from-white via-white to-[var(--yellow)]/8 rounded-2xl p-8 mb-8 border border-[var(--turquoise)]/15 shadow-sm">
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-bold text-xl border-2 border-gray-300">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-[var(--turquoise)]/15 flex items-center justify-center text-[var(--turquoise)] font-bold text-xl border-2 border-[var(--turquoise)]/30">
                     1
                   </div>
                   <h3 className="font-bold text-lg mb-2">団体プレゼン</h3>
@@ -306,7 +308,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-bold text-xl border-2 border-gray-300">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-[var(--pink)]/15 flex items-center justify-center text-[var(--pink)] font-bold text-xl border-2 border-[var(--pink)]/30">
                     2
                   </div>
                   <h3 className="font-bold text-lg mb-2">参加者投票</h3>
@@ -314,7 +316,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-bold text-xl border-2 border-gray-300">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-[var(--orange)]/15 flex items-center justify-center text-[var(--orange)] font-bold text-xl border-2 border-[var(--orange)]/30">
                     3
                   </div>
                   <h3 className="font-bold text-lg mb-2">審査員講評</h3>
@@ -324,13 +326,13 @@ export default function Home() {
 
               <div className="text-center pt-6 border-t border-gray-200">
                 <p className="text-gray-700 font-semibold mb-2">
-                  <span className="inline-block px-3 py-1 bg-white rounded-full text-sm mr-2">↻</span>
+                  <span className="inline-block px-3 py-1 bg-[var(--turquoise)]/15 rounded-full text-sm mr-2 text-[var(--turquoise)]">↻</span>
                   このサイクルを５団体分繰り返します
                 </p>
               </div>
             </div>
 
-            <div className="text-center bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <div className="text-center bg-gradient-to-br from-white via-[var(--turquoise)]/10 to-[var(--yellow)]/12 rounded-xl p-6 border border-[var(--turquoise)]/20 shadow-sm">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">最後に表彰式 <span role="img" aria-label="trophy">🏆</span></h3>
               <p className="text-gray-600 mb-3">
                 全団体の発表と投票が終了後、結果発表と表彰を行います
@@ -486,7 +488,7 @@ export default function Home() {
                 name: "Kyoka Murao",
                 role: "運営・渉外",
                 img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764043025/2_cir9wp.png",
-                bio: "筑紫女学園大学2年生。大学・団体との連携や登壇調整を担当。参加者目線の導線づくりを行いました。",
+                bio: "筑紫女学園大学3年生。大学・団体との連携や登壇調整を担当。参加者目線の導線づくりを行いました。",
                 gradient: "from-[var(--pink)] to-[var(--yellow)]",
                 position: "center"
               },
