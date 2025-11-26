@@ -206,6 +206,7 @@ export default function Home() {
                   img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1932_gsxkzg.jpg",
                   desc:
                     "フィールドワークを中心とした研究方法でグローバルな社会課題にアプローチ。多文化共生、国際協力、フェアトレードなどのテーマごとにグループに分かれ、現場での調査と得られた知見の発信に取り組んでいます。",
+                  website: "https://www.kyusan-u.ac.jp/international/"
                 },
                 {
                   name: "IFSAQ（九州大学）",
