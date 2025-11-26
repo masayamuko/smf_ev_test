@@ -1,11 +1,21 @@
 export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 
+const base = import.meta.env.BASE_URL || "/";
+const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+
+const withBase = (path: string | undefined) => {
+  if (!path) return "";
+  if (path.startsWith("http") || path.startsWith("data:")) return path;
+  const trimmed = path.replace(/^\\/+/, "");
+  return `${normalizedBase}${trimmed}`;
+};
+
 export const APP_TITLE =
   import.meta.env.VITE_APP_TITLE || "FUKUOKA海外系サークルAWARD";
 
 export const APP_LOGO =
-  import.meta.env.VITE_APP_LOGO ||
-  "https://placehold.co/128x128/E1E7EF/1F2937?text=App";
+  withBase(import.meta.env.VITE_APP_LOGO) ||
+  `${normalizedBase}awdlogo.png`;
 
 // Generate login URL at runtime so redirect URI reflects the current origin.
 export const getLoginUrl = () => {
