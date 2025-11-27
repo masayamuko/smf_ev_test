@@ -140,10 +140,10 @@ export default function Home() {
             <Card className="p-8 text-center space-y-4 hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4">💬</div>
               <h3 className="text-2xl font-bold text-[var(--orange)]">
-                発表後はサークルブースで直接交流
+                発表後は発表者と直接交流
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                発表後はブース交流で直接話せます。
+                発表後は発表者と直接話せます。
                 活動の雰囲気や参加方法、必要な英語力など、
                 気になることをその場で質問できます。
               </p>
@@ -481,7 +481,7 @@ export default function Home() {
                 name: "Yuta Nakao",
                 role: "企画・統括",
                 img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764043024/1_adje6v.png",
-                bio: "元九州国際大学。第１期実行委員会のリーダー。全体を統括してこの会を主催するに至りました。",
+                bio: "スマイリーフラワーズ職員。第１期実行委員会のリーダー。全体を統括してこの会を主催するに至りました。",
                 gradient: "from-[var(--turquoise)] to-[var(--pink)]",
                 position: "left"
               },
