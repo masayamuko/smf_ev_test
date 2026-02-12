@@ -1,15 +1,56 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import DemoAccessGate from "@/components/DemoAccessGate";
+import DemoEvent2025 from "@/pages/DemoEvent2025";
+import DemoEvent2026 from "@/pages/DemoEvent2026";
+import DemoHome from "@/pages/DemoHome";
 import NotFound from "@/pages/NotFound";
+import { ReactNode } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
+type ProtectedDemoPageProps = {
+  children: ReactNode;
+};
+
+function ProtectedDemoPage({ children }: ProtectedDemoPageProps) {
+  return <DemoAccessGate>{children}</DemoAccessGate>;
+}
+
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/demo"}>
+        {() => (
+          <ProtectedDemoPage>
+            <DemoHome />
+          </ProtectedDemoPage>
+        )}
+      </Route>
+      <Route path={"/demo/event-2025"}>
+        {() => (
+          <ProtectedDemoPage>
+            <DemoEvent2025 />
+          </ProtectedDemoPage>
+        )}
+      </Route>
+      <Route path={"/demo/event-2026"}>
+        {() => (
+          <ProtectedDemoPage>
+            <DemoEvent2026 />
+          </ProtectedDemoPage>
+        )}
+      </Route>
+      <Route path={"/demo/:rest*"}>
+        {() => (
+          <ProtectedDemoPage>
+            <NotFound />
+          </ProtectedDemoPage>
+        )}
+      </Route>
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
