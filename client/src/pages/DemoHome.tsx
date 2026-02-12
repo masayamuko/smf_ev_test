@@ -8,30 +8,35 @@ const groups = [
   {
     name: "鯉の会（西南学院大学）",
     category: "文化交流",
+    img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1660_djg8xc.jpg",
     description:
       "留学生と日本舞踊を通じて交流。伝統文化を軸にした国際理解を推進。",
   },
   {
     name: "国際交流 PARTNERS（久留米大学）",
     category: "地域交流",
+    img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764041404/IMG_1638_xjkwy9.jpg",
     description:
       "久留米を拠点に、日本人学生と留学生の異文化交流の機会を企画。",
   },
   {
     name: "FIWC九州",
     category: "国際協力",
+    img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764041417/CleanShot_2025-11-25_at_12.29.09_2x_t00hdy.png",
     description:
       "国内外の社会課題に向き合い、現地での協働を通じた活動を実践。",
   },
   {
     name: "九産大秋保ゼミ 国際協力班",
     category: "学術・調査",
+    img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1932_gsxkzg.jpg",
     description:
       "フィールドワーク中心に多文化共生やフェアトレードの研究を展開。",
   },
   {
     name: "IFSAQ（九州大学）",
     category: "グローバルネットワーク",
+    img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1952_oubtsz.jpg",
     description:
       "森林学系学生の国際ネットワークを通じて越境的な学びと連携を促進。",
   },
@@ -45,7 +50,7 @@ export default function DemoHome() {
         <div className="memphis-shape w-24 h-24 bg-[var(--yellow)]/35 top-8 right-10 rotate-12" />
         <div className="memphis-shape memphis-circle w-14 h-14 bg-[var(--pink)]/35 bottom-8 left-[40%]" />
         <div className="container">
-          <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="space-y-6">
               <span className="inline-flex rounded-full bg-black text-white px-4 py-1 text-sm font-bold tracking-wide">
                 DEMO
@@ -57,7 +62,7 @@ export default function DemoHome() {
                 福岡で活動する国際交流団体の情報と、最新の国際交流イベント情報を
                 LINEでまとめて届けるための案内ページです。
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center">
                 <Button
                   asChild
                   className="bg-[var(--turquoise)] hover:bg-[var(--turquoise)]/90 text-base px-6 py-5"
@@ -70,7 +75,7 @@ export default function DemoHome() {
                   <Link href="/demo/event-2026">2026イベントLPを見る</Link>
                 </Button>
               </div>
-              <div className="flex flex-wrap gap-2 text-sm">
+              <div className="flex flex-wrap gap-2 text-sm justify-center">
                 <span className="rounded-full px-3 py-1 bg-black text-white">
                   団体掲載希望受付
                 </span>
@@ -82,27 +87,13 @@ export default function DemoHome() {
                 </span>
               </div>
             </div>
-
-            <Card className="p-6 md:p-8 border-black/10 bg-white/90 backdrop-blur-sm shadow-xl">
-              <h2 className="text-2xl font-bold mb-4">LINE追加でできること</h2>
-              <ul className="space-y-3 text-gray-700">
-                <li>福岡の国際交流団体情報を受け取れる</li>
-                <li>国際交流イベントの開催情報が届く</li>
-                <li>イベントの先行案内・募集開始を確認できる</li>
-                <li>団体掲載希望や問い合わせの窓口として使える</li>
-              </ul>
-              <div className="mt-6 rounded-xl bg-gradient-to-r from-[var(--turquoise)]/15 to-[var(--yellow)]/20 p-4 border border-black/5">
-                <p className="font-semibold text-gray-900">主なCV</p>
-                <p className="text-sm text-gray-700">
-                  1. LINE登録 2. イベントLP遷移
-                </p>
-              </div>
-            </Card>
           </div>
         </div>
       </section>
 
-      <section className="section bg-white/85 border-y border-black/5">
+      <section className="section bg-[linear-gradient(180deg,rgba(255,255,255,0.8),rgba(20,184,166,0.08))] border-y-2 border-[var(--turquoise)]/20 relative">
+        <div className="memphis-shape w-16 h-16 bg-[var(--yellow)]/40 top-10 left-8 rotate-12" />
+        <div className="memphis-shape memphis-circle w-16 h-16 bg-[var(--turquoise)]/20 bottom-8 right-10" />
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-end justify-between gap-4 mb-6 flex-wrap">
@@ -113,9 +104,16 @@ export default function DemoHome() {
                 </a>
               </Button>
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-5">
               {groups.map((group) => (
-                <Card key={group.name} className="p-5 border-black/10 h-full">
+                <Card key={group.name} className="p-5 border-black/10 h-full bg-white/95 backdrop-blur-sm shadow-md">
+                  <div className="mb-4 aspect-[16/9] w-full rounded-xl overflow-hidden bg-gray-100">
+                    <img
+                      src={group.img}
+                      alt={`${group.name} の写真`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-xs font-bold text-[var(--turquoise)] mb-2">
                     {group.category}
                   </p>
@@ -128,12 +126,12 @@ export default function DemoHome() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-[linear-gradient(120deg,rgba(251,191,36,0.12),rgba(244,114,182,0.1),rgba(255,255,255,0.85))] border-y border-black/10">
         <div className="container">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">このページの導線設計</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">このページの導線設計</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="p-6 border-black/10">
+              <Card className="p-6 border-black/10 shadow-sm bg-white/95">
                 <h3 className="text-2xl font-bold mb-3">CV 1: LINE登録</h3>
                 <p className="text-gray-700 mb-4">
                   ユーザー向けに団体・イベント情報を継続配信するメイン導線です。
@@ -145,7 +143,7 @@ export default function DemoHome() {
                 </Button>
               </Card>
 
-              <Card className="p-6 border-black/10">
+              <Card className="p-6 border-black/10 shadow-sm bg-white/95">
                 <h3 className="text-2xl font-bold mb-3">CV 2: イベント告知LP</h3>
                 <p className="text-gray-700 mb-4">
                   開催予定イベントのLPへ遷移し、参加予約・詳細確認へ繋げます。
@@ -164,7 +162,7 @@ export default function DemoHome() {
         </div>
       </section>
 
-      <section className="pb-20">
+      <section className="pb-20 pt-4 bg-[linear-gradient(180deg,rgba(20,184,166,0.04),rgba(0,0,0,0.02))]">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <Card className="p-8 md:p-10 border-black/10 bg-[linear-gradient(135deg,rgba(20,184,166,0.08),rgba(244,114,182,0.1),rgba(251,191,36,0.12))]">
