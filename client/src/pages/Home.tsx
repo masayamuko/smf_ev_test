@@ -44,7 +44,7 @@ export default function Home() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-sm">
                 福岡海外系<br />
-                大学サークル<br />
+                学生サークル<br />
                 アワード2025
               </h1>
 

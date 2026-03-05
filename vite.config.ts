@@ -7,9 +7,9 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 const plugins = [react(), tailwindcss(), vitePluginManusRuntime()];
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   // Use root base for Vercel, GH Pages prefix for project site
-  base: process.env.VERCEL ? "/" : "/smf_ev_test/",
+  base: mode === "development" ? "/" : "/smf_ev_test/",
   plugins,
   resolve: {
     alias: {
@@ -42,4 +42,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));

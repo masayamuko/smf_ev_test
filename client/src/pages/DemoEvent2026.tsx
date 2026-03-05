@@ -10,7 +10,7 @@ export default function DemoEvent2026() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--turquoise)]"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-indigo-600"
         style={{
           backgroundImage:
             'url("https://res.cloudinary.com/dg3mdcuju/image/upload/v1761205455/kokusaihead_djjuiq.png")',
@@ -20,14 +20,14 @@ export default function DemoEvent2026() {
         }}
       >
         {/* Memphis Decorations */}
-        <div className="memphis-shape memphis-circle w-32 h-32 bg-[var(--yellow)] top-20 left-10 opacity-80" />
-        <div className="memphis-shape memphis-circle w-24 h-24 bg-[var(--pink)] top-40 right-20 opacity-70" />
-        <div className="memphis-shape memphis-circle w-16 h-16 bg-[var(--orange)] bottom-32 left-1/4 opacity-60" />
-        <div className="memphis-shape w-20 h-20 bg-[var(--yellow)] top-1/3 right-1/3 rotate-45 opacity-50" />
-        <div className="memphis-shape w-12 h-12 bg-[var(--pink)] bottom-20 right-1/4 rotate-12 opacity-70" />
+        <div className="memphis-shape memphis-circle w-32 h-32 bg-amber-400 top-20 left-10 opacity-80" />
+        <div className="memphis-shape memphis-circle w-24 h-24 bg-emerald-400 top-40 right-20 opacity-70" />
+        <div className="memphis-shape memphis-circle w-16 h-16 bg-violet-400 bottom-32 left-1/4 opacity-60" />
+        <div className="memphis-shape w-20 h-20 bg-amber-400 top-1/3 right-1/3 rotate-45 opacity-50" />
+        <div className="memphis-shape w-12 h-12 bg-emerald-400 bottom-20 right-1/4 rotate-12 opacity-70" />
 
         {/* Subtle gradient overlay from left for readability on large screens */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--turquoise)] via-[var(--turquoise)]/70 to-transparent"></div>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-indigo-700 via-indigo-600/70 to-transparent"></div>
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -35,7 +35,7 @@ export default function DemoEvent2026() {
             <div className="text-white space-y-6 max-w-xl">
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-                  2026年12月3日(木)
+                  2026年6月13日(土)
                 </div>
                 <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold tracking-wide">
                   福岡市後援
@@ -44,23 +44,23 @@ export default function DemoEvent2026() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-sm">
                 福岡海外系<br />
-                大学サークル<br />
+                学生サークル<br />
                 アワード2026
               </h1>
 
               <p className="text-xl md:text-2xl font-medium leading-relaxed">
                 海外系サークルの活動を一気に知れる！<br />
-                福岡の学生が世界とつながる、特別な一夜。
+                福岡の学生が世界とつながる、特別な時間。
               </p>
 
               <div className="space-y-3 text-lg">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📅</span>
-                  <span>2026年12月3日（木）18:30-20:30</span>
+                  <span>2026年6月13日（土）12:00開始</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📍</span>
-                  <span>アクロス福岡 円形ホール</span>
+                  <span>アクロス福岡 大会議室（アクロス7F）</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">💰</span>
@@ -71,7 +71,7 @@ export default function DemoEvent2026() {
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Button
                   size="lg"
-                  className="bg-[var(--yellow)] text-black hover:bg-[var(--yellow)]/90 text-lg px-8 py-6 font-bold"
+                  className="bg-amber-400 text-black hover:bg-amber-500 text-lg px-8 py-6 font-bold"
                   asChild
                 >
                   <a
@@ -91,14 +91,14 @@ export default function DemoEvent2026() {
       </section>
 
       {/* Countdown Section (Moved Here) */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-br from-[var(--turquoise)]/10 via-white to-[var(--yellow)]/10 border-t border-black/5 overflow-hidden">
+      <section className="relative py-12 md:py-16 bg-gradient-to-br from-indigo-100 via-white to-amber-50 border-t border-black/5 overflow-hidden">
         {/* subtle background accents */}
-        <div className="memphis-shape memphis-circle w-20 h-20 bg-[var(--pink)] top-6 left-6 opacity-20" />
-        <div className="memphis-shape w-16 h-16 bg-[var(--orange)] bottom-6 right-10 rotate-12 opacity-20" />
+        <div className="memphis-shape memphis-circle w-20 h-20 bg-emerald-400 top-6 left-6 opacity-20" />
+        <div className="memphis-shape w-16 h-16 bg-violet-400 bottom-6 right-10 rotate-12 opacity-20" />
         <div className="container relative z-10">
           <Countdown
             heading="イベント当日まで残り、、、"
-            targetISO="2026-12-04T00:00:00+09:00"
+            targetISO="2026-06-13T12:00:00+09:00"
           />
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function DemoEvent2026() {
             {/* Feature 1 */}
             <Card className="p-8 text-center space-y-4 hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4">🌏</div>
-              <h3 className="text-2xl font-bold text-[var(--turquoise)]">
+              <h3 className="text-2xl font-bold text-indigo-600">
                 福岡の海外系サークルが一堂に集結
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -123,7 +123,7 @@ export default function DemoEvent2026() {
             {/* Feature 2 */}
             <Card className="p-8 text-center space-y-4 hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4">🏆</div>
-              <h3 className="text-2xl font-bold text-[var(--pink)]">
+              <h3 className="text-2xl font-bold text-emerald-600">
                 優秀な活動には豪華賞金！
               </h3>
               <div className="space-y-2 text-gray-700">
@@ -139,7 +139,7 @@ export default function DemoEvent2026() {
             {/* Feature 3 */}
             <Card className="p-8 text-center space-y-4 hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4">💬</div>
-              <h3 className="text-2xl font-bold text-[var(--orange)]">
+              <h3 className="text-2xl font-bold text-violet-600">
                 発表後は発表者と直接交流
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -155,13 +155,13 @@ export default function DemoEvent2026() {
       {/* About Section */}
       <section
         id="about"
-        className="section relative overflow-hidden bg-gradient-to-br from-[var(--turquoise)]/10 to-white border-t border-black/5"
+        className="section relative overflow-hidden bg-gradient-to-br from-indigo-50 to-white border-t border-black/5"
       >
         {/* Subtle top separator to distinguish from previous section */}
-        <div className="pointer-events-none absolute -top-4 left-0 w-full h-8 bg-gradient-to-b from-[var(--turquoise)]/15 to-transparent" />
+        <div className="pointer-events-none absolute -top-4 left-0 w-full h-8 bg-gradient-to-b from-indigo-100 to-transparent" />
         {/* Memphis Decorations */}
-        <div className="memphis-shape w-16 h-16 bg-[var(--pink)] top-10 right-10 rotate-45 opacity-30" />
-        <div className="memphis-shape memphis-circle w-24 h-24 bg-[var(--orange)] bottom-20 left-10 opacity-20" />
+        <div className="memphis-shape w-16 h-16 bg-emerald-400 top-10 right-10 rotate-45 opacity-30" />
+        <div className="memphis-shape memphis-circle w-24 h-24 bg-violet-400 bottom-20 left-10 opacity-20" />
 
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -178,55 +178,21 @@ export default function DemoEvent2026() {
           {/* Integrated: 登壇団体・サークル（5団体） — Uniform Grid Layout */}
           <div className="max-w-7xl mx-auto mt-12">
             <div className="flex flex-wrap justify-center gap-6">
-              {([
-                {
-                  name: "鯉の会（西南学院大学）",
-                  img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1660_djg8xc.jpg",
-                  desc:
-                    "西南学院大学のサークル『Japanese Traditional Dance・鯉の会』。留学生と共に日本舞踊を習い、お稽古の通訳も担当。目標は年に一度の大濠公園能楽堂での舞台披露。稽古後は先生の手作りごはんを皆でいただき交流を深め、日本文化を通して国際的なつながりを広げています。まさに、伝統とグローバル化の融合を実現しているサークルです。",
-                  instagram: "https://www.instagram.com/jtd__koinokai/"
-                },
-                {
-                  name: "国際交流 PARTNERS（久留米大学）",
-                  img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764041404/IMG_1638_xjkwy9.jpg",
-                  desc:
-                    "久留米大学の国際交流サークル。久留米を中心に、日本人学生と留学生の交流を通して異文化理解の輪を広げる活動を展開。久留米市の全日本語学校との同時交流企画にも携わりました。",
-                  instagram: "https://www.instagram.com/kurume.partners?igsh=MTN3MmtrbGJkZ3l3Zw=="
-                },
-                {
-                  name: "FIWC九州（Friends International Work Camp）",
-                  img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764041417/CleanShot_2025-11-25_at_12.29.09_2x_t00hdy.png",
-                  desc:
-                    "福岡の学生が主体となり、国内外で活動する国際協力学生団体。世界の貧困や偏見、国内の社会問題に一人ひとりが向き合い、現地に足を運び、現地の人々と共に活動しています。",
-                  instagram: "https://www.instagram.com/fiwckyushu?igsh=MTV5Y20yNDkwcHgxMA%3D%3D&utm_source=qr",
-                  website: "https://fiwc9kyushu.wixsite.com/fiwc-kyusyu?fbclid=PAdGRleAOFXKJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQIY2FsbHNpdGUCMTUAAaduWUHNE75VAyoB_355oFVHqJOy8LxN3LTh45s00LMO-BpLLMDJ50S9rzKGRg_aem_iDM-FN3XTUVzRWEj-Tg4rg"
-                },
-                {
-                  name: "九産大秋保ゼミ 国際協力班（九州産業大学）",
-                  img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1932_gsxkzg.jpg",
-                  desc:
-                    "フィールドワークを中心とした研究方法でグローバルな社会課題にアプローチ。多文化共生、国際協力、フェアトレードなどのテーマごとにグループに分かれ、現場での調査と得られた知見の発信に取り組んでいます。",
-                  website: "https://www.kyusan-u.ac.jp/international/"
-                },
-                {
-                  name: "IFSAQ（九州大学）",
-                  img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1952_oubtsz.jpg",
-                  desc:
-                    "IFSAは世界各国の森林学系学生を結ぶ国際ネットワーク（64か国・141大学）。九州大学でも有志10名が発起人となり、教育・協力・持続可能な森林管理の促進を目指す支部『IFSAQ』の設立総会を開催。学年・研究分野を超えた国際交流の場を広げています。",
-                  instagram: "https://www.instagram.com/ifsaq_kyushu?igsh=MXRmZmpyY2pvaTV4NA%3D%3D&utm_source=qr",
-                  website: "https://sites.google.com/view/ifsaq-ifsalocalcommitteekyushu/%E3%83%9B%E3%83%BC%E3%83%A0"
-                },
-              ] as { name: string; img?: string; desc: string; note?: string; instagram?: string; website?: string }[]).map((g, i) => {
+              {Array.from({ length: 5 }).map((_, idx) => ({
+                name: "登壇団体 募集中",
+                desc: "現在、登壇して活動の魅力を発信したい団体を大募集しています！",
+                note: `枠 ${idx + 1}`
+              } as { name: string; img?: string; desc: string; note?: string; instagram?: string; website?: string })).map((g, i) => {
                 const initial = g.name?.charAt(0) ?? "?";
                 return (
                   <div key={i} className="group h-full w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
-                    <div className="h-full p-[1px] rounded-2xl bg-gradient-to-r from-[var(--turquoise)]/30 via-[var(--pink)]/30 to-[var(--yellow)]/30">
+                    <div className="h-full p-[1px] rounded-2xl bg-gradient-to-r from-indigo-300 via-emerald-300 to-amber-300">
                       <Card className="h-full p-6 rounded-2xl bg-white/95 backdrop-blur-sm transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl flex flex-col">
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex items-center gap-3">
                             {/* Avatar fallback if no image */}
                             {!g.img && (
-                              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--turquoise)] to-[var(--pink)] text-white flex items-center justify-center font-bold shrink-0">
+                              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-emerald-400 text-white flex items-center justify-center font-bold shrink-0">
                                 {initial}
                               </div>
                             )}
@@ -290,18 +256,18 @@ export default function DemoEvent2026() {
 
 
       {/* Judging/Award Flow (New) */}
-      < section className="section bg-gradient-to-br from-white via-[var(--turquoise)]/6 to-[var(--yellow)]/8" >
+      < section className="section bg-gradient-to-br from-white via-indigo-50 to-amber-50" >
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--turquoise)]">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-600">
             会場のみんなで優秀な活動に投票しよう！
           </h2>
 
           <div className="max-w-4xl mx-auto">
             {/* Flow visualization */}
-            <div className="bg-gradient-to-br from-white via-white to-[var(--yellow)]/8 rounded-2xl p-8 mb-8 border border-[var(--turquoise)]/15 shadow-sm">
+            <div className="bg-gradient-to-br from-white via-white to-amber-50 rounded-2xl p-8 mb-8 border border-indigo-100 shadow-sm">
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-[var(--turquoise)]/15 flex items-center justify-center text-[var(--turquoise)] font-bold text-xl border-2 border-[var(--turquoise)]/30">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-xl border-2 border-indigo-200">
                     1
                   </div>
                   <h3 className="font-bold text-lg mb-2">団体プレゼン</h3>
@@ -309,7 +275,7 @@ export default function DemoEvent2026() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-[var(--pink)]/15 flex items-center justify-center text-[var(--pink)] font-bold text-xl border-2 border-[var(--pink)]/30">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold text-xl border-2 border-emerald-200">
                     2
                   </div>
                   <h3 className="font-bold text-lg mb-2">参加者投票</h3>
@@ -317,7 +283,7 @@ export default function DemoEvent2026() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-[var(--orange)]/15 flex items-center justify-center text-[var(--orange)] font-bold text-xl border-2 border-[var(--orange)]/30">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-violet-100 flex items-center justify-center text-violet-600 font-bold text-xl border-2 border-violet-200">
                     3
                   </div>
                   <h3 className="font-bold text-lg mb-2">審査員講評</h3>
@@ -327,13 +293,13 @@ export default function DemoEvent2026() {
 
               <div className="text-center pt-6 border-t border-gray-200">
                 <p className="text-gray-700 font-semibold mb-2">
-                  <span className="inline-block px-3 py-1 bg-[var(--turquoise)]/15 rounded-full text-sm mr-2 text-[var(--turquoise)]">↻</span>
+                  <span className="inline-block px-3 py-1 bg-indigo-100 rounded-full text-sm mr-2 text-indigo-600">↻</span>
                   このサイクルを５団体分繰り返します
                 </p>
               </div>
             </div>
 
-            <div className="text-center bg-gradient-to-br from-white via-[var(--turquoise)]/10 to-[var(--yellow)]/12 rounded-xl p-6 border border-[var(--turquoise)]/20 shadow-sm">
+            <div className="text-center bg-gradient-to-br from-white via-indigo-50 to-amber-50 rounded-xl p-6 border border-indigo-100 shadow-sm">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">最後に表彰式 <span role="img" aria-label="trophy">🏆</span></h3>
               <p className="text-gray-600 mb-3">
                 全団体の発表と投票が終了後、結果発表と表彰を行います
@@ -349,8 +315,8 @@ export default function DemoEvent2026() {
       </section >
 
       {/* Voting Section (Judges) */}
-      < section className="py-12 md:py-16 bg-gradient-to-br from-[var(--yellow)]/10 to-[var(--pink)]/10 relative overflow-hidden" >
-        <div className="memphis-shape w-20 h-20 bg-[var(--turquoise)] top-20 left-20 rotate-12 opacity-20" />
+      < section className="py-12 md:py-16 bg-gradient-to-br from-amber-100/50 to-emerald-100/50 relative overflow-hidden" >
+        <div className="memphis-shape w-20 h-20 bg-indigo-400 top-20 left-20 rotate-12 opacity-20" />
 
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
@@ -419,7 +385,7 @@ export default function DemoEvent2026() {
       </section >
 
       {/* Schedule Section */}
-      < section className="section bg-gradient-to-br from-[var(--turquoise)]/5 to-[var(--yellow)]/5" >
+      < section className="section bg-gradient-to-br from-indigo-50/50 to-amber-50/50" >
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             当日のタイムスケジュール
@@ -431,18 +397,18 @@ export default function DemoEvent2026() {
               <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-300"></div>
               <ul className="space-y-5">
                 {[
-                  { time: "17:30", title: "開場", desc: "会場に到着したら、受付でお名前をお伝えください。" },
-                  { time: "18:30", title: "開会（主催者挨拶・大会趣旨紹介）", desc: "イベントの趣旨と流れをご説明します。" },
-                  { time: "18:40", title: "各サークルプレゼン", desc: "各サークルが活動内容や魅力をプレゼンテーションします。" },
-                  { time: "19:40", title: "結果発表・表彰", desc: "観客投票の結果を発表し、優秀なサークルを表彰します。" },
-                  { time: "20:00", title: "第二部：交流会", desc: "各サークルのブースを回って、直接話を聞くことができます。" },
-                  { time: "20:30", title: "閉会", desc: "イベント終了です。お疲れさまでした！" }
+                  { time: "11:30", title: "開場", desc: "会場に到着したら、受付でお名前をお伝えください。" },
+                  { time: "12:00", title: "開会（主催者挨拶・大会趣旨紹介）", desc: "イベントの趣旨と流れをご説明します。" },
+                  { time: "12:10", title: "各サークルプレゼン", desc: "各サークルが活動内容や魅力をプレゼンテーションします。" },
+                  { time: "13:10", title: "結果発表・表彰", desc: "観客投票の結果を発表し、優秀なサークルを表彰します。" },
+                  { time: "13:30", title: "第二部：交流会", desc: "各サークルのブースを回って、直接話を聞くことができます。" },
+                  { time: "14:00", title: "閉会", desc: "イベント終了です。お疲れさまでした！" }
                 ].map((item, index) => (
                   <li key={index} className="relative pl-10 group cursor-pointer transition-all duration-300 hover:scale-105">
                     {/* node dot */}
-                    <span className="absolute left-[-5px] top-2 h-2.5 w-2.5 rounded-full bg-[var(--turquoise)] group-hover:scale-150 group-hover:bg-[var(--pink)] transition-all duration-300"></span>
-                    <div className="flex items-baseline gap-3 p-3 rounded-lg group-hover:bg-gradient-to-r group-hover:from-[var(--turquoise)]/10 group-hover:to-[var(--pink)]/10 transition-all duration-300">
-                      <span className="w-14 text-sm font-semibold text-[var(--turquoise)] tabular-nums group-hover:text-[var(--pink)] group-hover:text-base transition-all duration-300">
+                    <span className="absolute left-[-5px] top-2 h-2.5 w-2.5 rounded-full bg-indigo-500 group-hover:scale-150 group-hover:bg-emerald-500 transition-all duration-300"></span>
+                    <div className="flex items-baseline gap-3 p-3 rounded-lg group-hover:bg-gradient-to-r group-hover:from-indigo-50 group-hover:to-emerald-50 transition-all duration-300">
+                      <span className="w-14 text-sm font-semibold text-indigo-500 tabular-nums group-hover:text-emerald-500 group-hover:text-base transition-all duration-300">
                         {item.time}
                       </span>
                       <div className="flex-1">
@@ -463,10 +429,10 @@ export default function DemoEvent2026() {
       </section >
 
       {/* Operations Team */}
-      < section className="section bg-gradient-to-br from-white via-[var(--turquoise)]/5 to-white relative overflow-hidden" >
+      < section className="section bg-gradient-to-br from-white via-indigo-50/50 to-white relative overflow-hidden" >
         {/* Decorative background elements */}
-        < div className="absolute top-20 right-10 w-64 h-64 bg-[var(--pink)]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-[var(--turquoise)]/10 rounded-full blur-3xl" />
+        < div className="absolute top-20 right-10 w-64 h-64 bg-emerald-300/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-300/20 rounded-full blur-3xl" />
 
         <div className="container relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">実行委員会</h2>
@@ -478,27 +444,27 @@ export default function DemoEvent2026() {
           <div className="max-w-7xl mx-auto">
             {[
               {
-                name: "Yuta Nakao",
+                name: "Kyoka Murao",
                 role: "企画・統括",
-                img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764043024/1_adje6v.png",
-                bio: "スマイリーフラワーズ職員。第１期実行委員会のリーダー。全体を統括してこの会を主催するに至りました。",
-                gradient: "from-[var(--turquoise)] to-[var(--pink)]",
+                img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764043025/2_cir9wp.png",
+                bio: "筑紫女学園大学3年生。大学・団体との連携や登壇調整を担当。参加者目線の導線づくりを行いました。",
+                gradient: "from-indigo-500 to-emerald-500",
                 position: "left"
               },
               {
-                name: "Kyoka Murao",
+                name: "メンバー募集中",
                 role: "運営・渉外",
-                img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764043025/2_cir9wp.png",
-                bio: "筑紫女学園大学3年生。大学・団体との連携や登壇調整を担当。参加者目線の導線づくりを行いました。",
-                gradient: "from-[var(--pink)] to-[var(--yellow)]",
+                img: "",
+                bio: "第2回開催に向けて一緒にイベントを作るメンバーを募集しています！",
+                gradient: "from-emerald-500 to-amber-500",
                 position: "center"
               },
               {
-                name: "Azumi Koga",
+                name: "メンバー募集中",
                 role: "デザイン・広報",
-                img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764043025/3_armevv.png",
-                bio: "ヨークビル大学３年生。会をスムーズに進行するための素材やイベント当日の設計を主に担当しました。",
-                gradient: "from-[var(--yellow)] to-[var(--turquoise)]",
+                img: "",
+                bio: "第2回開催に向けて一緒にイベントを作るメンバーを募集しています！",
+                gradient: "from-amber-500 to-indigo-500",
                 position: "right"
               },
             ].map((m, i) => (
@@ -518,11 +484,17 @@ export default function DemoEvent2026() {
                   <div className="relative w-48 h-48 mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500" />
                     <div className="relative h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-500">
-                      <img
-                        src={m.img}
-                        alt={m.name}
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                      />
+                      {m.img ? (
+                        <img
+                          src={m.img}
+                          alt={m.name}
+                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gray-100 flex items-center justify-center text-4xl text-gray-400 font-bold transform group-hover:scale-110 transition-transform duration-700">
+                          ?
+                        </div>
+                      )}
                       {/* Overlay gradient */}
                       <div className={`absolute inset-0 bg-gradient-to-t ${m.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
                     </div>
@@ -554,9 +526,9 @@ export default function DemoEvent2026() {
           <div className="mt-16 text-center">
             <Button
               asChild
-              className="bg-gradient-to-r from-[var(--turquoise)] to-[var(--pink)] hover:from-[var(--turquoise)]/90 hover:to-[var(--pink)]/90 text-white px-8 py-10 md:py-12 text-xl leading-relaxed whitespace-normal font-bold shadow-lg hover:shadow-xl transition-all duration-300 min-h-[88px]"
+              className="bg-gradient-to-r from-indigo-600 to-emerald-500 hover:from-indigo-600/90 hover:to-emerald-500/90 text-white px-8 py-10 md:py-12 text-xl leading-relaxed whitespace-normal font-bold shadow-lg hover:shadow-xl transition-all duration-300 min-h-[88px]"
             >
-              <a href="#team-recruitment">第2回主催メンバーとなる<br />学生ボランティア募集【２０２６年春開催】</a>
+              <a href="/demo/intern">運営メンバー募集中</a>
             </Button>
           </div>
         </div>
@@ -567,7 +539,7 @@ export default function DemoEvent2026() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center gap-3">
-              <svg className="w-10 h-10 text-[var(--turquoise)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-10 h-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               次回開催の予告
@@ -577,43 +549,43 @@ export default function DemoEvent2026() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Left Block - Schedule */}
-            <div className="bg-gradient-to-br from-[var(--turquoise)]/5 to-[var(--pink)]/5 rounded-2xl p-8 border border-gray-200">
+            <div className="bg-gradient-to-br from-indigo-50 to-emerald-50 rounded-2xl p-8 border border-gray-200">
               <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[var(--turquoise)]"></span>
+                <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
                 次回日程（仮）
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[var(--turquoise)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">開催予定日</p>
-                    <p className="text-gray-600">2026年6月15日（仮）18:30-20:30</p>
+                    <p className="text-gray-600">2026年12月（仮）</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[var(--turquoise)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">会場</p>
-                    <p className="text-gray-600">アクロス福岡 円形ホール（調整中）</p>
+                    <p className="text-gray-600">未定</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Block - Team Recruitment */}
-            <div id="team-recruitment" className="bg-gradient-to-br from-[var(--yellow)]/5 to-[var(--turquoise)]/5 rounded-2xl p-8 border border-gray-200">
+            <div id="team-recruitment" className="bg-gradient-to-br from-amber-50 to-indigo-50 rounded-2xl p-8 border border-gray-200">
               <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[var(--pink)]"></span>
+                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                 主催チーム募集
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[var(--pink)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-emerald-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                   <div>
@@ -622,7 +594,7 @@ export default function DemoEvent2026() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[var(--pink)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-emerald-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   <div>
@@ -631,7 +603,7 @@ export default function DemoEvent2026() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-[var(--pink)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-emerald-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                   <div>
@@ -646,7 +618,7 @@ export default function DemoEvent2026() {
       </section >
 
       {/* CTA Section */}
-      < section className="section bg-gradient-to-r from-[var(--turquoise)] to-[var(--pink)] text-white relative overflow-hidden" >
+      < section className="section bg-gradient-to-r from-indigo-600 to-emerald-500 text-white relative overflow-hidden" >
         <div className="memphis-shape memphis-circle w-32 h-32 bg-white/20 top-10 right-10" />
         <div className="memphis-shape w-24 h-24 bg-white/10 bottom-10 left-10 rotate-45" />
 
@@ -664,7 +636,7 @@ export default function DemoEvent2026() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-[var(--turquoise)] hover:bg-gray-100 text-xl px-12 py-8 font-bold"
+            className="bg-white text-indigo-600 hover:bg-gray-100 text-xl px-12 py-8 font-bold"
             asChild
           >
             <a
@@ -691,15 +663,15 @@ export default function DemoEvent2026() {
               <div className="relative h-[320px] md:h-[360px]">
                 {/* Back photo */}
                 <img
-                  src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1762849504/IMG_4134_myon4z.jpg"
-                  alt="アクロス福岡 円形ホール（後ろの写真）"
+                  src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1772687619/across_out.jpg"
+                  alt="アクロス福岡 外観"
                   loading="lazy"
                   className="absolute z-0 left-2 top-4 w-4/5 md:w-3/4 h-56 md:h-72 object-cover rounded-xl shadow-xl rotate-[-6deg] transition-transform duration-300 ease-out will-change-transform hover:scale-105 hover:-translate-y-1 hover:translate-x-1 cursor-pointer"
                 />
                 {/* Front photo */}
                 <img
-                  src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1762849508/CleanShot_2025-11-11_at_17.18.10_2x_nvxhoc.png"
-                  alt="アクロス福岡 円形ホール（手前の写真）"
+                  src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1772687618/across_kaigiD.jpg"
+                  alt="アクロス福岡 大会議室"
                   loading="lazy"
                   className="absolute z-10 right-2 bottom-6 w-3/4 md:w-2/3 h-56 md:h-72 object-cover rounded-xl shadow-2xl rotate-[5deg] ring-4 ring-white/70 transition-transform duration-300 ease-out will-change-transform hover:scale-105 hover:-translate-y-1 hover:-translate-x-1 cursor-pointer"
                 />
@@ -725,7 +697,7 @@ export default function DemoEvent2026() {
               </div>
               <div className="mt-3 text-sm text-gray-600">
                 <p>〒810-0001 福岡県福岡市中央区天神1丁目1-1</p>
-                <p>会場: アクロス福岡 円形ホール</p>
+                <p>会場: アクロス福岡 大会議室（アクロス7F）</p>
               </div>
             </div>
           </div>
@@ -757,8 +729,8 @@ export default function DemoEvent2026() {
             <div>
               <h3 className="text-2xl font-bold mb-4">イベント情報</h3>
               <div className="space-y-2 text-gray-400">
-                <p>📅 2026年12月3日（木）18:30-20:30</p>
-                <p>📍 アクロス福岡 円形ホール</p>
+                <p>📅 2026年6月13日（土）12:00開始</p>
+                <p>📍 アクロス福岡 大会議室（アクロス7F）</p>
                 <p>〒810-0001 福岡県福岡市中央区天神1丁目1-1</p>
                 <p>💰 入場無料・事前予約優先</p>
               </div>
@@ -806,7 +778,7 @@ export default function DemoEvent2026() {
                   <label className="block text-sm font-medium mb-2">ふりがな *</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--turquoise)] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     placeholder="例）やまだ たろう"
                     required
                   />
@@ -816,7 +788,7 @@ export default function DemoEvent2026() {
                   <label className="block text-sm font-medium mb-2">メールアドレス *</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--turquoise)] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     placeholder="例）example@email.com"
                     required
                   />
@@ -826,14 +798,14 @@ export default function DemoEvent2026() {
                   <label className="block text-sm font-medium mb-2">電話番号</label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--turquoise)] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     placeholder="例）090-1234-5678"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">所属 *</label>
-                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--turquoise)] focus:border-transparent" required>
+                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required>
                     <option value="">選択してください</option>
                     <option value="大学生">大学生</option>
                     <option value="高校生">高校生</option>
@@ -846,14 +818,14 @@ export default function DemoEvent2026() {
                   <label className="block text-sm font-medium mb-2">学校名・学年</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--turquoise)] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     placeholder="例）福岡大学 1年"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">参加人数 *</label>
-                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--turquoise)] focus:border-transparent" required>
+                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required>
                     <option value="1">1名</option>
                     <option value="2">2名</option>
                     <option value="3">3名</option>
