@@ -528,7 +528,7 @@ export default function DemoEvent2026() {
               asChild
               className="bg-gradient-to-r from-indigo-600 to-emerald-500 hover:from-indigo-600/90 hover:to-emerald-500/90 text-white px-8 py-10 md:py-12 text-xl leading-relaxed whitespace-normal font-bold shadow-lg hover:shadow-xl transition-all duration-300 min-h-[88px]"
             >
-              <a href="/demo/intern">運営メンバー募集中</a>
+              <a href="/intern">運営メンバー募集中</a>
             </Button>
           </div>
         </div>

@@ -98,7 +98,7 @@ export default function DemoIntern() {
                                     variant="outline"
                                     className="rounded-xl border-2 border-gray-300 hover:border-[var(--turquoise)] hover:text-[var(--turquoise)] transition-all duration-200"
                                 >
-                                    <Link href="/demo/event-2025">第一回の様子を見る →</Link>
+                                    <Link href="/event-2025">第一回の様子を見る →</Link>
                                 </Button>
                             </div>
                         </Card>

@@ -320,7 +320,7 @@ export default function DemoHome() {
                     size="lg"
                     className="border-white/30 text-white hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-xl px-8 py-5 font-semibold"
                   >
-                    <Link href="/demo/event-2025">結果を見る →</Link>
+                    <Link href="/event-2025">結果を見る →</Link>
                   </Button>
                 </div>
               </Card>
@@ -345,7 +345,7 @@ export default function DemoHome() {
                     size="lg"
                     className="bg-[var(--yellow)] hover:bg-amber-400 text-gray-900 text-lg px-10 py-6 rounded-xl shadow-xl shadow-yellow-500/20 hover:shadow-yellow-400/30 transition-all duration-300 hover:-translate-y-1 font-bold"
                   >
-                    <Link href="/demo/intern">詳細を見る →</Link>
+                    <Link href="/intern">詳細を見る →</Link>
                   </Button>
                 </div>
               </Card>
@@ -388,7 +388,7 @@ export default function DemoHome() {
                 size="lg"
                 className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl transition-all duration-300 hover:-translate-y-0.5 font-bold"
               >
-                <Link href="/demo/event-2026">2026イベントLPを見る →</Link>
+                <Link href="/event-2026">2026イベントLPを見る →</Link>
               </Button>
             </div>
           </div>

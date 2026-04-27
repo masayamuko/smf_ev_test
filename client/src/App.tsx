@@ -6,11 +6,11 @@ import DemoEvent2026 from "@/pages/DemoEvent2026";
 import DemoHome from "@/pages/DemoHome";
 import DemoIntern from "@/pages/DemoIntern";
 import NotFound from "@/pages/NotFound";
+import UnderConstruction from "@/pages/UnderConstruction";
 import { ReactNode } from "react";
 import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
 
 type ProtectedDemoPageProps = {
   children: ReactNode;
@@ -24,39 +24,23 @@ function Router() {
   return (
     <WouterRouter base={import.meta.env.BASE_URL}>
       <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/demo"}>
-          {() => (
-            <ProtectedDemoPage>
-              <DemoHome />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo/event-2025"}>
-          {() => (
-            <ProtectedDemoPage>
-              <DemoEvent2025 />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo/event-2026"}>
+        <Route path={"/"} component={DemoHome} />
+        <Route path={"/event-2025"} component={DemoEvent2025} />
+
+        <Route path={"/event-2026"} component={UnderConstruction} />
+        <Route path={"/event-2026/test"}>
           {() => (
             <ProtectedDemoPage>
               <DemoEvent2026 />
             </ProtectedDemoPage>
           )}
         </Route>
-        <Route path={"/demo/intern"}>
+
+        <Route path={"/intern"} component={UnderConstruction} />
+        <Route path={"/intern/test"}>
           {() => (
             <ProtectedDemoPage>
               <DemoIntern />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo/:rest*"}>
-          {() => (
-            <ProtectedDemoPage>
-              <NotFound />
             </ProtectedDemoPage>
           )}
         </Route>
