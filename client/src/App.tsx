@@ -24,7 +24,13 @@ function Router() {
   return (
     <WouterRouter base={import.meta.env.BASE_URL}>
       <Switch>
-        <Route path={"/"} component={Home} />
+        <Route path={"/"}>
+          {() => (
+            <ProtectedDemoPage>
+              <Home />
+            </ProtectedDemoPage>
+          )}
+        </Route>
         <Route path={"/demo"}>
           {() => (
             <ProtectedDemoPage>

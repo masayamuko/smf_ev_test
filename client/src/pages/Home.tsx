@@ -556,7 +556,7 @@ export default function Home() {
               asChild
               className="bg-gradient-to-r from-[var(--turquoise)] to-[var(--pink)] hover:from-[var(--turquoise)]/90 hover:to-[var(--pink)]/90 text-white px-8 py-10 md:py-12 text-xl leading-relaxed whitespace-normal font-bold shadow-lg hover:shadow-xl transition-all duration-300 min-h-[88px]"
             >
-              <a href="#team-recruitment">第2回主催メンバーとなる<br />学生ボランティア募集【２０２６年春開催】</a>
+              <a href="/demo/event-2026">第2回 Fukuoka国際系学生 AWARD 2026<br />詳細・登壇団体募集はこちら【6/13(土) アクロス福岡】</a>
             </Button>
           </div>
         </div>
@@ -589,7 +589,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">開催予定日</p>
-                    <p className="text-gray-600">2026年6月15日（仮）18:30-20:30</p>
+                    <p className="text-gray-600">2026年6月13日（土）13:30〜16:30</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -599,7 +599,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">会場</p>
-                    <p className="text-gray-600">アクロス福岡 円形ホール（調整中）</p>
+                    <p className="text-gray-600">アクロス福岡 7階 大会議室</p>
                   </div>
                 </div>
               </div>
@@ -635,8 +635,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                   <div>
-                    <p className="font-semibold text-gray-900">募集期限</p>
-                    <p className="text-gray-600">2025年12月末（仮）</p>
+                    <p className="font-semibold text-gray-900">登壇団体 応募締切</p>
+                    <p className="text-gray-600">2026年5月13日（火）</p>
                   </div>
                 </div>
               </div>

@@ -40,31 +40,35 @@ export default function DemoEvent2026() {
                 <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold tracking-wide">
                   福岡市後援
                 </div>
+                <div className="inline-block bg-amber-400 text-black px-4 py-2 rounded-full text-sm font-bold tracking-wide">
+                  登壇団体募集中
+                </div>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-sm">
-                福岡海外系<br />
-                学生サークル<br />
-                アワード2026
+                Fukuoka<br />
+                国際系学生<br />
+                AWARD 2026
               </h1>
 
               <p className="text-xl md:text-2xl font-medium leading-relaxed">
-                海外系サークルの活動を一気に知れる！<br />
-                福岡の学生が世界とつながる、特別な時間。
+                あなたの活動を、世界へ。<br />
+                国際交流・留学生支援・海外活動に挑む<br className="hidden md:block" />
+                学生団体が集う、特別な一日。
               </p>
 
               <div className="space-y-3 text-lg">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📅</span>
-                  <span>2026年6月13日（土）12:00開始</span>
+                  <span>2026年6月13日（土）13:30〜16:30</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📍</span>
-                  <span>アクロス福岡 大会議室（アクロス7F）</span>
+                  <span>アクロス福岡 7階 大会議室</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">💰</span>
-                  <span>入場無料・事前予約優先</span>
+                  <span className="text-2xl">📝</span>
+                  <span>登壇団体 応募締切：2026年5月13日（火）</span>
                 </div>
               </div>
 
@@ -74,17 +78,38 @@ export default function DemoEvent2026() {
                   className="bg-amber-400 text-black hover:bg-amber-500 text-lg px-8 py-6 font-bold"
                   asChild
                 >
+                  <a href="#entry">
+                    登壇団体に応募する
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 backdrop-blur-sm border-white/40 text-white hover:bg-white/20 text-lg px-8 py-6 font-bold"
+                  asChild
+                >
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSf_K_wfxi43O-ieic5Xn53gP2WWh4nl1P9BJxhoGy43kz6TlA/viewform"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    今すぐ無料で予約する
+                    観覧の事前予約
                   </a>
                 </Button>
               </div>
             </div>
 
+            {/* Right: Logo */}
+            <div className="hidden lg:flex items-center justify-center">
+              <div className="relative">
+                <div className="absolute -inset-6 bg-white/40 rounded-full blur-2xl" />
+                <img
+                  src="/award2026-logo.jpg"
+                  alt="Fukuoka国際系学生 AWARD 2026 ロゴ"
+                  className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full object-contain bg-white shadow-2xl ring-8 ring-white/30"
+                />
+              </div>
+            </div>
 
           </div>
         </div>
@@ -98,7 +123,7 @@ export default function DemoEvent2026() {
         <div className="container relative z-10">
           <Countdown
             heading="イベント当日まで残り、、、"
-            targetISO="2026-06-13T12:00:00+09:00"
+            targetISO="2026-06-13T13:30:00+09:00"
           />
         </div>
       </section>
@@ -127,9 +152,9 @@ export default function DemoEvent2026() {
                 優秀な活動には豪華賞金！
               </h3>
               <div className="space-y-2 text-gray-700">
-                <p className="font-bold">🏆 1位：賞金5万円</p>
-                <p className="font-bold">🥈 2位：賞金3万円</p>
-                <p className="font-bold">🥉 3位：賞金2万円</p>
+                <p className="font-bold">🥇 ベストオーディエンス賞：5万円＋賞状</p>
+                <p className="font-bold">🥈 特別審査員賞：3万円＋賞状</p>
+                <p className="font-bold">🌸 スマフラ奨励賞：1万円＋賞状</p>
               </div>
               <p className="text-gray-700">
                 みんなの投票で順位が決まるので、あなたの一票が、学生たちの活動を後押しします。
@@ -249,10 +274,154 @@ export default function DemoEvent2026() {
                 );
               })}
             </div>
-            <p className="text-center mt-8 text-gray-600">上記５団体が登壇予定です。</p>
+            <p className="text-center mt-8 text-gray-600">
+              登壇団体は現在募集中。あなたの団体の活動を、ここで発信しませんか？
+            </p>
+            <div className="mt-6 text-center">
+              <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 text-lg font-bold">
+                <a href="#entry">登壇団体の応募要項を見る</a>
+              </Button>
+            </div>
           </div >
         </div >
       </section >
+
+      {/* Entry / Recruitment Section */}
+      <section id="entry" className="section bg-gradient-to-br from-amber-50 via-white to-indigo-50 relative overflow-hidden">
+        <div className="memphis-shape memphis-circle w-32 h-32 bg-amber-300 top-10 right-10 opacity-30" />
+        <div className="memphis-shape w-24 h-24 bg-emerald-300 bottom-10 left-10 rotate-12 opacity-30" />
+
+        <div className="container relative z-10">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1 rounded-full bg-amber-400 text-black text-sm font-bold tracking-wider mb-4">
+              ＼ 登壇団体募集中 ／
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+              あなたの活動を、世界へ。
+            </h2>
+            <p className="mt-4 text-lg text-gray-700">
+              プレゼンを通じて、あなたの団体の魅力を福岡中の学生・教育関係者に届けませんか？
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+            {/* 応募条件 */}
+            <div className="p-6 md:p-10 bg-gradient-to-br from-indigo-50 to-white">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <span className="inline-block w-1 h-7 bg-indigo-500 rounded-full" />
+                応募条件
+              </h3>
+              <ul className="space-y-4 text-gray-800 text-base md:text-lg">
+                <li className="flex items-start gap-3">
+                  <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold">①</span>
+                  <span>福岡県内の<strong className="text-indigo-700">高校・大学</strong>に所属する団体</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold">②</span>
+                  <span><strong className="text-indigo-700">国際交流・留学生支援・海外活動</strong>に関する活動を行っている団体</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold">③</span>
+                  <span>本番までの<strong className="text-indigo-700">事前ミーティング（3回程度）</strong>に参加できる団体</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 賞 */}
+            <div className="p-6 md:p-10 border-t border-gray-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <span className="inline-block w-1 h-7 bg-amber-500 rounded-full" />
+                受賞団体には賞金・賞状を授与
+              </h3>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="rounded-xl p-5 bg-gradient-to-br from-amber-100 to-amber-50 border border-amber-200 text-center">
+                  <div className="text-3xl mb-2">🥇</div>
+                  <div className="font-bold text-gray-900">ベストオーディエンス賞</div>
+                  <div className="mt-2 text-amber-700 font-bold text-lg">賞金 5万円</div>
+                  <div className="text-sm text-gray-600">＋賞状</div>
+                </div>
+                <div className="rounded-xl p-5 bg-gradient-to-br from-gray-100 to-gray-50 border border-gray-200 text-center">
+                  <div className="text-3xl mb-2">🥈</div>
+                  <div className="font-bold text-gray-900">特別審査員賞</div>
+                  <div className="mt-2 text-gray-700 font-bold text-lg">賞金 3万円</div>
+                  <div className="text-sm text-gray-600">＋賞状</div>
+                </div>
+                <div className="rounded-xl p-5 bg-gradient-to-br from-pink-100 to-pink-50 border border-pink-200 text-center">
+                  <div className="text-3xl mb-2">🌸</div>
+                  <div className="font-bold text-gray-900">スマフラ奨励賞</div>
+                  <div className="mt-2 text-pink-700 font-bold text-lg">賞金 1万円</div>
+                  <div className="text-sm text-gray-600">＋賞状</div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="p-6 md:p-10 bg-gradient-to-br from-indigo-600 to-emerald-500 text-white">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div>
+                  <p className="text-sm opacity-90 mb-1">応募締切</p>
+                  <p className="text-3xl md:text-4xl font-bold">2026年 5月13日（火）</p>
+                  <p className="mt-3 text-white/90">
+                    申し込み・ご質問は<strong>Instagram DM</strong>または<strong>お電話</strong>へ。お気軽にご連絡ください。
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Button asChild size="lg" className="bg-amber-400 text-black hover:bg-amber-500 text-lg py-6 font-bold">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                      Instagram DMで応募する
+                    </a>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/50 text-white hover:bg-white/20 text-lg py-6 font-bold">
+                    <a href="tel:0927914360">📞 092-791-4360 へ電話</a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Keynote Section — 非公開（今回開催の予定なし。復活させる場合は false → true） */}
+      {false && (
+        <section className="section bg-gradient-to-br from-white via-indigo-50/40 to-white">
+          <div className="container">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1 rounded-full bg-indigo-600 text-white text-sm font-bold tracking-wider mb-4">
+                KEYNOTE
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+                特別 基調講演
+              </h2>
+              <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+                国際交流・キャリアの第一線で活動するゲストによる、学生のための特別講演を予定しています。
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="rounded-2xl bg-white shadow-xl border border-indigo-100 overflow-hidden">
+                <div className="grid md:grid-cols-3 gap-0">
+                  <div className="md:col-span-1 bg-gradient-to-br from-indigo-600 to-emerald-500 p-8 flex items-center justify-center text-white">
+                    <div className="text-center">
+                      <div className="text-5xl mb-2">🎤</div>
+                      <p className="font-bold">SPECIAL GUEST</p>
+                      <p className="text-sm opacity-90 mt-2">登壇者・演題は<br />調整中です</p>
+                    </div>
+                  </div>
+                  <div className="md:col-span-2 p-8">
+                    <p className="text-sm text-indigo-700 font-bold mb-2">講演内容（予定）</p>
+                    <p className="text-lg text-gray-800 leading-relaxed">
+                      国際交流の最前線で活躍するゲストをお招きし、これからの時代に必要な「世界とつながる力」をテーマに、学生のみなさまへメッセージをお届けします。
+                    </p>
+                    <p className="mt-4 text-sm text-gray-500">
+                      ※ 登壇者・タイトル・所属の詳細は決まり次第、本ページにて発表いたします。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
 
       {/* Judging/Award Flow (New) */}
@@ -397,12 +566,13 @@ export default function DemoEvent2026() {
               <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-300"></div>
               <ul className="space-y-5">
                 {[
-                  { time: "11:30", title: "開場", desc: "会場に到着したら、受付でお名前をお伝えください。" },
-                  { time: "12:00", title: "開会（主催者挨拶・大会趣旨紹介）", desc: "イベントの趣旨と流れをご説明します。" },
-                  { time: "12:10", title: "各サークルプレゼン", desc: "各サークルが活動内容や魅力をプレゼンテーションします。" },
-                  { time: "13:10", title: "結果発表・表彰", desc: "観客投票の結果を発表し、優秀なサークルを表彰します。" },
-                  { time: "13:30", title: "第二部：交流会", desc: "各サークルのブースを回って、直接話を聞くことができます。" },
-                  { time: "14:00", title: "閉会", desc: "イベント終了です。お疲れさまでした！" }
+                  { time: "13:00", title: "開場", desc: "会場に到着したら、受付でお名前をお伝えください。" },
+                  { time: "13:30", title: "開会（主催者挨拶・大会趣旨紹介）", desc: "イベントの趣旨と流れをご説明します。" },
+                  { time: "13:40", title: "登壇団体プレゼン", desc: "各団体が活動の魅力と取り組みをプレゼンテーションします。" },
+                  { time: "15:30", title: "投票・審査員講評", desc: "会場の参加者投票と、審査員からのフィードバックです。" },
+                  { time: "16:00", title: "結果発表・表彰", desc: "ベストオーディエンス賞・特別審査員賞・スマフラ奨励賞を発表します。" },
+                  { time: "16:15", title: "交流タイム", desc: "登壇団体・参加者・審査員が直接話せる交流の時間です。" },
+                  { time: "16:30", title: "閉会", desc: "イベント終了です。お疲れさまでした！" }
                 ].map((item, index) => (
                   <li key={index} className="relative pl-10 group cursor-pointer transition-all duration-300 hover:scale-105">
                     {/* node dot */}
@@ -711,14 +881,14 @@ export default function DemoEvent2026() {
             <div>
               <h3 className="text-2xl font-bold mb-4">主催者情報</h3>
               <div className="mb-4 space-y-1">
-                <p className="text-gray-400">主催</p>
-                <p className="text-gray-300 ml-4">NPO法人スマイリーフラワーズ</p>
+                <p className="text-gray-400">企画・主催</p>
+                <p className="text-gray-300 ml-4">NPO法人国際教育支援機構 スマイリーフラワーズ</p>
               </div>
               <div className="mb-4 space-y-1">
                 <p className="text-gray-400">後援</p>
-                <p className="text-gray-300 ml-4">福岡市</p>
+                <p className="text-gray-300 ml-4">福岡市／筑紫女学園大学 英語学科</p>
               </div>
-              <p className="text-lg font-semibold mb-2 mt-6">NPO法人スマイリーフラワーズ</p>
+              <p className="text-lg font-semibold mb-2 mt-6">お問い合わせ</p>
               <div className="space-y-2 text-gray-400">
                 <p>📞 TEL: 092-791-4360</p>
                 <p>📧 Email: info@smileyflowers.net</p>
@@ -729,10 +899,10 @@ export default function DemoEvent2026() {
             <div>
               <h3 className="text-2xl font-bold mb-4">イベント情報</h3>
               <div className="space-y-2 text-gray-400">
-                <p>📅 2026年6月13日（土）12:00開始</p>
-                <p>📍 アクロス福岡 大会議室（アクロス7F）</p>
+                <p>📅 2026年6月13日（土）13:30〜16:30</p>
+                <p>📍 アクロス福岡 7階 大会議室</p>
                 <p>〒810-0001 福岡県福岡市中央区天神1丁目1-1</p>
-                <p>💰 入場無料・事前予約優先</p>
+                <p>📝 登壇団体 応募締切：2026年5月13日（火）</p>
               </div>
             </div>
           </div>

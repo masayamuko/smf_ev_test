@@ -8,8 +8,9 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), vitePluginManusRuntime()];
 
 export default defineConfig(({ mode }) => ({
-  // Use root base for Vercel, GH Pages prefix for project site
-  base: mode === "development" ? "/" : "/smf_ev_test/",
+  // Custom domain (awards.smileyflowers.org) is served at root, so base="/".
+  // If you ever need to publish at masayamuko.github.io/smf_ev_test/, set BUILD_BASE=/smf_ev_test/ at build time.
+  base: process.env.BUILD_BASE ?? "/",
   plugins,
   resolve: {
     alias: {
