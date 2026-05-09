@@ -99,14 +99,14 @@ export default function DemoEvent2026() {
               </div>
             </div>
 
-            {/* Right: Logo */}
-            <div className="hidden lg:flex items-center justify-center">
+            {/* Right: Logo (transparent via Cloudinary background removal) */}
+            <div className="flex items-center justify-center mt-8 lg:mt-0">
               <div className="relative">
-                <div className="absolute -inset-6 bg-white/40 rounded-full blur-2xl" />
+                <div className="absolute -inset-8 bg-white/30 rounded-full blur-3xl" />
                 <img
-                  src="/award2026-logo.jpg"
+                  src="https://res.cloudinary.com/dg3mdcuju/image/upload/e_background_removal/f_webp,q_auto:eco/v1778293063/corduroy/smf/award2026/logo.jpg"
                   alt="Fukuoka国際系学生 AWARD 2026 ロゴ"
-                  className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full object-contain bg-white shadow-2xl ring-8 ring-white/30"
+                  className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
                 />
               </div>
             </div>
