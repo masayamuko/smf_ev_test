@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
+// AWARD2026 登壇団体の写真（チラシからの切り出し・仮。後日、各団体の元写真で差し替え）
+import imgOym from "@/assets/award2026/teams/oym.jpg";
+import imgSakura from "@/assets/award2026/teams/sakura.jpg";
+import imgRyo from "@/assets/award2026/teams/ryo.jpg";
+import imgFitcore from "@/assets/award2026/teams/fitcore.jpg";
+import imgC3 from "@/assets/award2026/teams/c3.jpg";
 
 const LINE_ADD_URL = import.meta.env.VITE_LINE_ADD_URL || "https://line.me/";
 
@@ -47,6 +53,42 @@ const groups = [
     img: "https://res.cloudinary.com/dg3mdcuju/image/upload/v1764040955/IMG_1952_oubtsz.jpg",
     description:
       "森林学系学生の国際ネットワークを通じて越境的な学びと連携を促進。",
+  },
+  // ── AWARD 2026 登壇団体（高校生2・大学生5のうち、IFSAQ/FIWCは上記に既出のため残り5団体） ──
+  {
+    name: "On Your Mark！（福岡未来創造キャンプ）",
+    category: "高校生・挑戦",
+    img: imgOym,
+    description:
+      "高校生が主体となり、未来を切り拓く挑戦を後押しするキャンプ型プログラム。",
+  },
+  {
+    name: "SAKURA（雙葉高校）",
+    category: "高校生・国際交流",
+    img: imgSakura,
+    description:
+      "雙葉高校の生徒による国際交流・社会貢献活動に取り組むチーム。",
+  },
+  {
+    name: "国際寮RA（西南学院大学）",
+    category: "留学生支援",
+    img: imgRyo,
+    description:
+      "国際寮のレジデント・アシスタントとして、留学生と日本人学生の共生をつくる。",
+  },
+  {
+    name: "FIT CORE（福岡大学）",
+    category: "国際交流",
+    img: imgFitcore,
+    description:
+      "福岡大学を拠点に国際交流・地域連携に取り組む学生団体。",
+  },
+  {
+    name: "プロジェクト創発団体C³（西南学院大学）",
+    category: "課題解決",
+    img: imgC3,
+    description:
+      "西南学院大学発、課題解決型のプロジェクトを生み出す創発チーム。",
   },
 ];
 
@@ -110,13 +152,8 @@ export default function DemoHome() {
 
         <div className="container relative z-10 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            {/* DEMO badge */}
-            <span className="inline-flex rounded-full bg-white/15 backdrop-blur-sm text-white px-5 py-1.5 text-sm font-bold tracking-widest uppercase border border-white/20">
-              DEMO
-            </span>
-
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] text-white tracking-tight drop-shadow-lg">
-              福岡国際交流
+              福岡国際系団体
               <br />
               <span className="bg-gradient-to-r from-[var(--turquoise)] via-teal-300 to-emerald-300 bg-clip-text text-transparent">
                 プラットフォーム
@@ -124,14 +161,14 @@ export default function DemoHome() {
             </h1>
 
             <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
-              福岡で活動する国際交流団体の情報と、最新の国際交流イベント情報を
-              LINEでまとめて届けるための案内ページです。
+              福岡で活動する国際系団体の情報と、福岡のイベント情報・国際系イベント情報を
+              LINEでお届けする案内ページです。
             </p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2.5 justify-center pt-2">
               <span className="rounded-full px-4 py-1.5 bg-white text-gray-900 text-sm font-bold shadow-lg">
-                国際交流イベント情報
+                国際系イベント情報
               </span>
               <span className="rounded-full px-4 py-1.5 bg-white/10 backdrop-blur-sm text-white/90 border border-white/20 text-sm font-medium">
                 団体掲載受付中
@@ -152,7 +189,8 @@ export default function DemoHome() {
       </section>
 
       {/* ─── 福岡での国際系情報が届く SECTION ─── */}
-      <section className="py-16 md:py-20 bg-teal-50/50">
+      {/* 背景色は Hero の波(divider) fill #f0fdfa = teal-50 と完全一致させ、継ぎ目の横線を消す */}
+      <section className="py-16 md:py-20 bg-teal-50">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div>
@@ -167,21 +205,21 @@ export default function DemoHome() {
                 <div className="text-4xl mb-3">📱</div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">LINEに登録するだけ</h3>
                 <p className="text-sm text-gray-600">
-                  公式LINEを友だち追加するだけで、福岡の国際交流情報が届きます。
+                  公式LINEを友だち追加するだけで、福岡の国際系情報が届きます。
                 </p>
               </Card>
               <Card className="p-6 border-0 shadow-md rounded-2xl bg-white text-center">
                 <div className="text-4xl mb-3">🌍</div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">登録団体のイベント情報</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">掲載団体のイベント情報</h3>
                 <p className="text-sm text-gray-600">
-                  掲載団体が企画する国際交流イベントの情報や招待がLINEで届きます。
+                  掲載団体が企画する国際系イベントの情報や招待がLINEで届きます。
                 </p>
               </Card>
               <Card className="p-6 border-0 shadow-md rounded-2xl bg-white text-center">
                 <div className="text-4xl mb-3">🎉</div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">最新のAward情報も</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">最新のアワード情報も</h3>
                 <p className="text-sm text-gray-600">
-                  福岡国際団体Awardの開催情報やインターン募集もいち早くキャッチ。
+                  年1回、福岡国際系学生団体のアワードを開催。開催情報やインターン募集もいち早くキャッチ。
                 </p>
               </Card>
             </div>
@@ -205,9 +243,9 @@ export default function DemoHome() {
           <div className="max-w-6xl mx-auto">
             {/* Section header */}
             <div className="text-center mb-10">
-              <p className="text-sm font-bold text-[var(--turquoise)] mb-2 tracking-wide uppercase">Registered Groups</p>
+              <p className="text-sm font-bold text-[var(--turquoise)] mb-2 tracking-wide uppercase">Groups in Fukuoka</p>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-                団体一覧
+                福岡の国際系団体一覧
               </h2>
             </div>
 
@@ -294,58 +332,68 @@ export default function DemoHome() {
                 🏆 Award
               </span>
               <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-                福岡国際団体Award
+                福岡国際系学生団体アワード
                 <br />
-                <span className="bg-gradient-to-r from-[var(--yellow)] to-amber-300 bg-clip-text text-transparent">開催！</span>
+                <span className="bg-gradient-to-r from-[var(--yellow)] to-amber-300 bg-clip-text text-transparent">開催</span>
               </h2>
               <p className="text-lg text-white/70 mt-4 max-w-xl mx-auto leading-relaxed">
-                福岡で活動する国際交流団体が一堂に会し、
-                活動内容をプレゼン。投票で上位団体を表彰するイベントです。
+                年1回、福岡で活動する国際系学生団体が一堂に会し、
+                活動内容をプレゼン。来場者投票と審査員評価で表彰するイベントです。
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {/* Past Event */}
+              {/* アーカイブ（過去の開催） */}
               <Card className="p-0 overflow-hidden border-0 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
-                <div className="p-8 text-center">
-                  <span className="text-sm font-bold text-white/50 uppercase tracking-wider">Past Event</span>
-                  <h3 className="text-2xl font-extrabold text-white mt-2 mb-4">第一回 Award 2025</h3>
-                  <p className="text-white/60 text-sm mb-6">
-                    5団体が参加し、観客投票で結果を決定。
-                    <br />盛況のうちに終了しました！
-                  </p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="border-white/30 text-white hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-xl px-8 py-5 font-semibold"
-                  >
-                    <Link href="/demo/event-2025">結果を見る →</Link>
-                  </Button>
+                <div className="p-8 text-left">
+                  <span className="text-sm font-bold text-white/50 uppercase tracking-wider">Archive</span>
+                  <h3 className="text-2xl font-extrabold text-white mt-2 mb-5">過去の開催</h3>
+                  <div className="space-y-3">
+                    <Link
+                      href="/demo/event-2025"
+                      className="flex items-center justify-between rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-4 transition-colors group"
+                    >
+                      <div>
+                        <p className="text-xs text-white/50">2025</p>
+                        <p className="font-bold text-white">第1回 AWARD 2025</p>
+                      </div>
+                      <span className="text-white/60 group-hover:text-white transition-colors">→</span>
+                    </Link>
+                    <Link
+                      href="/demo/event-2026"
+                      className="flex items-center justify-between rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-4 transition-colors group"
+                    >
+                      <div>
+                        <p className="text-xs text-white/50">2026 ・ 参加者満足度 94.5%</p>
+                        <p className="font-bold text-white">第2回 AWARD 2026</p>
+                      </div>
+                      <span className="text-white/60 group-hover:text-white transition-colors">→</span>
+                    </Link>
+                  </div>
                 </div>
               </Card>
 
-              {/* Intern Recruitment */}
+              {/* 次回（第3回）＋ 主催チーム募集 */}
               <Card className="p-0 overflow-hidden border-0 rounded-2xl bg-gradient-to-br from-[var(--yellow)]/20 to-amber-500/10 border border-[var(--yellow)]/30">
-                <div className="p-8 text-center">
-                  <span className="inline-flex items-center gap-1 bg-[var(--yellow)] text-gray-900 rounded-full px-3 py-1 text-xs font-extrabold uppercase tracking-wider">
-                    🔥 募集中
+                <div className="p-8 text-center flex flex-col h-full">
+                  <span className="inline-flex items-center gap-1 bg-[var(--yellow)] text-gray-900 rounded-full px-3 py-1 text-xs font-extrabold uppercase tracking-wider self-center">
+                    🔥 主催チーム募集中
                   </span>
-                  <h3 className="text-2xl font-extrabold text-white mt-3 mb-4">
-                    第二回 Award 2026
+                  <h3 className="text-2xl font-extrabold text-white mt-3 mb-2">
+                    第3回 AWARD
                     <br />
-                    <span className="text-[var(--yellow)]">インターン募集中</span>
+                    <span className="text-[var(--yellow)]">2027年12月 開催予定</span>
                   </h3>
-                  <p className="text-white/60 text-sm mb-6">
-                    第二回の運営を一緒に作りませんか？
-                    <br />企画・広報・当日運営まで、あなたの力を求めています！
+                  <p className="text-white/60 text-sm mb-6 flex-grow">
+                    次回開催を一緒に作る運営メンバーを募集中。
+                    インターン・運営メンバー・主催チームとして、企画・広報・当日運営まで、あなたの力を求めています！
                   </p>
                   <Button
                     asChild
                     size="lg"
                     className="bg-[var(--yellow)] hover:bg-amber-400 text-gray-900 text-lg px-10 py-6 rounded-xl shadow-xl shadow-yellow-500/20 hover:shadow-yellow-400/30 transition-all duration-300 hover:-translate-y-1 font-bold"
                   >
-                    <Link href="/demo/intern">詳細を見る →</Link>
+                    <Link href="/demo/intern">募集の詳細を見る →</Link>
                   </Button>
                 </div>
               </Card>
@@ -367,30 +415,59 @@ export default function DemoHome() {
             <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
               公式LINEに登録して
               <br />
-              福岡の国際情報をGET
+              福岡の国際系の情報をGET
             </h3>
             <p className="text-lg text-white/80 mb-10 leading-relaxed max-w-xl mx-auto">
               団体掲載の相談、イベント情報、インターン募集など
               すべてLINEからお届けします。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-teal-700 hover:bg-gray-100 text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 font-bold"
+                className="bg-white text-teal-700 hover:bg-gray-100 text-lg px-12 py-7 rounded-xl shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 font-bold"
               >
                 <a href={LINE_ADD_URL} target="_blank" rel="noopener noreferrer">
                   ✨ 公式LINEを追加
                 </a>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl transition-all duration-300 hover:-translate-y-0.5 font-bold"
-              >
-                <Link href="/demo/event-2026">2026イベントLPを見る →</Link>
-              </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 運営メンバー / About SECTION ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-bold text-[var(--turquoise)] mb-2 tracking-wide uppercase">About Us</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5">
+              運営メンバー
+            </h2>
+            <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
+              このプラットフォームは、NPO法人国際教育支援機構スマイリーフラワーズと
+              学生による実行委員会が運営しています。福岡の国際系団体をつなぎ、
+              情報発信・イベント・アワードを通じて「知る・つながる・広がる」場をつくっています。
+            </p>
+
+            {/* メンバー紹介（プレースホルダ。後日プロフィールを差し替え） */}
+            <div className="grid sm:grid-cols-3 gap-5 mb-10">
+              {["企画・統括", "運営・渉外", "デザイン・広報"].map((role, i) => (
+                <div key={i} className="rounded-2xl border border-gray-100 shadow-sm p-6 bg-white">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-teal-400 to-emerald-400" />
+                  <p className="font-bold text-gray-900">運営メンバー</p>
+                  <p className="text-xs text-gray-500 mt-1">{role}</p>
+                </div>
+              ))}
+            </div>
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-[var(--turquoise)] hover:bg-teal-400 text-white text-lg px-10 py-6 rounded-xl shadow-lg shadow-teal-500/20 transition-all duration-300 hover:-translate-y-0.5 font-bold"
+            >
+              <Link href="/join">運営チームの活動を見る・学生運営メンバー募集 →</Link>
+            </Button>
           </div>
         </div>
       </section>

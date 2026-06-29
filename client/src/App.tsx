@@ -4,6 +4,7 @@ import DemoEvent2025 from "@/pages/DemoEvent2025";
 import DemoEvent2026 from "@/pages/DemoEvent2026";
 import DemoHome from "@/pages/DemoHome";
 import DemoIntern from "@/pages/DemoIntern";
+import Join from "@/pages/Join";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -19,6 +20,8 @@ function Router() {
         <Route path={"/demo/event-2025"} component={DemoEvent2025} />
         <Route path={"/demo/event-2026"} component={DemoEvent2026} />
         <Route path={"/demo/intern"} component={DemoIntern} />
+        {/* 運営メンバー募集LP（旧 smf-hours /join をプラットフォームに統合） */}
+        <Route path={"/join"} component={Join} />
         <Route path={"/demo/:rest*"} component={NotFound} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
