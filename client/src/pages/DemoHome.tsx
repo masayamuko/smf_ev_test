@@ -461,15 +461,13 @@ export default function DemoHome() {
               ))}
             </div>
 
-            {/* TODO: リンク先は別途制作中のLPに差し替え（現在は未掲載のためプレースホルダ） */}
             <Button
               asChild
               size="lg"
               className="bg-[var(--turquoise)] hover:bg-teal-400 text-white text-lg px-10 py-6 rounded-xl shadow-lg shadow-teal-500/20 transition-all duration-300 hover:-translate-y-0.5 font-bold"
             >
-              <a href="#">運営チームの活動を見る →</a>
+              <Link href="/join">運営チームの活動を見る・学生運営メンバー募集 →</Link>
             </Button>
-            <p className="text-xs text-gray-400 mt-3">※ 活動紹介ページは準備中です</p>
           </div>
         </div>
       </section>
