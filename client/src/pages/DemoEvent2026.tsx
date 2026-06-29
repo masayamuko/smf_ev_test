@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
 import Countdown from "@/components/Countdown";
+import imgOym from "@/assets/award2026/teams/oym.jpg";
+import imgSakura from "@/assets/award2026/teams/sakura.jpg";
+import imgRyo from "@/assets/award2026/teams/ryo.jpg";
+import imgFitcore from "@/assets/award2026/teams/fitcore.jpg";
+import imgIfsaq from "@/assets/award2026/teams/ifsaq.jpg";
+import imgC3 from "@/assets/award2026/teams/c3.jpg";
+import imgFiwc from "@/assets/award2026/teams/fiwc.jpg";
 
 export default function DemoEvent2026() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -33,17 +40,9 @@ export default function DemoEvent2026() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text Content */}
             <div className="text-white space-y-6 max-w-xl">
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-                  2026年6月13日(土)
-                </div>
-                <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold tracking-wide">
-                  福岡市後援
-                </div>
-                <div className="inline-block bg-amber-400 text-black px-4 py-2 rounded-full text-sm font-bold tracking-wide">
-                  登壇団体募集中
-                </div>
-              </div>
+              <p className="text-lg md:text-xl font-bold tracking-wide text-amber-300 drop-shadow-sm">
+                “やってみたい”が、世界を広げる
+              </p>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-sm">
                 Fukuoka<br />
@@ -51,24 +50,54 @@ export default function DemoEvent2026() {
                 AWARD 2026
               </h1>
 
-              <p className="text-xl md:text-2xl font-medium leading-relaxed">
-                あなたの活動を、世界へ。<br />
-                国際交流・留学生支援・海外活動に挑む<br className="hidden md:block" />
-                学生団体が集う、特別な一日。
+              <p className="text-base md:text-lg font-bold tracking-wide">
+                若者の挑戦 <span className="text-amber-300">×</span> 国際交流 <span className="text-amber-300">×</span> つながり
               </p>
 
-              <div className="space-y-3 text-lg">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">📅</span>
-                  <span>2026年6月13日（土）13:30〜16:30</span>
+              <div className="space-y-4">
+                {/* 日付：数字を大きく、年月日(土)は小さく */}
+                <div className="flex items-end gap-3">
+                  <span className="text-2xl leading-none mb-1">📅</span>
+                  <div className="font-bold leading-none flex items-end flex-wrap">
+                    <span className="text-5xl md:text-6xl">6</span>
+                    <span className="text-base mx-0.5 mb-1">月</span>
+                    <span className="text-5xl md:text-6xl">13</span>
+                    <span className="text-base mx-0.5 mb-1">日</span>
+                    <span className="text-lg md:text-xl ml-1 mb-1">（土）</span>
+                  </div>
                 </div>
+                {/* 時間：開場を含め2行 */}
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">🕐</span>
+                  <div className="leading-tight">
+                    <p className="text-2xl md:text-3xl font-bold tracking-wide">13:30〜16:30</p>
+                    <p className="text-sm text-white/80">12:30 開場</p>
+                  </div>
+                </div>
+                {/* 会場：アクロス福岡だけ大きく */}
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📍</span>
-                  <span>アクロス福岡 7階 大会議室</span>
+                  <div className="leading-tight">
+                    <p className="text-2xl md:text-3xl font-bold">アクロス福岡</p>
+                    <p className="text-sm text-white/80">7階 大会議室</p>
+                  </div>
                 </div>
+                {/* 対象 */}
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">📝</span>
-                  <span>登壇団体 応募締切：2026年5月13日（火）</span>
+                  <span className="text-2xl">🎓</span>
+                  <span className="text-base md:text-lg">対象：高校生・大学生・社会人・留学生</span>
+                </div>
+              </div>
+
+              {/* 観覧無料・途中参加OK 丸バッジ（チラシ準拠） */}
+              <div className="flex items-center gap-3 pt-1">
+                <div className="w-[72px] h-[72px] rounded-full bg-orange-500 text-white flex flex-col items-center justify-center font-bold leading-none shadow-lg ring-2 ring-white/70 text-center">
+                  <span className="text-base">観覧</span>
+                  <span className="text-base mt-1">無料</span>
+                </div>
+                <div className="w-[72px] h-[72px] rounded-full bg-teal-500 text-white flex flex-col items-center justify-center font-bold leading-none shadow-lg ring-2 ring-white/70 text-center">
+                  <span className="text-sm">途中</span>
+                  <span className="text-sm mt-1">参加OK</span>
                 </div>
               </div>
 
@@ -78,22 +107,29 @@ export default function DemoEvent2026() {
                   className="bg-amber-400 text-black hover:bg-amber-500 text-lg px-8 py-6 font-bold"
                   asChild
                 >
-                  <a href="#entry">
-                    登壇団体に応募する
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 backdrop-blur-sm border-white/40 text-white hover:bg-white/20 text-lg px-8 py-6 font-bold"
-                  asChild
-                >
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSf_K_wfxi43O-ieic5Xn53gP2WWh4nl1P9BJxhoGy43kz6TlA/viewform"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    観覧の事前予約
+                    観覧を事前予約する（無料）
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  className="border-0 text-white bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-90 shadow-lg text-lg px-8 py-6 font-bold"
+                  asChild
+                >
+                  <a
+                    href="https://www.instagram.com/fukuoka.international.award613/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                    最新情報（Instagram）
                   </a>
                 </Button>
               </div>
@@ -111,6 +147,65 @@ export default function DemoEvent2026() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Overview / Value Section */}
+      <section className="relative pt-16 pb-16 md:pt-20 md:pb-24 bg-gradient-to-b from-white via-sky-50/60 to-white overflow-hidden border-t border-black/5">
+        {/* Flags garland (flyer signature) */}
+        <FlagGarland />
+
+        {/* soft sky accents */}
+        <div className="pointer-events-none absolute -top-10 right-[-40px] w-72 h-72 bg-sky-200/40 rounded-full blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-60px] left-[-40px] w-80 h-80 bg-emerald-200/30 rounded-full blur-3xl" />
+
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block px-4 py-1 rounded-full bg-sky-100 text-sky-700 text-sm font-bold tracking-[0.2em] mb-5">
+              ABOUT
+            </span>
+            <h2 className="text-2xl md:text-4xl font-bold leading-relaxed text-gray-900">
+              国際をテーマに活動する学生団体が、<br className="hidden md:block" />
+              福岡に集結。
+            </h2>
+            <p className="mt-5 text-lg md:text-xl text-gray-700 leading-relaxed">
+              それぞれの想いと経験を発信し、つながり、<br className="hidden md:block" />
+              未来を広げる一日です。
+            </p>
+          </div>
+
+          {/* 3 value pillars：知る・つながる・広がる */}
+          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto mt-14">
+            {[
+              { emoji: "🔎", title: "知る", color: "from-sky-500 to-cyan-400", desc: "留学・海外インターン・国際ボランティアなど、多彩な海外活動を一度に知れる。" },
+              { emoji: "🤝", title: "つながる", color: "from-emerald-500 to-teal-400", desc: "同じ志を持つ学生・団体・留学生と、その場で直接つながれる。" },
+              { emoji: "🚀", title: "広がる", color: "from-orange-500 to-amber-400", desc: "「やってみたい」が動き出す。あなたの世界が、ここから広がる。" },
+            ].map((v, i) => (
+              <div key={i} className="relative rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-7 text-center">
+                <div className={`w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${v.color} text-white text-2xl flex items-center justify-center shadow-md`}>
+                  {v.emoji}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{v.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* 信頼ストリップ：主催・後援・助成 */}
+          <div className="mt-14 max-w-4xl mx-auto">
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-center">
+              {[
+                { label: "主催", value: "NPO法人スマイリーフラワーズ" },
+                { label: "後援", value: "福岡市／よかとピア国際交流財団" },
+                { label: "助成", value: "よかとピア国際交流財団" },
+              ].map((t, i) => (
+                <div key={i} className="flex items-center gap-2.5">
+                  <span className="inline-block px-3 py-1 rounded-md bg-gray-900 text-white text-sm font-bold shrink-0">{t.label}</span>
+                  <span className="text-base md:text-lg text-gray-800 font-semibold">{t.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -200,86 +295,123 @@ export default function DemoEvent2026() {
               </p>
             </div>
           </div>
-          {/* Integrated: 登壇団体・サークル（5団体） — Uniform Grid Layout */}
+          {/* 登壇団体（確定ラインナップ） */}
           <div className="max-w-7xl mx-auto mt-12">
-            <div className="flex flex-wrap justify-center gap-6">
-              {Array.from({ length: 5 }).map((_, idx) => ({
-                name: "登壇団体 募集中",
-                desc: "現在、登壇して活動の魅力を発信したい団体を大募集しています！",
-                note: `枠 ${idx + 1}`
-              } as { name: string; img?: string; desc: string; note?: string; instagram?: string; website?: string })).map((g, i) => {
-                const initial = g.name?.charAt(0) ?? "?";
-                return (
-                  <div key={i} className="group h-full w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
-                    <div className="h-full p-[1px] rounded-2xl bg-gradient-to-r from-indigo-300 via-emerald-300 to-amber-300">
-                      <Card className="h-full p-6 rounded-2xl bg-white/95 backdrop-blur-sm transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl flex flex-col">
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="flex items-center gap-3">
-                            {/* Avatar fallback if no image */}
-                            {!g.img && (
-                              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-emerald-400 text-white flex items-center justify-center font-bold shrink-0">
-                                {initial}
-                              </div>
-                            )}
-                            <h3 className="text-lg font-bold leading-tight">{g.name}</h3>
-                          </div>
-                          {g.note && (
-                            <span className="ml-2 inline-block rounded-full bg-gray-900 text-white text-xs px-2 py-1 shrink-0">{g.note}</span>
-                          )}
+            <div className="text-center mb-8">
+              <span className="inline-block px-4 py-1 rounded-full bg-indigo-600 text-white text-sm font-bold tracking-wider mb-3">
+                第1部・登壇団体
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">出演団体が決定しました！</h3>
+            </div>
+
+            {/* 高校生の部 */}
+            <div className="mb-10">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="inline-flex items-center justify-center px-3 py-1 rounded-lg bg-emerald-500 text-white text-sm font-bold shrink-0">高校生</span>
+                <span className="h-px flex-grow bg-emerald-200" />
+              </div>
+              <div className="flex flex-wrap justify-center gap-6">
+                {[
+                  { name: "福岡未来創造キャンプ\nOn Your Mark！", img: imgOym, desc: "高校生が主体となり、未来を切り拓く挑戦を後押しするキャンプ型プログラム。" },
+                  { name: "SAKURA（雙葉高校）", img: imgSakura, desc: "雙葉高校の生徒による国際交流・社会貢献活動に取り組むチーム。" },
+                ].map((g, i) => (
+                  <div key={i} className="group h-full w-full md:w-[calc(50%-0.75rem)]">
+                    <div className="h-full p-[1px] rounded-2xl bg-gradient-to-r from-emerald-300 via-indigo-300 to-amber-300">
+                      <Card className="h-full rounded-2xl overflow-hidden bg-white/95 backdrop-blur-sm transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl flex flex-col">
+                        <div className="aspect-[16/7] w-full overflow-hidden bg-gray-100">
+                          <img src={g.img} alt={`${g.name.replace("\n", " ")} の活動写真`} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" />
                         </div>
-
-                        {g.img && (
-                          <div className="mb-4 aspect-[16/9] w-full rounded-xl overflow-hidden bg-gray-100 shrink-0">
-                            <img
-                              src={g.img}
-                              alt={`${g.name} イメージ`}
-                              className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-                            />
+                        <div className="p-6 flex flex-col flex-grow">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-indigo-400 text-white flex items-center justify-center font-bold shrink-0">
+                              {g.name.charAt(0)}
+                            </div>
+                            <h4 className="text-lg font-bold leading-tight whitespace-pre-line">{g.name}</h4>
                           </div>
-                        )}
-
-                        {g.desc && (
-                          <p className={`${g.desc.length > 150 ? 'text-xs' : 'text-sm'} text-gray-700 leading-relaxed flex-grow mb-3`}>
-                            {g.desc}
-                          </p>
-                        )}
-
-                        {(g.instagram || g.website) && (
-                          <div className="pt-3 border-t border-gray-100 flex gap-2">
-                            {g.instagram && (
-                              <Button asChild variant="outline" className="flex-1 border-pink-300 hover:bg-pink-50">
-                                <a href={g.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                  </svg>
-                                  Instagram
-                                </a>
-                              </Button>
-                            )}
-                            {g.website && (
-                              <Button asChild variant="outline" className="flex-1 border-blue-300 hover:bg-blue-50">
-                                <a href={g.website} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                                  </svg>
-                                  HP
-                                </a>
-                              </Button>
-                            )}
-                          </div>
-                        )}
+                          <p className="text-sm text-gray-700 leading-relaxed flex-grow">{g.desc}</p>
+                        </div>
                       </Card>
                     </div>
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
-            <p className="text-center mt-8 text-gray-600">
-              登壇団体は現在募集中。あなたの団体の活動を、ここで発信しませんか？
-            </p>
-            <div className="mt-6 text-center">
+
+            {/* 大学生の部 */}
+            <div>
+              <div className="flex items-center gap-3 mb-5">
+                <span className="inline-flex items-center justify-center px-3 py-1 rounded-lg bg-indigo-600 text-white text-sm font-bold shrink-0">大学生</span>
+                <span className="h-px flex-grow bg-indigo-200" />
+              </div>
+              <div className="flex flex-wrap justify-center gap-6">
+                {[
+                  { name: "国際寮RA", org: "西南学院大学", img: imgRyo, desc: "国際寮のレジデント・アシスタントとして、留学生と日本人学生の共生をつくる。" },
+                  { name: "FIT CORE", org: "福岡大学", img: imgFitcore, desc: "福岡大学を拠点に国際交流・地域連携に取り組む学生団体。" },
+                  { name: "IFSAQ", org: "九州大学", img: imgIfsaq, desc: "九州大学の国際交流を推進する学生コミュニティ。" },
+                  { name: "プロジェクト創発団体C³", org: "西南学院大学", img: imgC3, desc: "西南学院大学発、課題解決型のプロジェクトを生み出す創発チーム。" },
+                  { name: "FIWC", org: "九大・西南大・福大", img: imgFiwc, desc: "大学を越えて活動する国際ワークキャンプ（FIWC）の福岡チーム。" },
+                ].map((g, i) => (
+                  <div key={i} className="group h-full w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
+                    <div className="h-full p-[1px] rounded-2xl bg-gradient-to-r from-indigo-300 via-emerald-300 to-amber-300">
+                      <Card className="h-full rounded-2xl overflow-hidden bg-white/95 backdrop-blur-sm transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl flex flex-col">
+                        <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+                          <img src={g.img} alt={`${g.name} の活動写真`} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" />
+                        </div>
+                        <div className="p-6 flex flex-col flex-grow">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-emerald-400 text-white flex items-center justify-center font-bold shrink-0">
+                              {g.name.charAt(0)}
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-bold leading-tight">{g.name}</h4>
+                              <p className="text-xs text-gray-500">{g.org}</p>
+                            </div>
+                          </div>
+                          <p className="text-sm text-gray-700 leading-relaxed flex-grow">{g.desc}</p>
+                        </div>
+                      </Card>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* 第2部 ブース出展団体 */}
+            <div className="mt-16">
+              <div className="text-center mb-8">
+                <span className="inline-block px-4 py-1 rounded-full bg-amber-400 text-black text-sm font-bold tracking-wider mb-3">
+                  第2部・ブース出展団体
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">交流会で直接話せる団体</h3>
+                <p className="mt-3 text-gray-600">国際的な活動団体のブースで、直接話を聞いて新しいつながりを見つけよう。</p>
+              </div>
+              <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { name: "GSC Fukuoka Hub" },
+                  { name: "福岡県留学生会（FOSA）" },
+                  { name: "九州大学アフリカン学生（ASKU）" },
+                  { name: "福岡ベトナム青年学生協会（VYSAF）" },
+                  { name: "冨永陽仁", note: "書道を通して愛を世界中で交換" },
+                  { name: "NPO法人国際教育支援機構\nスマイリーフラワーズ" },
+                ].map((b, i) => (
+                  <div key={i} className="rounded-xl bg-white border border-gray-200 shadow-sm p-5 flex items-start gap-3 hover:shadow-md transition-shadow">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-emerald-400 text-white flex items-center justify-center font-bold shrink-0 text-sm">
+                      {b.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 leading-tight whitespace-pre-line">{b.name}</p>
+                      {b.note && <p className="text-xs text-gray-500 mt-1">{b.note}</p>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 text-lg font-bold">
-                <a href="#entry">登壇団体の応募要項を見る</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_K_wfxi43O-ieic5Xn53gP2WWh4nl1P9BJxhoGy43kz6TlA/viewform" target="_blank" rel="noopener noreferrer">
+                  観覧を事前予約する（無料）
+                </a>
               </Button>
             </div>
           </div >
@@ -294,37 +426,43 @@ export default function DemoEvent2026() {
         <div className="container relative z-10">
           <div className="text-center mb-10">
             <span className="inline-block px-4 py-1 rounded-full bg-amber-400 text-black text-sm font-bold tracking-wider mb-4">
-              ＼ 登壇団体募集中 ／
+              イベント内容
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-              あなたの活動を、世界へ。
+              2部構成で、知って・つながる一日。
             </h2>
             <p className="mt-4 text-lg text-gray-700">
-              プレゼンを通じて、あなたの団体の魅力を福岡中の学生・教育関係者に届けませんか？
+              第1部は学生団体のプレゼンと表彰、第2部はブースをまわる交流会です。
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-            {/* 応募条件 */}
-            <div className="p-6 md:p-10 bg-gradient-to-br from-indigo-50 to-white">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <span className="inline-block w-1 h-7 bg-indigo-500 rounded-full" />
-                応募条件
-              </h3>
-              <ul className="space-y-4 text-gray-800 text-base md:text-lg">
-                <li className="flex items-start gap-3">
-                  <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold">①</span>
-                  <span>福岡県内の<strong className="text-indigo-700">高校・大学</strong>に所属する団体</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold">②</span>
-                  <span><strong className="text-indigo-700">国際交流・留学生支援・海外活動</strong>に関する活動を行っている団体</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold">③</span>
-                  <span>本番までの<strong className="text-indigo-700">事前ミーティング（3回程度）</strong>に参加できる団体</span>
-                </li>
-              </ul>
+            {/* イベント内容（第1部・第2部） */}
+            <div className="grid md:grid-cols-2">
+              <div className="p-6 md:p-10 bg-gradient-to-br from-indigo-50 to-white border-b md:border-b-0 md:border-r border-gray-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="inline-flex items-center justify-center text-2xl">🎤</span>
+                  <h3 className="text-xl md:text-2xl font-bold text-indigo-700">第1部：Award・表彰</h3>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  学生団体によるプレゼンテーションを実施。海外ボランティアや国際交流など、それぞれの活動や思いを発表します。
+                  <strong className="text-indigo-700">来場者投票＋審査員評価</strong>で受賞団体が決定します。
+                </p>
+              </div>
+              <div className="p-6 md:p-10 bg-gradient-to-br from-amber-50 to-white">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="inline-flex items-center justify-center text-2xl">🤝</span>
+                  <h3 className="text-xl md:text-2xl font-bold text-amber-600">第2部：交流会</h3>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  国際的な活動団体のブースで直接話を聞き、新しいつながりを見つけられます。
+                </p>
+                <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+                  {["ブース団体", "登壇団体", "留学生", "参加者同士"].map((t) => (
+                    <li key={t} className="px-3 py-1 rounded-full bg-amber-100 text-amber-700 font-medium">{t}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             {/* 賞 */}
@@ -356,19 +494,19 @@ export default function DemoEvent2026() {
             </div>
 
             {/* CTA */}
-            <div className="p-6 md:p-10 bg-gradient-to-br from-indigo-600 to-emerald-500 text-white">
+            <div className="p-6 md:p-10 bg-gradient-to-br from-indigo-600 to-emerald-500 text-white border-t border-white/10">
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div>
-                  <p className="text-sm opacity-90 mb-1">応募締切</p>
-                  <p className="text-3xl md:text-4xl font-bold">2026年 5月13日（火）</p>
+                  <p className="text-sm opacity-90 mb-1">ご来場について</p>
+                  <p className="text-3xl md:text-4xl font-bold">観覧無料・途中参加OK</p>
                   <p className="mt-3 text-white/90">
-                    申し込み・ご質問は<strong>Instagram DM</strong>または<strong>お電話</strong>へ。お気軽にご連絡ください。
+                    事前予約でスムーズに入場できます。ご質問は<strong>Instagram DM</strong>または<strong>お電話</strong>へお気軽に。
                   </p>
                 </div>
                 <div className="flex flex-col gap-3">
                   <Button asChild size="lg" className="bg-amber-400 text-black hover:bg-amber-500 text-lg py-6 font-bold">
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                      Instagram DMで応募する
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_K_wfxi43O-ieic5Xn53gP2WWh4nl1P9BJxhoGy43kz6TlA/viewform" target="_blank" rel="noopener noreferrer">
+                      観覧を事前予約する（無料）
                     </a>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/50 text-white hover:bg-white/20 text-lg py-6 font-bold">
@@ -474,9 +612,9 @@ export default function DemoEvent2026() {
                 全団体の発表と投票が終了後、結果発表と表彰を行います
               </p>
               <div className="space-y-1 text-gray-700">
-                <p className="font-bold">🏆 1位：賞金5万円</p>
-                <p className="font-bold">🥈 2位：賞金3万円</p>
-                <p className="font-bold">🥉 3位：賞金2万円</p>
+                <p className="font-bold">🥇 ベストオーディエンス賞：賞金5万円</p>
+                <p className="font-bold">🥈 特別審査員賞：賞金3万円</p>
+                <p className="font-bold">🌸 スマフラ奨励賞：賞金1万円</p>
               </div>
             </div>
           </div>
@@ -566,7 +704,7 @@ export default function DemoEvent2026() {
               <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-300"></div>
               <ul className="space-y-5">
                 {[
-                  { time: "13:00", title: "開場", desc: "会場に到着したら、受付でお名前をお伝えください。" },
+                  { time: "12:30", title: "開場", desc: "会場に到着したら、受付でお名前をお伝えください。" },
                   { time: "13:30", title: "開会（主催者挨拶・大会趣旨紹介）", desc: "イベントの趣旨と流れをご説明します。" },
                   { time: "13:40", title: "登壇団体プレゼン", desc: "各団体が活動の魅力と取り組みをプレゼンテーションします。" },
                   { time: "15:30", title: "投票・審査員講評", desc: "会場の参加者投票と、審査員からのフィードバックです。" },
@@ -881,18 +1019,28 @@ export default function DemoEvent2026() {
             <div>
               <h3 className="text-2xl font-bold mb-4">主催者情報</h3>
               <div className="mb-4 space-y-1">
-                <p className="text-gray-400">企画・主催</p>
+                <p className="text-gray-400">主催</p>
                 <p className="text-gray-300 ml-4">NPO法人国際教育支援機構 スマイリーフラワーズ</p>
               </div>
               <div className="mb-4 space-y-1">
+                <p className="text-gray-400">企画</p>
+                <p className="text-gray-300 ml-4">学生実行委員会</p>
+              </div>
+              <div className="mb-4 space-y-1">
                 <p className="text-gray-400">後援</p>
-                <p className="text-gray-300 ml-4">福岡市／筑紫女学園大学 英語学科</p>
+                <p className="text-gray-300 ml-4">福岡市／よかとピア国際交流財団／筑紫女学園大学 英語学科</p>
+              </div>
+              <div className="mb-4 space-y-1">
+                <p className="text-gray-400">助成</p>
+                <p className="text-gray-300 ml-4">よかとピア国際交流財団</p>
               </div>
               <p className="text-lg font-semibold mb-2 mt-6">お問い合わせ</p>
               <div className="space-y-2 text-gray-400">
                 <p>📞 TEL: 092-791-4360</p>
                 <p>📧 Email: info@smileyflowers.net</p>
                 <p>🌐 Web: www.smileyflowers.net/</p>
+                <p>📷 Instagram: <a href="https://www.instagram.com/fukuoka.international.award613/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white underline">@FUKUOKA.INTERNATIONAL.AWARD613</a></p>
+                <p>🏢 事務所: 福岡市中央区大名2-10-1-A601</p>
               </div>
             </div>
 
@@ -1047,5 +1195,70 @@ export default function DemoEvent2026() {
         )
       }
     </div >
+  );
+}
+
+/* 国旗ガーランド（チラシ象徴のデコ） */
+function FlagGarland() {
+  // dir: 'h'=横帯 / 'v'=縦帯 / 'dot'=白地に中央円
+  const flags: { dir: "h" | "v" | "dot"; colors: string[]; dot?: string }[] = [
+    { dir: "dot", colors: ["#ffffff"], dot: "#BC002D" }, // 日本
+    { dir: "h", colors: ["#B22234", "#ffffff", "#3C3B6E"] }, // USA
+    { dir: "v", colors: ["#FF0000", "#ffffff", "#FF0000"] }, // カナダ
+    { dir: "h", colors: ["#000000", "#DD0000", "#FFCE00"] }, // ドイツ
+    { dir: "v", colors: ["#0055A4", "#ffffff", "#EF4135"] }, // フランス
+    { dir: "h", colors: ["#FF9933", "#ffffff", "#138808"] }, // インド
+    { dir: "dot", colors: ["#ffffff"], dot: "#CD2E3A" }, // 韓国
+    { dir: "v", colors: ["#009246", "#ffffff", "#CE2B37"] }, // イタリア
+    { dir: "h", colors: ["#009C3B", "#FFDF00", "#009C3B"] }, // ブラジル
+    { dir: "h", colors: ["#012169", "#ffffff", "#C8102E"] }, // UK系
+    { dir: "h", colors: ["#AA151B", "#F1BF00", "#AA151B"] }, // スペイン
+    { dir: "h", colors: ["#DA251D", "#DA251D", "#DA251D"] }, // ベトナム
+    { dir: "h", colors: ["#007A4D", "#ffffff", "#000000"] }, // 南ア
+    { dir: "h", colors: ["#CE1126", "#ffffff", "#000000"] }, // エジプト
+  ];
+  const W = 1200, dip = 26, N = flags.length, fw = 22, fh = 14;
+  const bands = (f: typeof flags[number]) => {
+    if (f.dir === "dot") {
+      return (
+        <g>
+          <rect width={fw} height={fh} fill={f.colors[0]} />
+          <circle cx={fw / 2} cy={fh / 2} r={fh * 0.32} fill={f.dot} />
+        </g>
+      );
+    }
+    const n = f.colors.length;
+    return (
+      <g>
+        {f.colors.map((c, k) =>
+          f.dir === "h" ? (
+            <rect key={k} x={0} y={(fh / n) * k} width={fw} height={fh / n} fill={c} />
+          ) : (
+            <rect key={k} x={(fw / n) * k} y={0} width={fw / n} height={fh} fill={c} />
+          )
+        )}
+      </g>
+    );
+  };
+  return (
+    <div className="pointer-events-none absolute top-0 left-0 w-full z-20" aria-hidden="true">
+      <svg viewBox={`0 0 ${W} 56`} width="100%" preserveAspectRatio="xMidYMid slice" className="block">
+        <path d={`M0 6 Q ${W / 2} ${6 + dip} ${W} 6`} fill="none" stroke="rgba(100,116,139,.55)" strokeWidth={1.5} />
+        {flags.map((f, i) => {
+          const t = (i + 0.5) / N;
+          const x = t * W;
+          const y = (1 - t) * (1 - t) * 6 + 2 * (1 - t) * t * (6 + dip) + t * t * 6;
+          return (
+            <g key={i} transform={`translate(${x}, ${y})`}>
+              <line x1={0} y1={0} x2={0} y2={5} stroke="rgba(100,116,139,.6)" strokeWidth={0.8} />
+              <g transform={`translate(${-fw / 2}, 5)`}>
+                {bands(f)}
+                <rect width={fw} height={fh} fill="none" stroke="rgba(0,0,0,.18)" strokeWidth={0.6} />
+              </g>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
   );
 }

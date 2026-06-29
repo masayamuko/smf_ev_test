@@ -1,71 +1,25 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import DemoAccessGate from "@/components/DemoAccessGate";
 import DemoEvent2025 from "@/pages/DemoEvent2025";
 import DemoEvent2026 from "@/pages/DemoEvent2026";
 import DemoHome from "@/pages/DemoHome";
 import DemoIntern from "@/pages/DemoIntern";
 import NotFound from "@/pages/NotFound";
-import { ReactNode } from "react";
 import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-
-type ProtectedDemoPageProps = {
-  children: ReactNode;
-};
-
-function ProtectedDemoPage({ children }: ProtectedDemoPageProps) {
-  return <DemoAccessGate>{children}</DemoAccessGate>;
-}
 
 function Router() {
   return (
     <WouterRouter base={import.meta.env.BASE_URL}>
       <Switch>
-        <Route path={"/"}>
-          {() => (
-            <ProtectedDemoPage>
-              <Home />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo"}>
-          {() => (
-            <ProtectedDemoPage>
-              <DemoHome />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo/event-2025"}>
-          {() => (
-            <ProtectedDemoPage>
-              <DemoEvent2025 />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo/event-2026"}>
-          {() => (
-            <ProtectedDemoPage>
-              <DemoEvent2026 />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo/intern"}>
-          {() => (
-            <ProtectedDemoPage>
-              <DemoIntern />
-            </ProtectedDemoPage>
-          )}
-        </Route>
-        <Route path={"/demo/:rest*"}>
-          {() => (
-            <ProtectedDemoPage>
-              <NotFound />
-            </ProtectedDemoPage>
-          )}
-        </Route>
+        {/* トップ＝福岡国際交流プラットフォーム（DemoHome）。配下にAward・実行委員会募集。一般公開（ゲートなし） */}
+        <Route path={"/"} component={DemoHome} />
+        <Route path={"/demo"} component={DemoHome} />
+        <Route path={"/demo/event-2025"} component={DemoEvent2025} />
+        <Route path={"/demo/event-2026"} component={DemoEvent2026} />
+        <Route path={"/demo/intern"} component={DemoIntern} />
+        <Route path={"/demo/:rest*"} component={NotFound} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
