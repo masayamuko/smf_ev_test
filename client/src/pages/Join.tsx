@@ -2,42 +2,41 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 const LINE_ADD_URL = import.meta.env.VITE_LINE_ADD_URL || "https://line.me/";
+const CORDUROY_URL = "https://corduroy.co.jp";
 
 /*
   学生運営メンバー募集LP（/join）
-  ※ /demo/intern（アワード運営インターン）とは別の、プラットフォーム運営側の個人募集。
-  公開ブロッカー（公開前に必ず確定して埋める）:
-    1. 報酬（無給/有給/交通費）＋労働性の整理
-    2. プラットフォームの正式名称
-    3. 募集期間・一次締切の日付
-    4. 個人情報の利用目的・写真掲載・AI入力ルール（フォーム周り）
-  ※ 内容は smf-hours/join.astro（企画書v2準拠）から移植し、プラットフォームのteal基調に合わせて再構成。
+  コンセプト：AI・ITの力で福岡の国際系サークルをサポートし、海外に目を向ける学生を増やす。
+  公開ブロッカー（公開前に確定して埋める）:
+    1. 一次締切の日付  2. プラットフォーム正式名称（現状：福岡国際系団体プラットフォーム）
+    3. 個人情報の利用目的・写真掲載・AI入力ルール（フォーム化する場合）
+  ※ 待遇＝なし（無償）。学習支援として株式会社コールテンがChatGPT Plus＋月1AI研修を提供。
 */
 
 const FORYOU = [
-  "国際系サークルにいるけど、もう一歩踏み込みたい",
-  "大学のうちに「自分でつくった」経験がほしい",
-  "AIが気になってるけど、まだ触れてない",
+  "福岡の国際系サークルをサポートしたい",
+  "ガクチカ（学生時代に打ち込んだ実績）がほしい",
+  "AIやITを学んで、実践していきたい",
   "同じ熱量で動ける仲間がほしい",
 ];
 
+// 活動内容：交流の場 / 学習の場 / 発信の場
 const ACTIVITIES = [
-  { emoji: "🤝", title: "集まる場をつくる", desc: "国際系サークルの交流会を企画（学期に1回ペース）。代表・幹部が集まり、刺激し合う場を主催します。" },
-  { emoji: "📣", title: "まとめて発信する", desc: "各団体の活動を月2本ペースでSNS／サイトで紹介。団体インタビューでいい活動を広く届けます。" },
-  { emoji: "🏆", title: "イベントを動かす", desc: "12月の福岡国際系学生団体アワードに向けた企画・運営。登壇団体のオファーなどアワードチームと連携します。" },
-  { emoji: "🤖", title: "運営にAIを使う", desc: "議事録・SNS下書き・情報整理をAIで効率化。AIを相棒に、少人数でも大きく動かします。" },
+  { emoji: "🤝", title: "交流の場", sub: "交流会の主催", desc: "国際系サークルが集まる交流会を主催。団体の垣根を越えたつながりをつくります。" },
+  { emoji: "📚", title: "学習の場", sub: "AI・IT勉強会の主催", desc: "AI・ITを学び合う勉強会を主催。学んだことを運営の実践で活かします。" },
+  { emoji: "📣", title: "発信の場", sub: "情報発信サイトの運営", desc: "団体紹介・イベント情報を発信するサイトを運営。いい活動を広く届けます。" },
 ];
 
 const TAKEAWAYS = [
   { emoji: "✨", title: "AIスキル", desc: "自分専用に育てたAIを、運営実務（議事録・SNS下書き・情報整理）で使いこなす力。" },
-  { emoji: "📁", title: "“つくった”実績", desc: "自分が作ったページ・企画・イベントを、そのままポートフォリオに。" },
+  { emoji: "📁", title: "“つくった”実績", desc: "自分が作ったページ・企画・イベントを、そのままガクチカ・ポートフォリオに。" },
   { emoji: "🌏", title: "仲間と場", desc: "熱量の合う仲間、福岡の国際交流コミュニティとのつながり。" },
 ];
 
 const FAQ = [
-  { q: "AI、まったく触ったことなくても大丈夫？", a: "大丈夫です。無料の基礎講座付き。むしろ初めての人が主役です。" },
+  { q: "AI、まったく触ったことなくても大丈夫？", a: "大丈夫です。月1回のAI研修付き。むしろ初めての人が主役です。" },
   { q: "どれくらいの時間がかかる？", a: "週1ミーティング＋自分のペースの作業。学業優先でOKな無理のない範囲です。" },
-  { q: "文系でも参加できる？", a: "もちろん。プログラミングではなく「AIとの付き合い方」を学びます。" },
+  { q: "文系でも参加できる？", a: "もちろん。プログラミングではなく「AI・ITとの付き合い方」を学びます。" },
   { q: "途中で合わなかったら？", a: "まずはカジュアル面談で話してから決められます。" },
 ];
 
@@ -53,14 +52,17 @@ export default function Join() {
             学生運営メンバー募集
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
-            福岡の国際交流を、
+            AI・ITの力で、
             <br />
             <span className="bg-gradient-to-r from-[var(--yellow)] to-amber-200 bg-clip-text text-transparent">
-              見る側から動かす側へ。
+              福岡の国際系サークルをサポート。
             </span>
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/85 font-medium">
-            学生運営メンバー募集 ／ AIを使った運営も学べる ／ 未経験OK
+          <p className="mt-6 text-lg md:text-2xl text-white font-bold">
+            海外に目を向ける学生を、福岡からもっと増やそう。
+          </p>
+          <p className="mt-3 text-base md:text-lg text-white/85 font-medium">
+            学生運営メンバー募集 ／ AI・ITを学んで実践 ／ 未経験OK
           </p>
           <div className="mt-10">
             <Button
@@ -102,27 +104,63 @@ export default function Join() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5">これは、何をする活動？</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              福岡の国際系サークル・団体の「団体一覧」「イベント情報」「交流会」「アワード」をつなぐ、
-              Web＋コミュニティのプラットフォーム。それを、
-              <strong className="text-[var(--turquoise)]">AIを相棒に学生チームで運営</strong>します。
-              年1回の福岡国際系学生団体アワード（12月）に向けて、通年でつながりをつくっていく活動です。
+              福岡の国際系サークル・団体の<strong className="text-[var(--turquoise)]">プラットフォームサイトの運営</strong>です。
+              サイトの更新・SNS運用、そして年1回の福岡国際系学生団体アワード。
+              運営を通じて、<strong className="text-[var(--turquoise)]">福岡の国際系サークルを盛り上げていくサポート</strong>の活動です。
+            </p>
+            <p className="mt-4 text-sm text-gray-500">
+              ※ アワードに向けて、通年でゆるやかにつながりをつくっていきます。
             </p>
           </div>
         </div>
       </section>
 
-      {/* ─── 活動内容（4本柱） ─── */}
+      {/* ─── 活動内容（交流の場 / 学習の場 / 発信の場） ─── */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-10">活動内容</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {ACTIVITIES.map((a) => (
-              <Card key={a.title} className="p-6 border-0 shadow-md rounded-2xl bg-white hover:shadow-xl transition-shadow text-center flex flex-col">
+              <Card key={a.title} className="p-7 border-0 shadow-md rounded-2xl bg-white hover:shadow-xl transition-shadow text-center flex flex-col">
                 <div className="text-4xl mb-3">{a.emoji}</div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">{a.title}</h3>
+                <h3 className="font-extrabold text-xl text-gray-900">{a.title}</h3>
+                <p className="text-sm font-bold text-[var(--turquoise)] mb-3">{a.sub}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{a.desc}</p>
               </Card>
             ))}
+          </div>
+
+          {/* AI・ITは月1研修で学べる + 次回イベント告知 */}
+          <div className="max-w-4xl mx-auto mt-12 rounded-2xl bg-gradient-to-br from-indigo-50 to-teal-50 border border-[var(--turquoise)]/20 p-8 md:p-10">
+            <div className="text-center mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-[var(--turquoise)]/10 text-[var(--turquoise)] px-4 py-1 text-sm font-bold mb-3">
+                🤖 月1回・AI研修
+              </span>
+              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900">AI・ITは、月1回の研修で学べます</h3>
+              <p className="mt-3 text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                運営メンバーには、<strong>月1回のAI研修</strong>を提供。AIやITを基礎から学び、議事録・SNS下書き・情報整理・サイト運営など、運営の実務でそのまま実践できます。
+                研修を提供するのは、AI活用を支援する<strong>株式会社コールテン</strong>です。
+              </p>
+            </div>
+
+            {/* 次回研修の告知 */}
+            <div className="rounded-xl bg-white border border-gray-200 shadow-sm p-6">
+              <p className="text-xs font-bold text-[var(--turquoise)] tracking-wider mb-3">次回 AI研修</p>
+              <div className="grid sm:grid-cols-2 gap-y-2 gap-x-6 text-gray-800">
+                <p className="flex items-center gap-2"><span className="text-xl">📅</span><span><strong>2026年7月6日（月）</strong> 18:00〜20:00</span></p>
+                <p className="flex items-center gap-2"><span className="text-xl">📍</span><span>福岡市内・天神駅近く（会場詳細は後日ご案内）</span></p>
+                <p className="flex items-center gap-2"><span className="text-xl">🏢</span><span>主催：株式会社コールテン</span></p>
+                <p className="flex items-center gap-2"><span className="text-xl">🙌</span><span>興味がある方はぜひ（運営メンバー以外も歓迎）</span></p>
+              </div>
+              <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                <Button asChild className="bg-[var(--turquoise)] hover:bg-teal-400 text-white font-bold rounded-xl px-6 py-5">
+                  <a href={LINE_ADD_URL} target="_blank" rel="noopener noreferrer">LINEで参加を伝える</a>
+                </Button>
+                <Button asChild variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 font-bold rounded-xl px-6 py-5">
+                  <a href={CORDUROY_URL} target="_blank" rel="noopener noreferrer">株式会社コールテンを見る →</a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -143,33 +181,19 @@ export default function Join() {
         </div>
       </section>
 
-      {/* ─── ここで学べるAI ─── */}
+      {/* ─── 募集要項 ─── */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5">ここは、AIを相棒にできる活動です</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              運営に入る人には、まず<strong className="text-[var(--turquoise)]">AIの基礎講座（無料）</strong>をやります。
-              プロンプトの作り方、議事録やSNS下書きでの使い方、「自分専用に育てたChatGPT」のつくり方まで。
-              AIは初めてでも大丈夫。むしろ、これから学びたい人が主役です。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 募集要項 ─── */}
-      <section className="py-16 md:py-20 bg-teal-50">
-        <div className="container">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-10">募集要項</h2>
-          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-md overflow-hidden">
+          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
             <dl>
               {[
                 { dt: "対象", dd: "福岡の大学生／国際交流に関心がある人／AI未経験歓迎" },
                 { dt: "募集人数", dd: "第1期 3名（定員に達し次第終了）" },
                 { dt: "一次締切", dd: "（決定後に記載）" },
                 { dt: "活動形態", dd: "オンライン中心＋たまにリアル／週1ミーティング（30〜60分）" },
-                { dt: "待遇", dd: "（決定後に記載）" },
-                { dt: "学習支援", dd: "AI基礎講座を無料で提供" },
+                { dt: "費用", dd: "無料（参加にあたっての費用はかかりません）" },
+                { dt: "学習支援", dd: "株式会社コールテンが、ChatGPT有料プラン（Plus）の提供＋月1回のAI研修を提供" },
               ].map((row) => (
                 <div key={row.dt} className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1 sm:gap-4 px-6 py-4 border-b border-gray-100 last:border-0">
                   <dt className="font-bold text-[var(--turquoise)]">{row.dt}</dt>
@@ -182,7 +206,7 @@ export default function Join() {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-teal-50">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-10">よくある質問</h2>
           <div className="max-w-2xl mx-auto space-y-3">
